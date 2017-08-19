@@ -1,0 +1,25 @@
+{
+  "kind": "bigquery#dataset",
+  "friendlyName": "test",
+  "description": "test description",
+  "location": "EU",
+  "id": "databerries-staging:test",
+  "access": [
+    {
+      "role": "WRITER",
+      "specialGroup": "projectWriters"
+    },
+    {
+      "role": "OWNER",
+      "specialGroup": "projectOwners"
+    },
+    {
+      "role": "OWNER",
+      "userByEmail": "thibault@teemo.co"
+    },
+    {
+      "role": "READER",
+      "specialGroup": "projectReaders"
+    }
+  ]
+}

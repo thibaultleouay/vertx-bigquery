@@ -1,0 +1,2819 @@
+= Cheatsheets
+
+[[Access]]
+== Access
+
+++++
+ Model definition for DatasetAccess.
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[domain]]`domain`|`String`|
++++
+[Pick one] A domain to grant access to. Any users signed in with the domain
+ specified will be granted the specified access. Example: "example.com".
++++
+|[[groupByEmail]]`groupByEmail`|`String`|
++++
+[Pick one] An email address of a Google Group to grant access to.
++++
+|[[role]]`role`|`String`|
++++
+[Required] Describes the rights granted to the user specified by the other
+ member of the access object. The following string values are supported:
+ READER, WRITER, OWNER.
++++
+|[[specialGroup]]`specialGroup`|`String`|
++++
+[Pick one] A special group to grant access to. Possible values include:
+ projectOwners: Owners of the enclosing project. projectReaders: Readers of
+ the enclosing project. projectWriters: Writers of the enclosing project.
+ allAuthenticatedUsers: All authenticated BigQuery users.
++++
+|[[userByEmail]]`userByEmail`|`String`|
++++
+[Pick one] An email address of a user to grant access to. For example:
+ fred@example.com.
++++
+|[[view]]`view`|`link:dataobjects.html#TableReference[TableReference]`|
++++
+[Pick one] A view from a different dataset to grant access to. Queries
+ executed against that view will have read access to tables in this dataset.
+ The role field is not required when this field is set. If that view is
+ updated by any user, access to the view needs to be granted again via an
+ update operation.
++++
+|===
+
+[[BigQueryOptions]]
+== BigQueryOptions
+
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[alpnVersions]]`alpnVersions`|`Array of link:enums.html#HttpVersion[HttpVersion]`|-
+|[[connectTimeout]]`connectTimeout`|`Number (int)`|-
+|[[crlPaths]]`crlPaths`|`Array of String`|-
+|[[crlValues]]`crlValues`|`Array of Buffer`|-
+|[[decoderInitialBufferSize]]`decoderInitialBufferSize`|`Number (int)`|-
+|[[defaultHost]]`defaultHost`|`String`|-
+|[[defaultPort]]`defaultPort`|`Number (int)`|-
+|[[enabledCipherSuites]]`enabledCipherSuites`|`Array of String`|-
+|[[enabledSecureTransportProtocols]]`enabledSecureTransportProtocols`|`Array of String`|-
+|[[followRedirects]]`followRedirects`|`Boolean`|-
+|[[forceSni]]`forceSni`|`Boolean`|-
+|[[googleCredentialToken]]`googleCredentialToken`|`String`|-
+|[[googleCrendiatlToken]]`googleCrendiatlToken`|`String`|-
+|[[http2ClearTextUpgrade]]`http2ClearTextUpgrade`|`Boolean`|-
+|[[http2ConnectionWindowSize]]`http2ConnectionWindowSize`|`Number (int)`|-
+|[[http2MaxPoolSize]]`http2MaxPoolSize`|`Number (int)`|-
+|[[http2MultiplexingLimit]]`http2MultiplexingLimit`|`Number (int)`|-
+|[[idleTimeout]]`idleTimeout`|`Number (int)`|-
+|[[initialSettings]]`initialSettings`|`link:dataobjects.html#Http2Settings[Http2Settings]`|-
+|[[jdkSslEngineOptions]]`jdkSslEngineOptions`|`link:dataobjects.html#JdkSSLEngineOptions[JdkSSLEngineOptions]`|-
+|[[keepAlive]]`keepAlive`|`Boolean`|-
+|[[keyStoreOptions]]`keyStoreOptions`|`link:dataobjects.html#JksOptions[JksOptions]`|-
+|[[localAddress]]`localAddress`|`String`|-
+|[[logActivity]]`logActivity`|`Boolean`|-
+|[[maxChunkSize]]`maxChunkSize`|`Number (int)`|-
+|[[maxHeaderSize]]`maxHeaderSize`|`Number (int)`|-
+|[[maxInitialLineLength]]`maxInitialLineLength`|`Number (int)`|-
+|[[maxPoolSize]]`maxPoolSize`|`Number (int)`|-
+|[[maxRedirects]]`maxRedirects`|`Number (int)`|-
+|[[maxWaitQueueSize]]`maxWaitQueueSize`|`Number (int)`|-
+|[[maxWebsocketFrameSize]]`maxWebsocketFrameSize`|`Number (int)`|-
+|[[maxWebsocketMessageSize]]`maxWebsocketMessageSize`|`Number (int)`|-
+|[[metricsName]]`metricsName`|`String`|-
+|[[openSslEngineOptions]]`openSslEngineOptions`|`link:dataobjects.html#OpenSSLEngineOptions[OpenSSLEngineOptions]`|-
+|[[pemKeyCertOptions]]`pemKeyCertOptions`|`link:dataobjects.html#PemKeyCertOptions[PemKeyCertOptions]`|-
+|[[pemTrustOptions]]`pemTrustOptions`|`link:dataobjects.html#PemTrustOptions[PemTrustOptions]`|-
+|[[pfxKeyCertOptions]]`pfxKeyCertOptions`|`link:dataobjects.html#PfxOptions[PfxOptions]`|-
+|[[pfxTrustOptions]]`pfxTrustOptions`|`link:dataobjects.html#PfxOptions[PfxOptions]`|-
+|[[pipelining]]`pipelining`|`Boolean`|-
+|[[pipeliningLimit]]`pipeliningLimit`|`Number (int)`|-
+|[[protocolVersion]]`protocolVersion`|`link:enums.html#HttpVersion[HttpVersion]`|-
+|[[proxyOptions]]`proxyOptions`|`link:dataobjects.html#ProxyOptions[ProxyOptions]`|-
+|[[receiveBufferSize]]`receiveBufferSize`|`Number (int)`|-
+|[[reuseAddress]]`reuseAddress`|`Boolean`|-
+|[[sendBufferSize]]`sendBufferSize`|`Number (int)`|-
+|[[sendUnmaskedFrames]]`sendUnmaskedFrames`|`Boolean`|-
+|[[soLinger]]`soLinger`|`Number (int)`|-
+|[[ssl]]`ssl`|`Boolean`|-
+|[[tcpKeepAlive]]`tcpKeepAlive`|`Boolean`|-
+|[[tcpNoDelay]]`tcpNoDelay`|`Boolean`|-
+|[[trafficClass]]`trafficClass`|`Number (int)`|-
+|[[trustAll]]`trustAll`|`Boolean`|-
+|[[trustStoreOptions]]`trustStoreOptions`|`link:dataobjects.html#JksOptions[JksOptions]`|-
+|[[tryUseCompression]]`tryUseCompression`|`Boolean`|-
+|[[useAlpn]]`useAlpn`|`Boolean`|-
+|[[usePooledBuffers]]`usePooledBuffers`|`Boolean`|-
+|[[userAgent]]`userAgent`|`String`|-
+|[[userAgentEnabled]]`userAgentEnabled`|`Boolean`|-
+|[[verifyHost]]`verifyHost`|`Boolean`|-
+|===
+
+[[BigtableColumn]]
+== BigtableColumn
+
+++++
+ Model definition for BigtableColumn.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[encoding]]`encoding`|`String`|
++++
+[Optional] The encoding of the values when the type is not STRING. Acceptable
+ encoding values are: TEXT - indicates values are alphanumeric text strings.
+ BINARY - indicates values are encoded using HBase Bytes.toBytes family of
+ functions. 'encoding' can also be set at the column family level. However,
+ the setting at this level takes precedence if 'encoding' is set at both
+ levels.
++++
+|[[fieldName]]`fieldName`|`String`|
++++
+[Optional] If the qualifier is not a valid BigQuery field identifier i.e.
+ does not match [a-zA-Z][a-zA-Z0-9_]*, a valid identifier must be provided as
+ the column field name and is used as field name in queries.
++++
+|[[onlyReadLatest]]`onlyReadLatest`|`Boolean`|
++++
+[Optional] If this is set, only the latest version of value in this column
+ are exposed. 'onlyReadLatest' can also be set at the column family level.
+ However, the setting at this level takes precedence if 'onlyReadLatest' is
+ set at both levels.
++++
+|[[qualifierEncoded]]`qualifierEncoded`|`String`|
++++
+[Required] Qualifier of the column. Columns in the parent column family that
+ has this exact qualifier are exposed as . field. If the qualifier is valid
+ UTF-8 string, it can be specified in the qualifier_string field. Otherwise, a
+ base-64 encoded value must be set to qualifier_encoded. The column field name
+ is the same as the column qualifier. However, if the qualifier is not a valid
+ BigQuery field identifier i.e. does not match [a-zA-Z][a-zA-Z0-9_]*, a valid
+ identifier must be provided as field_name.
++++
+|[[qualifierString]]`qualifierString`|`String`|
++++
+
++++
+|[[type]]`type`|`String`|
++++
+[Optional] The type to convert the value in cells of this column. The values
+ are expected to be encoded using HBase Bytes.toBytes function when using the
+ BINARY encoding value. Following BigQuery types are allowed (case-sensitive)
+ - BYTES STRING INTEGER FLOAT BOOLEAN Default type is BYTES. 'type' can also
+ be set at the column family level. However, the setting at this level takes
+ precedence if 'type' is set at both levels.
++++
+|===
+
+[[BigtableColumnFamily]]
+== BigtableColumnFamily
+
+++++
+ Model definition for BigtableColumnFamily.
+
+ <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
+ transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
+ <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[columns]]`columns`|`Array of link:dataobjects.html#BigtableColumn[BigtableColumn]`|
++++
+[Optional] Lists of columns that should be exposed as individual fields as opposed to a list of
+ (column name, value) pairs. All columns whose qualifier matches a qualifier in this list can be
+ accessed as .. Other columns can be accessed as a list through .Column field.
++++
+|[[encoding]]`encoding`|`String`|
++++
+[Optional] The encoding of the values when the type is not STRING. Acceptable encoding values
+ are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are
+ encoded using HBase Bytes.toBytes family of functions. This can be overridden for a specific
+ column by listing that column in 'columns' and specifying an encoding for it.
++++
+|[[familyId]]`familyId`|`String`|
++++
+Identifier of the column family.
++++
+|[[onlyReadLatest]]`onlyReadLatest`|`Boolean`|
++++
+[Optional] If this is set only the latest version of value are exposed for all columns in this
+ column family. This can be overridden for a specific column by listing that column in 'columns'
+ and specifying a different setting for that column.
++++
+|[[type]]`type`|`String`|
++++
+[Optional] The type to convert the value in cells of this column family. The values are
+ expected to be encoded using HBase Bytes.toBytes function when using the BINARY encoding value.
+ Following BigQuery types are allowed (case-sensitive) - BYTES STRING INTEGER FLOAT BOOLEAN
+ Default type is BYTES. This can be overridden for a specific column by listing that column in
+ 'columns' and specifying a type for it.
++++
+|===
+
+[[BigtableOptions]]
+== BigtableOptions
+
+++++
+ Model definition for BigtableOptions.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[columnFamilies]]`columnFamilies`|`Array of link:dataobjects.html#BigtableColumnFamily[BigtableColumnFamily]`|
++++
+[Optional] List of column families to expose in the table schema along with
+ their types. This list restricts the column families that can be referenced
+ in queries and specifies their value types. You can use this list to do type
+ conversions - see the 'type' field for more details. If you leave this list
+ empty, all column families are present in the table schema and their values
+ are read as BYTES. During a query only the column families referenced in that
+ query are read from Bigtable.
++++
+|[[ignoreUnspecifiedColumnFamilies]]`ignoreUnspecifiedColumnFamilies`|`Boolean`|
++++
+[Optional] If field is true, then the column families that are not specified
+ in columnFamilies list are not exposed in the table schema. Otherwise, they
+ are read with BYTES type values. The default value is false.
++++
+|[[readRowkeyAsString]]`readRowkeyAsString`|`Boolean`|
++++
+[Optional] If field is true, then the rowkey column families will be read and
+ converted to string. Otherwise they are read with BYTES type values and users
+ need to manually cast them with CAST if necessary. The default value is
+ false.
++++
+|===
+
+[[CsvOptions]]
+== CsvOptions
+
+++++
+ Model definition for CsvOptions.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[allowJaggedRows]]`allowJaggedRows`|`Boolean`|
++++
+[Optional] Indicates if BigQuery should accept rows that are missing trailing
+ optional columns. If true, BigQuery treats missing trailing columns as null
+ values. If false, records with missing trailing columns are treated as bad
+ records, and if there are too many bad records, an invalid error is returned
+ in the job result. The default value is false.
++++
+|[[allowQuotedNewlines]]`allowQuotedNewlines`|`Boolean`|
++++
+[Optional] Indicates if BigQuery should allow quoted data sections that
+ contain newline characters in a CSV file. The default value is false.
++++
+|[[encoding]]`encoding`|`String`|
++++
+[Optional] The character encoding of the data. The supported values are UTF-8
+ or ISO-8859-1. The default value is UTF-8. BigQuery decodes the data after
+ the raw, binary data has been split using the values of the quote and
+ fieldDelimiter properties.
++++
+|[[fieldDelimiter]]`fieldDelimiter`|`String`|
++++
+[Optional] The separator for fields in a CSV file. BigQuery converts the
+ string to ISO-8859-1 encoding, and then uses the first byte of the encoded
+ string to split the data in its raw, binary state. BigQuery also supports the
+ escape sequence "\t" to specify a tab separator. The default value is a comma
+ (',').
++++
+|[[quote]]`quote`|`String`|
++++
+[Optional] The value that is used to quote data sections in a CSV file.
+ BigQuery converts the string to ISO-8859-1 encoding, and then uses the first
+ byte of the encoded string to split the data in its raw, binary state. The
+ default value is a double-quote ('"'). If your data does not contain quoted
+ sections, set the property value to an empty string. If your data contains
+ quoted newline characters, you must also set the allowQuotedNewlines property
+ to true.
++++
+|[[skipLeadingRows]]`skipLeadingRows`|`Number (Long)`|
++++
+[Optional] The number of rows at the top of a CSV file that BigQuery will
+ skip when reading the data. The default value is 0. This property is useful
+ if you have header rows in the file that should be skipped.
++++
+|===
+
+[[Dataset]]
+== Dataset
+
+++++
+ Model definition for Dataset.
+
+ <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
+ transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
+ <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[access]]`access`|`Array of link:dataobjects.html#Access[Access]`|
++++
+[Optional] An array of objects that define dataset access for one or more entities. You can set
+ this property when inserting or updating a dataset in order to control who is allowed to access
+ the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the
+ following entities: access.specialGroup: projectReaders; access.role: READER;
+ access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup: projectOwners;
+ access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;
++++
+|[[creationTime]]`creationTime`|`Number (Long)`|
++++
+[Output-only] The time when this dataset was created, in milliseconds since the epoch.
++++
+|[[datasetReference]]`datasetReference`|`link:dataobjects.html#DatasetReference[DatasetReference]`|
++++
+[Required] A reference that identifies the dataset.
++++
+|[[defaultTableExpirationMs]]`defaultTableExpirationMs`|`Number (Long)`|
++++
+[Optional] The default lifetime of all tables in the dataset, in milliseconds. The minimum
+ value is 3600000 milliseconds (one hour). Once this property is set, all newly-created tables
+ in the dataset will have an expirationTime property set to the creation time plus the value in
+ this property, and changing the value will only affect new tables, not existing ones. When the
+ expirationTime for a given table is reached, that table will be deleted automatically. If a
+ table's expirationTime is modified or removed before the table expires, or if you provide an
+ explicit expirationTime when creating a table, that value takes precedence over the default
+ expiration time indicated by this property.
++++
+|[[description]]`description`|`String`|
++++
+[Optional] A user-friendly description of the dataset.
++++
+|[[etag]]`etag`|`String`|
++++
+[Output-only] A hash of the resource.
++++
+|[[friendlyName]]`friendlyName`|`String`|
++++
+[Optional] A descriptive name for the dataset.
++++
+|[[id]]`id`|`String`|
++++
+[Output-only] The fully-qualified unique name of the dataset in the format projectId:datasetId.
+ The dataset name without the project name is given in the datasetId field. When creating a new
+ dataset, leave this field blank, and instead specify the datasetId field.
++++
+|[[kind]]`kind`|`String`|
++++
+[Output-only] The resource type.
++++
+|[[labels]]`labels`|`String`|
++++
+The labels associated with this dataset. You can use these to organize and group your datasets.
+ You can set this property when inserting or updating a dataset. See Labeling Datasets for more
+ information.
++++
+|[[lastModifiedTime]]`lastModifiedTime`|`Number (Long)`|
++++
+[Output-only] The date when this dataset or any of its tables was last modified, in
+ milliseconds since the epoch.
++++
+|[[location]]`location`|`String`|
++++
+The geographic location where the dataset should reside. Possible values include EU and US. The
+ default value is US.
++++
+|[[selfLink]]`selfLink`|`String`|
++++
+[Output-only] A URL that can be used to access the resource again. You can use this URL in Get
+ or Update requests to the resource.
++++
+|===
+
+[[DatasetList]]
+== DatasetList
+
+++++
+ Model definition for DatasetList.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[datasets]]`datasets`|`Array of link:dataobjects.html#Datasets[Datasets]`|
++++
+An array of the dataset resources in the project. Each resource contains
+ basic information. For full information about a particular dataset resource,
+ use the Datasets: get method. This property is omitted when there are no
+ datasets in the project.
++++
+|[[etag]]`etag`|`String`|
++++
+A hash value of the results page. You can use this property to determine if
+ the page has changed since the last request.
++++
+|[[kind]]`kind`|`String`|
++++
+The list type. This property always returns the value "bigquery#datasetList".
++++
+|[[nextPageToken]]`nextPageToken`|`String`|
++++
+A token that can be used to request the next results page. This property is
+ omitted on the final results page.
++++
+|===
+
+[[DatasetReference]]
+== DatasetReference
+
+++++
+ Model definition for DatasetReference.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[datasetId]]`datasetId`|`String`|
++++
+[Required] A unique ID for this dataset, without the project name. The ID
+ must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The
+ maximum length is 1,024 characters.
++++
+|[[projectId]]`projectId`|`String`|
++++
+[Optional] The ID of the project containing this dataset.
++++
+|===
+
+[[Datasets]]
+== Datasets
+
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[datasetReference]]`datasetReference`|`link:dataobjects.html#DatasetReference[DatasetReference]`|
++++
+The dataset reference. Use this property to access specific parts of the
+ dataset's ID, such as project ID or dataset ID.
++++
+|[[friendlyName]]`friendlyName`|`String`|
++++
+A descriptive name for the dataset, if one exists.
++++
+|[[id]]`id`|`String`|
++++
+The fully-qualified, unique, opaque ID of the dataset.
++++
+|[[kind]]`kind`|`String`|
++++
+The resource type. This property always returns the value "bigquery#dataset".
++++
+|[[labels]]`labels`|`String`|
++++
+The labels associated with this dataset. You can use these to organize and
+ group your datasets.
++++
+|===
+
+[[ErrorProto]]
+== ErrorProto
+
+++++
+ Model definition for ErrorProto.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[debugInfo]]`debugInfo`|`String`|
++++
+Debugging information. This property is internal to Google and should not be
+ used.
++++
+|[[location]]`location`|`String`|
++++
+Specifies where the error occurred, if present.
++++
+|[[message]]`message`|`String`|
++++
+A human-readable description of the error.
++++
+|[[reason]]`reason`|`String`|
++++
+A short error code that summarizes the error.
++++
+|===
+
+[[ExplainQueryStage]]
+== ExplainQueryStage
+
+++++
+ Model definition for ExplainQueryStage.
+
+ <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
+ transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
+ <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[computeMsAvg]]`computeMsAvg`|`Number (Long)`|
++++
+Milliseconds the average shard spent on CPU-bound tasks.
++++
+|[[computeMsMax]]`computeMsMax`|`Number (Long)`|
++++
+Milliseconds the slowest shard spent on CPU-bound tasks.
++++
+|[[computeRatioAvg]]`computeRatioAvg`|`Number (Double)`|
++++
+Relative amount of time the average shard spent on CPU-bound tasks.
++++
+|[[computeRatioMax]]`computeRatioMax`|`Number (Double)`|
++++
+Relative amount of time the slowest shard spent on CPU-bound tasks.
++++
+|[[id]]`id`|`Number (Long)`|
++++
+Unique ID for stage within plan.
++++
+|[[name]]`name`|`String`|
++++
+Human-readable name for stage.
++++
+|[[readMsAvg]]`readMsAvg`|`Number (Long)`|
++++
+Milliseconds the average shard spent reading input.
++++
+|[[readMsMax]]`readMsMax`|`Number (Long)`|
++++
+Milliseconds the slowest shard spent reading input.
++++
+|[[readRatioAvg]]`readRatioAvg`|`Number (Double)`|
++++
+Relative amount of time the average shard spent reading input.
++++
+|[[readRatioMax]]`readRatioMax`|`Number (Double)`|
++++
+Relative amount of time the slowest shard spent reading input.
++++
+|[[recordsRead]]`recordsRead`|`Number (Long)`|
++++
+Number of records read into the stage.
++++
+|[[recordsWritten]]`recordsWritten`|`Number (Long)`|
++++
+Number of records written by the stage.
++++
+|[[shuffleOutputBytes]]`shuffleOutputBytes`|`Number (Long)`|
++++
+Total number of bytes written to shuffle.
++++
+|[[shuffleOutputBytesSpilled]]`shuffleOutputBytesSpilled`|`Number (Long)`|
++++
+Total number of bytes written to shuffle and spilled to disk.
++++
+|[[status]]`status`|`String`|
++++
+Current status for the stage.
++++
+|[[steps]]`steps`|`Array of link:dataobjects.html#ExplainQueryStep[ExplainQueryStep]`|
++++
+List of operations within the stage in dependency order (approximately chronological).
++++
+|[[waitMsAvg]]`waitMsAvg`|`Number (Long)`|
++++
+Milliseconds the average shard spent waiting to be scheduled.
++++
+|[[waitMsMax]]`waitMsMax`|`Number (Long)`|
++++
+Milliseconds the slowest shard spent waiting to be scheduled.
++++
+|[[waitRatioAvg]]`waitRatioAvg`|`Number (Double)`|
++++
+Relative amount of time the average shard spent waiting to be scheduled.
++++
+|[[waitRatioMax]]`waitRatioMax`|`Number (Double)`|
++++
+Relative amount of time the slowest shard spent waiting to be scheduled.
++++
+|[[writeMsAvg]]`writeMsAvg`|`Number (Long)`|
++++
+Milliseconds the average shard spent on writing output.
++++
+|[[writeMsMax]]`writeMsMax`|`Number (Long)`|
++++
+Milliseconds the slowest shard spent on writing output.
++++
+|[[writeRatioAvg]]`writeRatioAvg`|`Number (Double)`|
++++
+Relative amount of time the average shard spent on writing output.
++++
+|[[writeRatioMax]]`writeRatioMax`|`Number (Double)`|
++++
+Relative amount of time the slowest shard spent on writing output.
++++
+|===
+
+[[ExplainQueryStep]]
+== ExplainQueryStep
+
+++++
+ Model definition for ExplainQueryStep.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[kind]]`kind`|`String`|
++++
+Machine-readable operation type.
++++
+|[[substeps]]`substeps`|`Array of String`|
++++
+Human-readable stage descriptions.
++++
+|===
+
+[[ExternalDataConfiguration]]
+== ExternalDataConfiguration
+
+++++
+ Model definition for ExternalDataConfiguration.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[autodetect]]`autodetect`|`Boolean`|
++++
+Try to detect schema and format options automatically. Any option specified
+ explicitly will be honored.
++++
+|[[bigtableOptions]]`bigtableOptions`|`link:dataobjects.html#BigtableOptions[BigtableOptions]`|
++++
+[Optional] Additional options if sourceFormat is set to BIGTABLE.
++++
+|[[compression]]`compression`|`String`|
++++
+[Optional] The compression type of the data source. Possible values include
+ GZIP and NONE. The default value is NONE. This setting is ignored for Google
+ Cloud Bigtable, Google Cloud Datastore backups and Avro formats.
++++
+|[[csvOptions]]`csvOptions`|`link:dataobjects.html#CsvOptions[CsvOptions]`|
++++
+Additional properties to set if sourceFormat is set to CSV.
++++
+|[[googleSheetsOptions]]`googleSheetsOptions`|`link:dataobjects.html#GoogleSheetsOptions[GoogleSheetsOptions]`|
++++
+[Optional] Additional options if sourceFormat is set to GOOGLE_SHEETS.
++++
+|[[ignoreUnknownValues]]`ignoreUnknownValues`|`Boolean`|
++++
+[Optional] Indicates if BigQuery should allow extra values that are not
+ represented in the table schema. If true, the extra values are ignored. If
+ false, records with extra columns are treated as bad records, and if there
+ are too many bad records, an invalid error is returned in the job result. The
+ default value is false. The sourceFormat property determines what BigQuery
+ treats as an extra value: CSV: Trailing columns JSON: Named values that don't
+ match any column names Google Cloud Bigtable: This setting is ignored. Google
+ Cloud Datastore backups: This setting is ignored. Avro: This setting is
+ ignored.
++++
+|[[maxBadRecords]]`maxBadRecords`|`Number (Integer)`|
++++
+[Optional] The maximum number of bad records that BigQuery can ignore when
+ reading data. If the number of bad records exceeds this value, an invalid
+ error is returned in the job result. The default value is 0, which requires
+ that all records are valid. This setting is ignored for Google Cloud
+ Bigtable, Google Cloud Datastore backups and Avro formats.
++++
+|[[schema]]`schema`|`link:dataobjects.html#TableSchema[TableSchema]`|
++++
+[Optional] The schema for the data. Schema is required for CSV and JSON
+ formats. Schema is disallowed for Google Cloud Bigtable, Cloud Datastore
+ backups, and Avro formats.
++++
+|[[sourceFormat]]`sourceFormat`|`String`|
++++
+[Required] The data format. For CSV files, specify "CSV". For Google sheets,
+ specify "GOOGLE_SHEETS". For newline-delimited JSON, specify
+ "NEWLINE_DELIMITED_JSON". For Avro files, specify "AVRO". For Google Cloud
+ Datastore backups, specify "DATASTORE_BACKUP". [Beta] For Google Cloud
+ Bigtable, specify "BIGTABLE".
++++
+|[[sourceUris]]`sourceUris`|`Array of String`|
++++
+[Required] The fully-qualified URIs that point to your data in Google Cloud.
+ For Google Cloud Storage URIs: Each URI can contain one '*' wildcard
+ character and it must come after the 'bucket' name. Size limits related to
+ load jobs apply to external data sources. For Google Cloud Bigtable URIs:
+ Exactly one URI can be specified and it has be a fully specified and valid
+ HTTPS URL for a Google Cloud Bigtable table. For Google Cloud Datastore
+ backups, exactly one URI can be specified. Also, the '*' wildcard character
+ is not allowed.
++++
+|===
+
+[[GetQueryResultsResponse]]
+== GetQueryResultsResponse
+
+++++
+ Model definition for GetQueryResultsResponse.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[cacheHit]]`cacheHit`|`Boolean`|
++++
+Whether the query result was fetched from the query cache.
++++
+|[[errors]]`errors`|`Array of link:dataobjects.html#ErrorProto[ErrorProto]`|
++++
+[Output-only] The first errors or warnings encountered during the running of
+ the job. The final message includes the number of errors that caused the
+ process to stop. Errors here do not necessarily mean that the job has
+ completed or was unsuccessful.
++++
+|[[etag]]`etag`|`String`|
++++
+A hash of this response.
++++
+|[[jobComplete]]`jobComplete`|`Boolean`|
++++
+Whether the query has completed or not. If rows or totalRows are present,
+ this will always be true. If this is false, totalRows will not be available.
++++
+|[[jobReference]]`jobReference`|`link:dataobjects.html#JobReference[JobReference]`|
++++
+Reference to the BigQuery Job that was created to run the query. This field
+ will be present even if the original request timed out, in which case
+ GetQueryResults can be used to read the results once the query has completed.
+ Since this API only returns the first page of results, subsequent pages can
+ be fetched via the same mechanism (GetQueryResults).
++++
+|[[kind]]`kind`|`String`|
++++
+The resource type of the response.
++++
+|[[numDmlAffectedRows]]`numDmlAffectedRows`|`Number (Long)`|
++++
+[Output-only] The number of rows affected by a DML statement. Present only
+ for DML statements INSERT, UPDATE or DELETE.
++++
+|[[pageToken]]`pageToken`|`String`|
++++
+A token used for paging results.
++++
+|[[rows]]`rows`|`Array of link:dataobjects.html#TableRow[TableRow]`|
++++
+An object with as many results as can be contained within the maximum
+ permitted reply size. To get any additional rows, you can call
+ GetQueryResults and specify the jobReference returned above. Present only
+ when the query completes successfully.
++++
+|[[schema]]`schema`|`link:dataobjects.html#TableSchema[TableSchema]`|
++++
+The schema of the results. Present only when the query completes
+ successfully.
++++
+|[[totalBytesProcessed]]`totalBytesProcessed`|`Number (Long)`|
++++
+The total number of bytes processed for this query.
++++
+|===
+
+[[GoogleSheetsOptions]]
+== GoogleSheetsOptions
+
+++++
+ Model definition for GoogleSheetsOptions.
+
+ <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
+ transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
+ <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[skipLeadingRows]]`skipLeadingRows`|`Number (Long)`|
++++
+[Optional] The number of rows at the top of a sheet that BigQuery will skip when reading the
+ data. The default value is 0. This property is useful if you have header rows that should be
+ skipped. When autodetect is on, behavior is the following: * skipLeadingRows unspecified -
+ Autodetect tries to detect headers in the first row. If they are not detected, the row is read
+ as data. Otherwise data is read starting from the second row. * skipLeadingRows is 0 -
+ Instructs autodetect that there are no headers and data should be read starting from the first
+ row. * skipLeadingRows = N > 0 - Autodetect skips N-1 rows and tries to detect headers in row
+ N. If headers are not detected, row N is just skipped. Otherwise row N is used to extract
+ column names for the detected schema.
++++
+|===
+
+[[InsertErrors]]
+== InsertErrors
+
+++++
+ Model definition for TableDataInsertAllResponseInsertErrors.
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[errors]]`errors`|`Array of link:dataobjects.html#ErrorProto[ErrorProto]`|
++++
+Error information for the row indicated by the index property.
++++
+|[[index]]`index`|`Number (Long)`|
++++
+The index of the row that error applies to.
++++
+|===
+
+[[Job]]
+== Job
+
+++++
+ Model definition for Job.
+
+ <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
+ transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
+ <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[configuration]]`configuration`|`link:dataobjects.html#JobConfiguration[JobConfiguration]`|
++++
+[Required] Describes the job configuration.
++++
+|[[etag]]`etag`|`String`|
++++
+[Output-only] A hash of this resource.
++++
+|[[id]]`id`|`String`|
++++
+[Output-only] Opaque ID field of the job
++++
+|[[jobReference]]`jobReference`|`link:dataobjects.html#JobReference[JobReference]`|
++++
+[Optional] Reference describing the unique-per-user name of the job.
++++
+|[[kind]]`kind`|`String`|
++++
+[Output-only] The type of the resource.
++++
+|[[selfLink]]`selfLink`|`String`|
++++
+[Output-only] A URL that can be used to access this resource again.
++++
+|[[statistics]]`statistics`|`link:dataobjects.html#JobStatistics[JobStatistics]`|
++++
+[Output-only] Information about the job, including starting time and ending time of the job.
++++
+|[[status]]`status`|`link:dataobjects.html#JobStatus[JobStatus]`|
++++
+[Output-only] The status of this job. Examine this value when polling an asynchronous job to
+ see if the job is complete.
++++
+|[[userEmail]]`userEmail`|`String`|
++++
+[Output-only] Email address of the user who ran the job.
++++
+|===
+
+[[JobCancelResponse]]
+== JobCancelResponse
+
+++++
+ Model definition for JobCancelResponse.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[job]]`job`|`link:dataobjects.html#Job[Job]`|
++++
+The final state of the job.
++++
+|[[kind]]`kind`|`String`|
++++
+The resource type of the response.
++++
+|===
+
+[[JobConfiguration]]
+== JobConfiguration
+
+++++
+ Model definition for JobConfiguration.
+
+ <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
+ transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
+ <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[copy]]`copy`|`link:dataobjects.html#JobConfigurationTableCopy[JobConfigurationTableCopy]`|
++++
+[Pick one] Copies a table.
++++
+|[[dryRun]]`dryRun`|`Boolean`|
++++
+[Optional] If set, don't actually run this job. A valid query will return a mostly empty
+ response with some processing statistics, while an invalid query will return the same error it
+ would if it wasn't a dry run. Behavior of non-query jobs is undefined.
++++
+|[[extract]]`extract`|`link:dataobjects.html#JobConfigurationExtract[JobConfigurationExtract]`|
++++
+[Pick one] Configures an extract job.
++++
+|[[labels]]`labels`|`String`|
++++
+[Experimental] The labels associated with this job. You can use these to organize and group
+ your jobs. Label keys and values can be no longer than 63 characters, can only contain
+ lowercase letters, numeric characters, underscores and dashes. International characters are
+ allowed. Label values are optional. Label keys must start with a letter and each label in the
+ list must have a different key.
++++
+|[[load]]`load`|`link:dataobjects.html#JobConfigurationLoad[JobConfigurationLoad]`|
++++
+[Pick one] Configures a load job.
++++
+|[[query]]`query`|`link:dataobjects.html#JobConfigurationQuery[JobConfigurationQuery]`|
++++
+[Pick one] Configures a query job.
++++
+|===
+
+[[JobConfigurationExtract]]
+== JobConfigurationExtract
+
+++++
+ Model definition for JobConfigurationExtract.
+
+ <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
+ transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
+ <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[compression]]`compression`|`String`|
++++
+[Optional] The compression type to use for exported files. Possible values include GZIP and
+ NONE. The default value is NONE.
++++
+|[[destinationFormat]]`destinationFormat`|`String`|
++++
+[Optional] The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON and
+ AVRO. The default value is CSV. Tables with nested or repeated fields cannot be exported as
+ CSV.
++++
+|[[destinationUri]]`destinationUri`|`String`|
++++
+[Pick one] DEPRECATED: Use destinationUris instead, passing only one URI as necessary. The
+ fully-qualified Google Cloud Storage URI where the extracted table should be written.
++++
+|[[destinationUris]]`destinationUris`|`Array of String`|
++++
+[Pick one] A list of fully-qualified Google Cloud Storage URIs where the extracted table should
+ be written.
++++
+|[[fieldDelimiter]]`fieldDelimiter`|`String`|
++++
+[Optional] Delimiter to use between fields in the exported data. Default is ','
++++
+|[[printHeader]]`printHeader`|`Boolean`|
++++
+[Optional] Whether to print out a header row in the results. Default is true.
++++
+|[[sourceTable]]`sourceTable`|`link:dataobjects.html#TableReference[TableReference]`|
++++
+[Required] A reference to the table being exported.
++++
+|===
+
+[[JobConfigurationLoad]]
+== JobConfigurationLoad
+
+++++
+ Model definition for JobConfigurationLoad.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[allowJaggedRows]]`allowJaggedRows`|`Boolean`|
++++
+[Optional] Accept rows that are missing trailing optional columns. The
+ missing values are treated as nulls. If false, records with missing trailing
+ columns are treated as bad records, and if there are too many bad records, an
+ invalid error is returned in the job result. The default value is false. Only
+ applicable to CSV, ignored for other formats.
++++
+|[[allowQuotedNewlines]]`allowQuotedNewlines`|`Boolean`|
++++
+Indicates if BigQuery should allow quoted data sections that contain newline
+ characters in a CSV file. The default value is false.
++++
+|[[autodetect]]`autodetect`|`Boolean`|
++++
+Indicates if we should automatically infer the options and schema for CSV and
+ JSON sources.
++++
+|[[createDisposition]]`createDisposition`|`String`|
++++
+[Optional] Specifies whether the job is allowed to create new tables. The
+ following values are supported: CREATE_IF_NEEDED: If the table does not
+ exist, BigQuery creates the table. CREATE_NEVER: The table must already
+ exist. If it does not, a 'notFound' error is returned in the job result. The
+ default value is CREATE_IF_NEEDED. Creation, truncation and append actions
+ occur as one atomic update upon job completion.
++++
+|[[destinationTable]]`destinationTable`|`link:dataobjects.html#TableReference[TableReference]`|
++++
+[Required] The destination table to load the data into.
++++
+|[[encoding]]`encoding`|`String`|
++++
+[Optional] The character encoding of the data. The supported values are UTF-8
+ or ISO-8859-1. The default value is UTF-8. BigQuery decodes the data after
+ the raw, binary data has been split using the values of the quote and
+ fieldDelimiter properties.
++++
+|[[fieldDelimiter]]`fieldDelimiter`|`String`|
++++
+[Optional] The separator for fields in a CSV file. The separator can be any
+ ISO-8859-1 single- byte character. To use a character in the range 128-255,
+ you must encode the character as UTF8. BigQuery converts the string to
+ ISO-8859-1 encoding, and then uses the first byte of the encoded string to
+ split the data in its raw, binary state. BigQuery also supports the escape
+ sequence "\t" to specify a tab separator. The default value is a comma (',').
++++
+|[[ignoreUnknownValues]]`ignoreUnknownValues`|`Boolean`|
++++
+[Optional] Indicates if BigQuery should allow extra values that are not
+ represented in the table schema. If true, the extra values are ignored. If
+ false, records with extra columns are treated as bad records, and if there
+ are too many bad records, an invalid error is returned in the job result. The
+ default value is false. The sourceFormat property determines what BigQuery
+ treats as an extra value: CSV: Trailing columns JSON: Named values that don't
+ match any column names
++++
+|[[maxBadRecords]]`maxBadRecords`|`Number (Integer)`|
++++
+[Optional] The maximum number of bad records that BigQuery can ignore when
+ running the job. If the number of bad records exceeds this value, an invalid
+ error is returned in the job result. The default value is 0, which requires
+ that all records are valid.
++++
+|[[nullMarker]]`nullMarker`|`String`|
++++
+[Optional] Specifies a string that represents a null value in a CSV file. For
+ example, if you specify "\N", BigQuery interprets "\N" as a null value when
+ loading a CSV file. The default value is the empty string. If you set this
+ property to a custom value, BigQuery throws an error if an empty string is
+ present for all data types except for STRING and BYTE. For STRING and BYTE
+ columns, BigQuery interprets the empty string as an empty value.
++++
+|[[projectionFields]]`projectionFields`|`Array of String`|
++++
+If sourceFormat is set to "DATASTORE_BACKUP", indicates which entity
+ properties to load into BigQuery from a Cloud Datastore backup. Property
+ names are case sensitive and must be top-level properties. If no properties
+ are specified, BigQuery loads all properties. If any named property isn't
+ found in the Cloud Datastore backup, an invalid error is returned in the job
+ result.
++++
+|[[quote]]`quote`|`String`|
++++
+[Optional] The value that is used to quote data sections in a CSV file.
+ BigQuery converts the string to ISO-8859-1 encoding, and then uses the first
+ byte of the encoded string to split the data in its raw, binary state. The
+ default value is a double-quote ('"'). If your data does not contain quoted
+ sections, set the property value to an empty string. If your data contains
+ quoted newline characters, you must also set the allowQuotedNewlines property
+ to true.
++++
+|[[schema]]`schema`|`link:dataobjects.html#TableSchema[TableSchema]`|
++++
+[Optional] The schema for the destination table. The schema can be omitted if
+ the destination table already exists, or if you're loading data from Google
+ Cloud Datastore.
++++
+|[[schemaInline]]`schemaInline`|`String`|
++++
+[Deprecated] The inline schema. For CSV schemas, specify as
+ "Field1:Type1[,Field2:Type2]*". For example, "foo:STRING, bar:INTEGER,
+ baz:FLOAT".
++++
+|[[schemaInlineFormat]]`schemaInlineFormat`|`String`|
++++
+[Deprecated] The format of the schemaInline property.
++++
+|[[schemaUpdateOptions]]`schemaUpdateOptions`|`Array of String`|
++++
+[Experimental] Allows the schema of the desitination table to be updated as a
+ side effect of the load job if a schema is autodetected or supplied in the
+ job configuration. Schema update options are supported in two cases: when
+ writeDisposition is WRITE_APPEND; when writeDisposition is WRITE_TRUNCATE and
+ the destination table is a partition of a table, specified by partition
+ decorators. For normal tables, WRITE_TRUNCATE will always overwrite the
+ schema. One or more of the following values are specified:
+ ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
+ ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original
+ schema to nullable.
++++
+|[[skipLeadingRows]]`skipLeadingRows`|`Number (Integer)`|
++++
+[Optional] The number of rows at the top of a CSV file that BigQuery will
+ skip when loading the data. The default value is 0. This property is useful
+ if you have header rows in the file that should be skipped.
++++
+|[[sourceFormat]]`sourceFormat`|`String`|
++++
+[Optional] The format of the data files. For CSV files, specify "CSV". For
+ datastore backups, specify "DATASTORE_BACKUP". For newline-delimited JSON,
+ specify "NEWLINE_DELIMITED_JSON". For Avro, specify "AVRO". The default value
+ is CSV.
++++
+|[[sourceUris]]`sourceUris`|`Array of String`|
++++
+[Required] The fully-qualified URIs that point to your data in Google Cloud.
+ For Google Cloud Storage URIs: Each URI can contain one '*' wildcard
+ character and it must come after the 'bucket' name. Size limits related to
+ load jobs apply to external data sources. For Google Cloud Bigtable URIs:
+ Exactly one URI can be specified and it has be a fully specified and valid
+ HTTPS URL for a Google Cloud Bigtable table. For Google Cloud Datastore
+ backups: Exactly one URI can be specified. Also, the '*' wildcard character
+ is not allowed.
++++
+|[[timePartitioning]]`timePartitioning`|`link:dataobjects.html#TimePartitioning[TimePartitioning]`|
++++
+[Experimental] If specified, configures time-based partitioning for the
+ destination table.
++++
+|[[writeDisposition]]`writeDisposition`|`String`|
++++
+[Optional] Specifies the action that occurs if the destination table already
+ exists. The following values are supported: WRITE_TRUNCATE: If the table
+ already exists, BigQuery overwrites the table data. WRITE_APPEND: If the
+ table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If
+ the table already exists and contains data, a 'duplicate' error is returned
+ in the job result. The default value is WRITE_APPEND. Each action is atomic
+ and only occurs if BigQuery is able to complete the job successfully.
+ Creation, truncation and append actions occur as one atomic update upon job
+ completion.
++++
+|===
+
+[[JobConfigurationQuery]]
+== JobConfigurationQuery
+
+++++
+ Model definition for JobConfigurationQuery.
+
+ <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
+ transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
+ <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[allowLargeResults]]`allowLargeResults`|`Boolean`|
++++
+[Optional] If true and query uses legacy SQL dialect, allows the query to produce arbitrarily
+ large result tables at a slight cost in performance. Requires destinationTable to be set. For
+ standard SQL queries, this flag is ignored and large results are always allowed. However, you
+ must still set destinationTable when result size exceeds the allowed maximum response size.
++++
+|[[createDisposition]]`createDisposition`|`String`|
++++
+[Optional] Specifies whether the job is allowed to create new tables. The following values are
+ supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+ CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in
+ the job result. The default value is CREATE_IF_NEEDED. Creation, truncation and append actions
+ occur as one atomic update upon job completion.
++++
+|[[defaultDataset]]`defaultDataset`|`link:dataobjects.html#DatasetReference[DatasetReference]`|
++++
+[Optional] Specifies the default dataset to use for unqualified table names in the query.
++++
+|[[destinationTable]]`destinationTable`|`link:dataobjects.html#TableReference[TableReference]`|
++++
+[Optional] Describes the table where the query results should be stored. If not present, a new
+ table will be created to store the results. This property must be set for large results that
+ exceed the maximum response size.
++++
+|[[flattenResults]]`flattenResults`|`Boolean`|
++++
+[Optional] If true and query uses legacy SQL dialect, flattens all nested and repeated fields
+ in the query results. allowLargeResults must be true if this is set to false. For standard SQL
+ queries, this flag is ignored and results are never flattened.
++++
+|[[maximumBillingTier]]`maximumBillingTier`|`Number (Integer)`|
++++
+[Optional] Limits the billing tier for this job. Queries that have resource usage beyond this
+ tier will fail (without incurring a charge). If unspecified, this will be set to your project
+ default.
++++
+|[[maximumBytesBilled]]`maximumBytesBilled`|`Number (Long)`|
++++
+[Optional] Limits the bytes billed for this job. Queries that will have bytes billed beyond
+ this limit will fail (without incurring a charge). If unspecified, this will be set to your
+ project default.
++++
+|[[parameterMode]]`parameterMode`|`String`|
++++
+Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use
+ named (@myparam) query parameters in this query.
++++
+|[[preserveNulls]]`preserveNulls`|`Boolean`|
++++
+[Deprecated] This property is deprecated.
++++
+|[[priority]]`priority`|`String`|
++++
+[Optional] Specifies a priority for the query. Possible values include INTERACTIVE and BATCH.
+ The default value is INTERACTIVE.
++++
+|[[query]]`query`|`String`|
++++
+[Required] SQL query text to execute. The useLegacySql field can be used to indicate whether
+ the query uses legacy SQL or standard SQL.
++++
+|[[queryParameters]]`queryParameters`|`Array of link:dataobjects.html#QueryParameter[QueryParameter]`|
++++
+Query parameters for standard SQL queries.
++++
+|[[schemaUpdateOptions]]`schemaUpdateOptions`|`Array of String`|
++++
+[Experimental] Allows the schema of the destination table to be updated as a side effect of the
+ query job. Schema update options are supported in two cases: when writeDisposition is
+ WRITE_APPEND; when writeDisposition is WRITE_TRUNCATE and the destination table is a partition
+ of a table, specified by partition decorators. For normal tables, WRITE_TRUNCATE will always
+ overwrite the schema. One or more of the following values are specified: ALLOW_FIELD_ADDITION:
+ allow adding a nullable field to the schema. ALLOW_FIELD_RELAXATION: allow relaxing a required
+ field in the original schema to nullable.
++++
+|[[tableDefinitions]]`tableDefinitions`|`link:dataobjects.html#ExternalDataConfiguration[ExternalDataConfiguration]`|
++++
+[Optional] If querying an external data source outside of BigQuery, describes the data format,
+ location and other properties of the data source. By defining these properties, the data source
+ can then be queried as if it were a standard BigQuery table.
++++
+|[[timePartitioning]]`timePartitioning`|`link:dataobjects.html#TimePartitioning[TimePartitioning]`|
++++
+[Experimental] If specified, configures time-based partitioning for the destination table.
++++
+|[[useLegacySql]]`useLegacySql`|`Boolean`|
++++
+Specifies whether to use BigQuery's legacy SQL dialect for this query. The default value is
+ true. If set to false, the query will use BigQuery's standard SQL:
+ https://cloud.google.com/bigquery/sql-reference/ When useLegacySql is set to false, the value
+ of flattenResults is ignored; query will be run as if flattenResults is false.
++++
+|[[useQueryCache]]`useQueryCache`|`Boolean`|
++++
+[Optional] Whether to look for the result in the query cache. The query cache is a best-effort
+ cache that will be flushed whenever tables in the query are modified. Moreover, the query cache
+ is only available when a query does not have a destination table specified. The default value
+ is true.
++++
+|[[userDefinedFunctionResources]]`userDefinedFunctionResources`|`Array of link:dataobjects.html#UserDefinedFunctionResource[UserDefinedFunctionResource]`|
++++
+Describes user-defined function resources used in the query.
++++
+|[[writeDisposition]]`writeDisposition`|`String`|
++++
+[Optional] Specifies the action that occurs if the destination table already exists. The
+ following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery
+ overwrites the table data and uses the schema from the query result. WRITE_APPEND: If the table
+ already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already
+ exists and contains data, a 'duplicate' error is returned in the job result. The default value
+ is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job
+ successfully. Creation, truncation and append actions occur as one atomic update upon job
+ completion.
++++
+|===
+
+[[JobConfigurationTableCopy]]
+== JobConfigurationTableCopy
+
+++++
+ Model definition for JobConfigurationTableCopy.
+
+ <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
+ transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
+ <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[createDisposition]]`createDisposition`|`String`|
++++
+[Optional] Specifies whether the job is allowed to create new tables. The following values are
+ supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+ CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in
+ the job result. The default value is CREATE_IF_NEEDED. Creation, truncation and append actions
+ occur as one atomic update upon job completion.
++++
+|[[destinationTable]]`destinationTable`|`link:dataobjects.html#TableReference[TableReference]`|
++++
+[Required] The destination table
++++
+|[[sourceTable]]`sourceTable`|`link:dataobjects.html#TableReference[TableReference]`|
++++
+[Pick one] Source table to copy.
++++
+|[[sourceTables]]`sourceTables`|`Array of link:dataobjects.html#TableReference[TableReference]`|
++++
+[Pick one] Source tables to copy.
++++
+|[[writeDisposition]]`writeDisposition`|`String`|
++++
+[Optional] Specifies the action that occurs if the destination table already exists. The
+ following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery
+ overwrites the table data. WRITE_APPEND: If the table already exists, BigQuery appends the data
+ to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error
+ is returned in the job result. The default value is WRITE_EMPTY. Each action is atomic and only
+ occurs if BigQuery is able to complete the job successfully. Creation, truncation and append
+ actions occur as one atomic update upon job completion.
++++
+|===
+
+[[JobList]]
+== JobList
+
+++++
+ Model definition for JobList.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[etag]]`etag`|`String`|
++++
+A hash of this page of results.
++++
+|[[jobs]]`jobs`|`Array of link:dataobjects.html#Jobs[Jobs]`|
++++
+List of jobs that were requested.
++++
+|[[kind]]`kind`|`String`|
++++
+The resource type of the response.
++++
+|[[nextPageToken]]`nextPageToken`|`String`|
++++
+A token to request the next page of results.
++++
+|===
+
+[[JobReference]]
+== JobReference
+
+++++
+ Model definition for JobReference.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[jobId]]`jobId`|`String`|
++++
+[Required] The ID of the job. The ID must contain only letters (a-z, A-Z),
+ numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024
+ characters.
++++
+|[[projectId]]`projectId`|`String`|
++++
+[Required] The ID of the project containing this job.
++++
+|===
+
+[[JobStatistics]]
+== JobStatistics
+
+++++
+ Model definition for JobStatistics.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[creationTime]]`creationTime`|`Number (Long)`|
++++
+[Output-only] Creation time of this job, in milliseconds since the epoch.
+ This field will be present on all jobs.
++++
+|[[endTime]]`endTime`|`Number (Long)`|
++++
+[Output-only] End time of this job, in milliseconds since the epoch. This
+ field will be present whenever a job is in the DONE state.
++++
+|[[extract]]`extract`|`link:dataobjects.html#JobStatistics4[JobStatistics4]`|
++++
+[Output-only] Statistics for an extract job.
++++
+|[[load]]`load`|`link:dataobjects.html#JobStatistics3[JobStatistics3]`|
++++
+[Output-only] Statistics for a load job.
++++
+|[[query]]`query`|`link:dataobjects.html#JobStatistics2[JobStatistics2]`|
++++
+[Output-only] Statistics for a query job.
++++
+|[[startTime]]`startTime`|`Number (Long)`|
++++
+[Output-only] Start time of this job, in milliseconds since the epoch. This
+ field will be present when the job transitions from the PENDING state to
+ either RUNNING or DONE.
++++
+|[[totalBytesProcessed]]`totalBytesProcessed`|`Number (Long)`|
++++
+[Output-only] [Deprecated] Use the bytes processed in the query statistics
+ instead.
++++
+|===
+
+[[JobStatistics2]]
+== JobStatistics2
+
+++++
+ Model definition for JobStatistics2.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[billingTier]]`billingTier`|`Number (Integer)`|
++++
+[Output-only] Billing tier for the job.
++++
+|[[cacheHit]]`cacheHit`|`Boolean`|
++++
+[Output-only] Whether the query result was fetched from the query cache.
++++
+|[[numDmlAffectedRows]]`numDmlAffectedRows`|`Number (Long)`|
++++
+[Output-only] The number of rows affected by a DML statement. Present only
+ for DML statements INSERT, UPDATE or DELETE.
++++
+|[[queryPlan]]`queryPlan`|`Array of link:dataobjects.html#ExplainQueryStage[ExplainQueryStage]`|
++++
+[Output-only] Describes execution plan for the query.
++++
+|[[referencedTables]]`referencedTables`|`Array of link:dataobjects.html#TableReference[TableReference]`|
++++
+[Output-only, Experimental] Referenced tables for the job. Queries that
+ reference more than 50 tables will not have a complete list.
++++
+|[[schema]]`schema`|`link:dataobjects.html#TableSchema[TableSchema]`|
++++
+[Output-only, Experimental] The schema of the results. Present only for
+ successful dry run of non-legacy SQL queries.
++++
+|[[statementType]]`statementType`|`String`|
++++
+[Output-only, Experimental] The type of query statement, if valid.
++++
+|[[totalBytesBilled]]`totalBytesBilled`|`Number (Long)`|
++++
+[Output-only] Total bytes billed for the job.
++++
+|[[totalBytesProcessed]]`totalBytesProcessed`|`Number (Long)`|
++++
+[Output-only] Total bytes processed for the job.
++++
+|[[undeclaredQueryParameters]]`undeclaredQueryParameters`|`Array of link:dataobjects.html#QueryParameter[QueryParameter]`|
++++
+[Output-only, Experimental] Standard SQL only: list of undeclared query
+ parameters detected during a dry run validation.
++++
+|===
+
+[[JobStatistics3]]
+== JobStatistics3
+
+++++
+ Model definition for JobStatistics3.
+
+ <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
+ transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
+ <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[badRecords]]`badRecords`|`Number (Long)`|
++++
+[Output-only] The number of bad records encountered. Note that if the job has failed because of
+ more bad records encountered than the maximum allowed in the load job configuration, then this
+ number can be less than the total number of bad records present in the input data.
++++
+|[[inputFileBytes]]`inputFileBytes`|`Number (Long)`|
++++
+[Output-only] Number of bytes of source data in a load job.
++++
+|[[inputFiles]]`inputFiles`|`Number (Long)`|
++++
+[Output-only] Number of source files in a load job.
++++
+|[[outputBytes]]`outputBytes`|`Number (Long)`|
++++
+[Output-only] Size of the loaded data in bytes. Note that while a load job is in the running
+ state, this value may change.
++++
+|[[outputRows]]`outputRows`|`Number (Long)`|
++++
+[Output-only] Number of rows imported in a load job. Note that while an import job is in the
+ running state, this value may change.
++++
+|===
+
+[[JobStatistics4]]
+== JobStatistics4
+
+++++
+ Model definition for JobStatistics4.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[destinationUriFileCounts]]`destinationUriFileCounts`|`Array of Number (Long)`|
++++
+[Output-only] Number of files per destination URI or URI pattern specified in
+ the extract configuration. These values will be in the same order as the URIs
+ specified in the 'destinationUris' field.
++++
+|===
+
+[[JobStatus]]
+== JobStatus
+
+++++
+ Model definition for JobStatus.
+
+ <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
+ transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
+ <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[errorResult]]`errorResult`|`link:dataobjects.html#ErrorProto[ErrorProto]`|
++++
+[Output-only] Final error result of the job. If present, indicates that the job has completed
+ and was unsuccessful.
++++
+|[[errors]]`errors`|`Array of link:dataobjects.html#ErrorProto[ErrorProto]`|
++++
+[Output-only] The first errors encountered during the running of the job. The final message
+ includes the number of errors that caused the process to stop. Errors here do not necessarily
+ mean that the job has completed or was unsuccessful.
++++
+|[[state]]`state`|`String`|
++++
+[Output-only] Running state of the job.
++++
+|===
+
+[[Jobs]]
+== Jobs
+
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[configuration]]`configuration`|`link:dataobjects.html#JobConfiguration[JobConfiguration]`|
++++
+[Full-projection-only] Specifies the job configuration.
++++
+|[[errorResult]]`errorResult`|`link:dataobjects.html#ErrorProto[ErrorProto]`|
++++
+A result object that will be present only if the job has failed.
++++
+|[[id]]`id`|`String`|
++++
+Unique opaque ID of the job.
++++
+|[[jobReference]]`jobReference`|`link:dataobjects.html#JobReference[JobReference]`|
++++
+Job reference uniquely identifying the job.
++++
+|[[kind]]`kind`|`String`|
++++
+The resource type.
++++
+|[[state]]`state`|`String`|
++++
+Running state of the job. When the state is DONE, errorResult can be checked
+ to determine whether the job succeeded or failed.
++++
+|[[statistics]]`statistics`|`link:dataobjects.html#JobStatistics[JobStatistics]`|
++++
+[Output-only] Information about the job, including starting time and ending
+ time of the job.
++++
+|[[status]]`status`|`link:dataobjects.html#JobStatus[JobStatus]`|
++++
+[Full-projection-only] Describes the state of the job.
++++
+|[[userEmail]]`userEmail`|`String`|
++++
+[Full-projection-only] Email address of the user who ran the job.
++++
+|===
+
+[[ProjectList]]
+== ProjectList
+
+++++
+ Model definition for ProjectList.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[etag]]`etag`|`String`|
++++
+A hash of the page of results
++++
+|[[kind]]`kind`|`String`|
++++
+The type of list.
++++
+|[[nextPageToken]]`nextPageToken`|`String`|
++++
+A token to request the next page of results.
++++
+|[[projects]]`projects`|`Array of link:dataobjects.html#Projects[Projects]`|
++++
+Projects to which you have at least READ access.
++++
+|[[totalItems]]`totalItems`|`Number (Integer)`|
++++
+The total number of projects in the list.
++++
+|===
+
+[[ProjectReference]]
+== ProjectReference
+
+++++
+ Model definition for ProjectReference.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[projectId]]`projectId`|`String`|
++++
+[Required] ID of the project. Can be either the numeric ID or the assigned ID
+ of the project.
++++
+|===
+
+[[Projects]]
+== Projects
+
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[friendlyName]]`friendlyName`|`String`|
++++
+A descriptive name for this project.
++++
+|[[id]]`id`|`String`|
++++
+An opaque ID of this project.
++++
+|[[kind]]`kind`|`String`|
++++
+The resource type.
++++
+|[[projectReference]]`projectReference`|`link:dataobjects.html#ProjectReference[ProjectReference]`|
++++
+A unique reference to this project.
++++
+|===
+
+[[QueryParameter]]
+== QueryParameter
+
+++++
+ Model definition for QueryParameter.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[name]]`name`|`String`|
++++
+[Optional] If unset, this is a positional parameter. Otherwise, should be
+ unique within a query.
++++
+|[[parameterType]]`parameterType`|`link:dataobjects.html#QueryParameterType[QueryParameterType]`|
++++
+[Required] The type of this parameter.
++++
+|[[parameterValue]]`parameterValue`|`link:dataobjects.html#QueryParameterValue[QueryParameterValue]`|
++++
+[Required] The value of this parameter.
++++
+|===
+
+[[QueryParameterType]]
+== QueryParameterType
+
+++++
+ Model definition for QueryParameterType.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[arrayType]]`arrayType`|`link:dataobjects.html#QueryParameterType[QueryParameterType]`|
++++
+[Optional] The type of the array's elements, if this is an array.
++++
+|[[structTypes]]`structTypes`|`Array of link:dataobjects.html#StructTypes[StructTypes]`|
++++
+[Optional] The types of the fields of this struct, in order, if this is a
+ struct.
++++
+|[[type]]`type`|`String`|
++++
+[Required] The top level type of this field.
++++
+|===
+
+[[QueryParameterValue]]
+== QueryParameterValue
+
+++++
+ Model definition for QueryParameterValue.
+
+ <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
+ transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
+ <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[arrayValues]]`arrayValues`|`Array of link:dataobjects.html#QueryParameterValue[QueryParameterValue]`|
++++
+[Optional] The array values, if this is an array type.
++++
+|[[structValues]]`structValues`|`link:dataobjects.html#QueryParameterValue[QueryParameterValue]`|
++++
+[Optional] The struct field values, in order of the struct type's declaration.
++++
+|[[value]]`value`|`String`|
++++
+[Optional] The value of this value, if a simple scalar type.
++++
+|===
+
+[[QueryRequest]]
+== QueryRequest
+
+++++
+ Model definition for QueryRequest.
+
+ <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
+ transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
+ <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[defaultDataset]]`defaultDataset`|`link:dataobjects.html#DatasetReference[DatasetReference]`|
++++
+[Optional] Specifies the default datasetId and projectId to assume for any unqualified table
+ names in the query. If not set, all table names in the query string must be qualified in the
+ format 'datasetId.tableId'.
++++
+|[[dryRun]]`dryRun`|`Boolean`|
++++
+[Optional] If set to true, BigQuery doesn't run the job. Instead, if the query is valid,
+ BigQuery returns statistics about the job such as how many bytes would be processed. If the
+ query is invalid, an error returns. The default value is false.
++++
+|[[kind]]`kind`|`String`|
++++
+The resource type of the request.
++++
+|[[maxResults]]`maxResults`|`Number (Long)`|
++++
+[Optional] The maximum number of rows of data to return per page of results. Setting this flag
+ to a small value such as 1000 and then paging through results might improve reliability when
+ the query result set is large. In addition to this limit, responses are also limited to 10 MB.
+ By default, there is no maximum row count, and only the byte limit applies.
++++
+|[[parameterMode]]`parameterMode`|`String`|
++++
+Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use
+ named (@myparam) query parameters in this query.
++++
+|[[preserveNulls]]`preserveNulls`|`Boolean`|
++++
+[Deprecated] This property is deprecated.
++++
+|[[query]]`query`|`String`|
++++
+[Required] A query string, following the BigQuery query syntax, of the query to execute.
+ Example: "SELECT count(f1) FROM [myProjectId:myDatasetId.myTableId]".
++++
+|[[queryParameters]]`queryParameters`|`Array of link:dataobjects.html#QueryParameter[QueryParameter]`|
++++
+Query parameters for Standard SQL queries.
++++
+|[[timeoutMs]]`timeoutMs`|`Number (Long)`|
++++
+[Optional] How long to wait for the query to complete, in milliseconds, before the request
+ times out and returns. Note that this is only a timeout for the request, not the query. If the
+ query takes longer to run than the timeout value, the call returns without any results and with
+ the 'jobComplete' flag set to false. You can call GetQueryResults() to wait for the query to
+ complete and read the results. The default value is 10000 milliseconds (10 seconds).
++++
+|[[useLegacySql]]`useLegacySql`|`Boolean`|
++++
+Specifies whether to use BigQuery's legacy SQL dialect for this query. The default value is
+ true. If set to false, the query will use BigQuery's standard SQL:
+ https://cloud.google.com/bigquery/sql-reference/ When useLegacySql is set to false, the value
+ of flattenResults is ignored; query will be run as if flattenResults is false.
++++
+|[[useQueryCache]]`useQueryCache`|`Boolean`|
++++
+[Optional] Whether to look for the result in the query cache. The query cache is a best-effort
+ cache that will be flushed whenever tables in the query are modified. The default value is
+ true.
++++
+|===
+
+[[QueryResponse]]
+== QueryResponse
+
+++++
+ Model definition for QueryResponse.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[cacheHit]]`cacheHit`|`Boolean`|
++++
+Whether the query result was fetched from the query cache.
++++
+|[[errors]]`errors`|`Array of link:dataobjects.html#ErrorProto[ErrorProto]`|
++++
+[Output-only] The first errors or warnings encountered during the running of
+ the job. The final message includes the number of errors that caused the
+ process to stop. Errors here do not necessarily mean that the job has
+ completed or was unsuccessful.
++++
+|[[jobComplete]]`jobComplete`|`Boolean`|
++++
+Whether the query has completed or not. If rows or totalRows are present,
+ this will always be true. If this is false, totalRows will not be available.
++++
+|[[jobReference]]`jobReference`|`link:dataobjects.html#JobReference[JobReference]`|
++++
+Reference to the Job that was created to run the query. This field will be
+ present even if the original request timed out, in which case GetQueryResults
+ can be used to read the results once the query has completed. Since this API
+ only returns the first page of results, subsequent pages can be fetched via
+ the same mechanism (GetQueryResults).
++++
+|[[kind]]`kind`|`String`|
++++
+The resource type.
++++
+|[[numDmlAffectedRows]]`numDmlAffectedRows`|`Number (Long)`|
++++
+[Output-only] The number of rows affected by a DML statement. Present only
+ for DML statements INSERT, UPDATE or DELETE.
++++
+|[[pageToken]]`pageToken`|`String`|
++++
+A token used for paging results.
++++
+|[[rows]]`rows`|`Array of link:dataobjects.html#TableRow[TableRow]`|
++++
+An object with as many results as can be contained within the maximum
+ permitted reply size. To get any additional rows, you can call
+ GetQueryResults and specify the jobReference returned above.
++++
+|[[schema]]`schema`|`link:dataobjects.html#TableSchema[TableSchema]`|
++++
+The schema of the results. Present only when the query completes
+ successfully.
++++
+|[[totalBytesProcessed]]`totalBytesProcessed`|`Number (Long)`|
++++
+The total number of bytes processed for this query. If this query was a dry
+ run, this is the number of bytes that would be processed if the query were
+ run.
++++
+|===
+
+[[Rows]]
+== Rows
+
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[insertId]]`insertId`|`String`|
++++
+[Optional] A unique ID for each row. BigQuery uses this property to detect
+ duplicate insertion requests on a best-effort basis.
++++
+|[[json]]`json`|`String`|
++++
+[Required] A JSON object that contains a row of data. The object's properties
+ and values must match the destination table's schema.
++++
+|===
+
+[[Streamingbuffer]]
+== Streamingbuffer
+
+++++
+ Model definition for Streamingbuffer.
+
+ <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
+ transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
+ <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|===
+
+[[StructTypes]]
+== StructTypes
+
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[description]]`description`|`String`|
++++
+[Optional] Human-oriented description of the field.
++++
+|[[name]]`name`|`String`|
++++
+[Optional] The name of this field.
++++
+|[[type]]`type`|`link:dataobjects.html#QueryParameterType[QueryParameterType]`|
++++
+[Required] The type of this field.
++++
+|===
+
+[[Table]]
+== Table
+
+++++
+ Model definition for Table.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[creationTime]]`creationTime`|`Number (Long)`|
++++
+[Output-only] The time when this table was created, in milliseconds since the
+ epoch.
++++
+|[[description]]`description`|`String`|
++++
+[Optional] A user-friendly description of this table.
++++
+|[[etag]]`etag`|`String`|
++++
+[Output-only] A hash of this resource.
++++
+|[[expirationTime]]`expirationTime`|`Number (Long)`|
++++
+[Optional] The time when this table expires, in milliseconds since the epoch.
+ If not present, the table will persist indefinitely. Expired tables will be
+ deleted and their storage reclaimed.
++++
+|[[externalDataConfiguration]]`externalDataConfiguration`|`link:dataobjects.html#ExternalDataConfiguration[ExternalDataConfiguration]`|
++++
+[Optional] Describes the data format, location, and other properties of a
+ table stored outside of BigQuery. By defining these properties, the data
+ source can then be queried as if it were a standard BigQuery table.
++++
+|[[friendlyName]]`friendlyName`|`String`|
++++
+[Optional] A descriptive name for this table.
++++
+|[[id]]`id`|`String`|
++++
+[Output-only] An opaque ID uniquely identifying the table.
++++
+|[[kind]]`kind`|`String`|
++++
+[Output-only] The type of the resource.
++++
+|[[labels]]`labels`|`String`|
++++
+[Experimental] The labels associated with this table. You can use these to
+ organize and group your tables. Label keys and values can be no longer than
+ 63 characters, can only contain lowercase letters, numeric characters,
+ underscores and dashes. International characters are allowed. Label values
+ are optional. Label keys must start with a letter and each label in the list
+ must have a different key.
++++
+|[[location]]`location`|`String`|
++++
+[Output-only] The geographic location where the table resides. This value is
+ inherited from the dataset.
++++
+|[[numBytes]]`numBytes`|`Number (Long)`|
++++
+[Output-only] The size of this table in bytes, excluding any data in the
+ streaming buffer.
++++
+|[[numLongTermBytes]]`numLongTermBytes`|`Number (Long)`|
++++
+[Output-only] The number of bytes in the table that are considered "long-term
+ storage".
++++
+|[[schema]]`schema`|`link:dataobjects.html#TableSchema[TableSchema]`|
++++
+[Optional] Describes the schema of this table.
++++
+|[[selfLink]]`selfLink`|`String`|
++++
+[Output-only] A URL that can be used to access this resource again.
++++
+|[[streamingBuffer]]`streamingBuffer`|`link:dataobjects.html#Streamingbuffer[Streamingbuffer]`|
++++
+[Output-only] Contains information regarding this table's streaming buffer,
+ if one is present. This field will be absent if the table is not being
+ streamed to or if there is no data in the streaming buffer.
++++
+|[[tableReference]]`tableReference`|`link:dataobjects.html#TableReference[TableReference]`|
++++
+[Required] Reference describing the ID of this table.
++++
+|[[timePartitioning]]`timePartitioning`|`link:dataobjects.html#TimePartitioning[TimePartitioning]`|
++++
+[Experimental] If specified, configures time-based partitioning for this
+ table.
++++
+|[[type]]`type`|`String`|
++++
+[Output-only] Describes the table type. The following values are supported:
+ TABLE: A normal BigQuery table. VIEW: A virtual table defined by a SQL query.
+ EXTERNAL: A table that references data stored in an external storage system,
+ such as Google Cloud Storage. The default value is TABLE.
++++
+|[[view]]`view`|`link:dataobjects.html#ViewDefinition[ViewDefinition]`|
++++
+[Optional] The view definition.
++++
+|===
+
+[[TableCell]]
+== TableCell
+
+++++
+ Model definition for TableCell.
+
+ <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
+ transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
+ <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|===
+
+[[TableDataInsertAllRequest]]
+== TableDataInsertAllRequest
+
+++++
+ Model definition for TableDataInsertAllRequest.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[ignoreUnknownValues]]`ignoreUnknownValues`|`Boolean`|
++++
+[Optional] Accept rows that contain values that do not match the schema. The
+ unknown values are ignored. Default is false, which treats unknown values as
+ errors.
++++
+|[[kind]]`kind`|`String`|
++++
+The resource type of the response.
++++
+|[[rows]]`rows`|`Array of link:dataobjects.html#Rows[Rows]`|
++++
+The rows to insert.
++++
+|[[skipInvalidRows]]`skipInvalidRows`|`Boolean`|
++++
+[Optional] Insert all valid rows of a request, even if invalid rows exist.
+ The default value is false, which causes the entire request to fail if any
+ invalid rows exist.
++++
+|[[templateSuffix]]`templateSuffix`|`String`|
++++
+[Experimental] If specified, treats the destination table as a base template,
+ and inserts the rows into an instance table named
+ "{destination}{templateSuffix}". BigQuery will manage creation of the
+ instance table, using the schema of the base template table. See
+ https://cloud.google.com/bigquery/streaming-data-into-bigquery#template-tables
+ for considerations when working with templates tables.
++++
+|===
+
+[[TableDataInsertAllResponse]]
+== TableDataInsertAllResponse
+
+++++
+ Model definition for TableDataInsertAllResponse.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[insertErrors]]`insertErrors`|`Array of link:dataobjects.html#InsertErrors[InsertErrors]`|
++++
+An array of errors for rows that were not inserted.
++++
+|[[kind]]`kind`|`String`|
++++
+The resource type of the response.
++++
+|===
+
+[[TableDataList]]
+== TableDataList
+
+++++
+ Model definition for TableDataList.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[etag]]`etag`|`String`|
++++
+A hash of this page of results.
++++
+|[[kind]]`kind`|`String`|
++++
+The resource type of the response.
++++
+|[[pageToken]]`pageToken`|`String`|
++++
+A token used for paging results. Providing this token instead of the
+ startIndex parameter can help you retrieve stable results when an underlying
+ table is changing.
++++
+|[[rows]]`rows`|`Array of link:dataobjects.html#TableRow[TableRow]`|
++++
+Rows of results.
++++
+|[[totalRows]]`totalRows`|`Number (Long)`|
++++
+The total number of rows in the complete table.
++++
+|===
+
+[[TableFieldSchema]]
+== TableFieldSchema
+
+++++
+ Model definition for TableFieldSchema.
+
+ <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
+ transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
+ <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[description]]`description`|`String`|
++++
+[Optional] The field description. The maximum length is 1,024 characters.
++++
+|[[fields]]`fields`|`Array of link:dataobjects.html#TableFieldSchema[TableFieldSchema]`|
++++
+[Optional] Describes the nested schema fields if the type property is set to RECORD.
++++
+|[[mode]]`mode`|`String`|
++++
+[Optional] The field mode. Possible values include NULLABLE, REQUIRED and REPEATED. The default
+ value is NULLABLE.
++++
+|[[name]]`name`|`String`|
++++
+[Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or
+ underscores (_), and must start with a letter or underscore. The maximum length is 128
+ characters.
++++
+|[[type]]`type`|`String`|
++++
+[Required] The field data type. Possible values include STRING, BYTES, INTEGER, INT64 (same as
+ INTEGER), FLOAT, FLOAT64 (same as FLOAT), BOOLEAN, BOOL (same as BOOLEAN), TIMESTAMP, DATE,
+ TIME, DATETIME, RECORD (where RECORD indicates that the field contains a nested schema) or
+ STRUCT (same as RECORD).
++++
+|===
+
+[[TableList]]
+== TableList
+
+++++
+ Model definition for TableList.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[etag]]`etag`|`String`|
++++
+A hash of this page of results.
++++
+|[[kind]]`kind`|`String`|
++++
+The type of list.
++++
+|[[nextPageToken]]`nextPageToken`|`String`|
++++
+A token to request the next page of results.
++++
+|[[tables]]`tables`|`Array of link:dataobjects.html#Tables[Tables]`|
++++
+Tables in the requested dataset.
++++
+|[[totalItems]]`totalItems`|`Number (Integer)`|
++++
+The total number of tables in the dataset.
++++
+|===
+
+[[TableReference]]
+== TableReference
+
+++++
+ Model definition for TableReference.
+
+ <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
+ transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
+ <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[datasetId]]`datasetId`|`String`|
++++
+[Required] The ID of the dataset containing this table.
++++
+|[[projectId]]`projectId`|`String`|
++++
+[Required] The ID of the project containing this table.
++++
+|[[tableId]]`tableId`|`String`|
++++
+[Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
+ underscores (_). The maximum length is 1,024 characters.
++++
+|===
+
+[[TableRow]]
+== TableRow
+
+++++
+ Model definition for TableRow.
+
+ <p>
+ This is the Java data model class that specifies how to parse/serialize into
+ the JSON that is transmitted over HTTP when working with the BigQuery API.
+ For a detailed explanation see: <a href=
+ "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[f]]`f`|`Array of link:dataobjects.html#TableCell[TableCell]`|
++++
+Represents a single row in the result set, consisting of one or more fields.
++++
+|===
+
+[[TableSchema]]
+== TableSchema
+
+++++
+ Model definition for TableSchema.
+
+ <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
+ transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
+ <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[fields]]`fields`|`Array of link:dataobjects.html#TableFieldSchema[TableFieldSchema]`|
++++
+Describes the fields in a table.
++++
+|===
+
+[[Tables]]
+== Tables
+
+++++
+ Model definition for TableListTables.
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[friendlyName]]`friendlyName`|`String`|
++++
+The user-friendly name for this table.
++++
+|[[id]]`id`|`String`|
++++
+An opaque ID of the table
++++
+|[[kind]]`kind`|`String`|
++++
+The resource type.
++++
+|[[labels]]`labels`|`String`|
++++
+[Experimental] The labels associated with this table. You can use these to
+ organize and group your tables.
++++
+|[[tableReference]]`tableReference`|`link:dataobjects.html#TableReference[TableReference]`|
++++
+A reference uniquely identifying the table.
++++
+|[[timePartitioning]]`timePartitioning`|`link:dataobjects.html#TimePartitioning[TimePartitioning]`|
++++
+[Experimental] The time-based partitioning for this table.
++++
+|[[type]]`type`|`String`|
++++
+The type of table. Possible values are: TABLE, VIEW.
++++
+|[[view]]`view`|`link:dataobjects.html#View[View]`|
++++
+Additional details for a view.
++++
+|===
+
+[[TimePartitioning]]
+== TimePartitioning
+
+++++
+ Model definition for TimePartitioning.
+
+ <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
+ transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
+ <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[expirationMs]]`expirationMs`|`Number (Long)`|
++++
+[Optional] Number of milliseconds for which to keep the storage for a partition.
++++
+|[[type]]`type`|`String`|
++++
+[Required] The only type supported is DAY, which will generate one partition per day based on
+ data loading time.
++++
+|===
+
+[[UserDefinedFunctionResource]]
+== UserDefinedFunctionResource
+
+++++
+ Model definition for UserDefinedFunctionResource.
+
+ <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
+ transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
+ <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[inlineCode]]`inlineCode`|`String`|
++++
+[Pick one] An inline resource that contains code for a user-defined function (UDF). Providing a
+ inline code resource is equivalent to providing a URI for a file containing the same code.
++++
+|[[resourceUri]]`resourceUri`|`String`|
++++
+[Pick one] A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
++++
+|===
+
+[[View]]
+== View
+
+++++
+ Additional details for a view.
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[useLegacySql]]`useLegacySql`|`Boolean`|
++++
+True if view is defined in legacy SQL dialect, false if in standard SQL.
++++
+|===
+
+[[ViewDefinition]]
+== ViewDefinition
+
+++++
+ Model definition for ViewDefinition.
+
+ <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
+ transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
+ <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ </p>
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[query]]`query`|`String`|
++++
+[Required] A query that BigQuery executes when the view is referenced.
++++
+|[[useLegacySql]]`useLegacySql`|`Boolean`|
++++
+Specifies whether to use BigQuery's legacy SQL for this view. The default value is true. If set
+ to false, the view will use BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-
+ reference/ Queries and views that reference this view must use the same flag value.
++++
+|[[userDefinedFunctionResources]]`userDefinedFunctionResources`|`Array of link:dataobjects.html#UserDefinedFunctionResource[UserDefinedFunctionResource]`|
++++
+Describes user-defined function resources used in the query.
++++
+|===
+
