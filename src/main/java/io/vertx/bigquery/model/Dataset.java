@@ -22,9 +22,11 @@ import io.vertx.core.json.JsonObject;
 /**
  * Model definition for Dataset.
  *
- * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
- * <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ * <p>
+ * This is the Java data model class that specifies how to parse/serialize into
+ * the JSON that is transmitted over HTTP when working with the BigQuery API.
+ * For a detailed explanation see: <a href=
+ * "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
  * </p>
  *
  * @author Google, Inc.
@@ -32,388 +34,435 @@ import io.vertx.core.json.JsonObject;
 @DataObject(generateConverter = true)
 public final class Dataset {
 
-  /**
-   * [Optional] An array of objects that define dataset access for one or more entities. You can set
-   * this property when inserting or updating a dataset in order to control who is allowed to access
-   * the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the
-   * following entities: access.specialGroup: projectReaders; access.role: READER;
-   * access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup: projectOwners;
-   * access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;
-   * The value may be {@code null}.
-   */
-  
-  private java.util.List<Access> access;
+	/**
+	 * [Optional] An array of objects that define dataset access for one or more
+	 * entities. You can set this property when inserting or updating a dataset in
+	 * order to control who is allowed to access the data. If unspecified at dataset
+	 * creation time, BigQuery adds default dataset access for the following
+	 * entities: access.specialGroup: projectReaders; access.role: READER;
+	 * access.specialGroup: projectWriters; access.role: WRITER;
+	 * access.specialGroup: projectOwners; access.role: OWNER; access.userByEmail:
+	 * [dataset creator email]; access.role: OWNER; The value may be {@code null}.
+	 */
 
+	private java.util.List<Access> access;
 
-  /**
-   * [Output-only] The time when this dataset was created, in milliseconds since the epoch.
-   * The value may be {@code null}.
-   */
+	/**
+	 * [Output-only] The time when this dataset was created, in milliseconds since
+	 * the epoch. The value may be {@code null}.
+	 */
 
-  private java.lang.Long creationTime;
+	private java.lang.Long creationTime;
 
-  /**
-   * [Required] A reference that identifies the dataset.
-   * The value may be {@code null}.
-   */
-  
-  private DatasetReference datasetReference;
+	/**
+	 * [Required] A reference that identifies the dataset. The value may be
+	 * {@code null}.
+	 */
 
-  /**
-   * [Optional] The default lifetime of all tables in the dataset, in milliseconds. The minimum
-   * value is 3600000 milliseconds (one hour). Once this property is set, all newly-created tables
-   * in the dataset will have an expirationTime property set to the creation time plus the value in
-   * this property, and changing the value will only affect new tables, not existing ones. When the
-   * expirationTime for a given table is reached, that table will be deleted automatically. If a
-   * table's expirationTime is modified or removed before the table expires, or if you provide an
-   * explicit expirationTime when creating a table, that value takes precedence over the default
-   * expiration time indicated by this property.
-   * The value may be {@code null}.
-   */
+	private DatasetReference datasetReference;
 
-  private java.lang.Long defaultTableExpirationMs;
+	/**
+	 * [Optional] The default lifetime of all tables in the dataset, in
+	 * milliseconds. The minimum value is 3600000 milliseconds (one hour). Once this
+	 * property is set, all newly-created tables in the dataset will have an
+	 * expirationTime property set to the creation time plus the value in this
+	 * property, and changing the value will only affect new tables, not existing
+	 * ones. When the expirationTime for a given table is reached, that table will
+	 * be deleted automatically. If a table's expirationTime is modified or removed
+	 * before the table expires, or if you provide an explicit expirationTime when
+	 * creating a table, that value takes precedence over the default expiration
+	 * time indicated by this property. The value may be {@code null}.
+	 */
 
-  /**
-   * [Optional] A user-friendly description of the dataset.
-   * The value may be {@code null}.
-   */
-  
-  private java.lang.String description;
+	private java.lang.Long defaultTableExpirationMs;
 
-  /**
-   * [Output-only] A hash of the resource.
-   * The value may be {@code null}.
-   */
-  
-  private java.lang.String etag;
+	/**
+	 * [Optional] A user-friendly description of the dataset. The value may be
+	 * {@code null}.
+	 */
 
-  /**
-   * [Optional] A descriptive name for the dataset.
-   * The value may be {@code null}.
-   */
-  
-  private java.lang.String friendlyName;
+	private java.lang.String description;
 
-  /**
-   * [Output-only] The fully-qualified unique name of the dataset in the format projectId:datasetId.
-   * The dataset name without the project name is given in the datasetId field. When creating a new
-   * dataset, leave this field blank, and instead specify the datasetId field.
-   * The value may be {@code null}.
-   */
-  
-  private java.lang.String id;
+	/**
+	 * [Output-only] A hash of the resource. The value may be {@code null}.
+	 */
 
-  /**
-   * [Output-only] The resource type.
-   * The value may be {@code null}.
-   */
-  
-  private java.lang.String kind;
+	private java.lang.String etag;
 
-  /**
-   * The labels associated with this dataset. You can use these to organize and group your datasets.
-   * You can set this property when inserting or updating a dataset. See Labeling Datasets for more
-   * information.
-   * The value may be {@code null}.
-   */
-  
-  private java.util.Map<String, java.lang.String> labels;
+	/**
+	 * [Optional] A descriptive name for the dataset. The value may be {@code null}.
+	 */
 
-  /**
-   * [Output-only] The date when this dataset or any of its tables was last modified, in
-   * milliseconds since the epoch.
-   * The value may be {@code null}.
-   */
+	private java.lang.String friendlyName;
 
-  private java.lang.Long lastModifiedTime;
+	/**
+	 * [Output-only] The fully-qualified unique name of the dataset in the format
+	 * projectId:datasetId. The dataset name without the project name is given in
+	 * the datasetId field. When creating a new dataset, leave this field blank, and
+	 * instead specify the datasetId field. The value may be {@code null}.
+	 */
 
-  /**
-   * The geographic location where the dataset should reside. Possible values include EU and US. The
-   * default value is US.
-   * The value may be {@code null}.
-   */
-  
-  private java.lang.String location;
+	private java.lang.String id;
 
-  /**
-   * [Output-only] A URL that can be used to access the resource again. You can use this URL in Get
-   * or Update requests to the resource.
-   * The value may be {@code null}.
-   */
-  
-  private java.lang.String selfLink;
+	/**
+	 * [Output-only] The resource type. The value may be {@code null}.
+	 */
 
-  /**
-   * [Optional] An array of objects that define dataset access for one or more entities. You can set
-   * this property when inserting or updating a dataset in order to control who is allowed to access
-   * the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the
-   * following entities: access.specialGroup: projectReaders; access.role: READER;
-   * access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup: projectOwners;
-   * access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;
-   * @return value or {@code null} for none
-   */
-  public java.util.List<Access> getAccess() {
-    return access;
-  }
+	private java.lang.String kind;
 
-  /**
-   * [Optional] An array of objects that define dataset access for one or more entities. You can set
-   * this property when inserting or updating a dataset in order to control who is allowed to access
-   * the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the
-   * following entities: access.specialGroup: projectReaders; access.role: READER;
-   * access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup: projectOwners;
-   * access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;
-   * @param access access or {@code null} for none
-   */
-  public Dataset setAccess(java.util.List<Access> access) {
-    this.access = access;
-    return this;
-  }
+	/**
+	 * The labels associated with this dataset. You can use these to organize and
+	 * group your datasets. You can set this property when inserting or updating a
+	 * dataset. See Labeling Datasets for more information. The value may be
+	 * {@code null}.
+	 */
 
-  /**
-   * [Output-only] The time when this dataset was created, in milliseconds since the epoch.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getCreationTime() {
-    return creationTime;
-  }
+	private java.util.Map<String, java.lang.String> labels;
 
-  /**
-   * [Output-only] The time when this dataset was created, in milliseconds since the epoch.
-   * @param creationTime creationTime or {@code null} for none
-   */
-  public Dataset setCreationTime(java.lang.Long creationTime) {
-    this.creationTime = creationTime;
-    return this;
-  }
+	/**
+	 * [Output-only] The date when this dataset or any of its tables was last
+	 * modified, in milliseconds since the epoch. The value may be {@code null}.
+	 */
 
-  /**
-   * [Required] A reference that identifies the dataset.
-   * @return value or {@code null} for none
-   */
-  public DatasetReference getDatasetReference() {
-    return datasetReference;
-  }
+	private java.lang.Long lastModifiedTime;
 
-  /**
-   * [Required] A reference that identifies the dataset.
-   * @param datasetReference datasetReference or {@code null} for none
-   */
-  public Dataset setDatasetReference(DatasetReference datasetReference) {
-    this.datasetReference = datasetReference;
-    return this;
-  }
+	/**
+	 * The geographic location where the dataset should reside. Possible values
+	 * include EU and US. The default value is US. The value may be {@code null}.
+	 */
 
-  /**
-   * [Optional] The default lifetime of all tables in the dataset, in milliseconds. The minimum
-   * value is 3600000 milliseconds (one hour). Once this property is set, all newly-created tables
-   * in the dataset will have an expirationTime property set to the creation time plus the value in
-   * this property, and changing the value will only affect new tables, not existing ones. When the
-   * expirationTime for a given table is reached, that table will be deleted automatically. If a
-   * table's expirationTime is modified or removed before the table expires, or if you provide an
-   * explicit expirationTime when creating a table, that value takes precedence over the default
-   * expiration time indicated by this property.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getDefaultTableExpirationMs() {
-    return defaultTableExpirationMs;
-  }
+	private java.lang.String location;
 
-  /**
-   * [Optional] The default lifetime of all tables in the dataset, in milliseconds. The minimum
-   * value is 3600000 milliseconds (one hour). Once this property is set, all newly-created tables
-   * in the dataset will have an expirationTime property set to the creation time plus the value in
-   * this property, and changing the value will only affect new tables, not existing ones. When the
-   * expirationTime for a given table is reached, that table will be deleted automatically. If a
-   * table's expirationTime is modified or removed before the table expires, or if you provide an
-   * explicit expirationTime when creating a table, that value takes precedence over the default
-   * expiration time indicated by this property.
-   * @param defaultTableExpirationMs defaultTableExpirationMs or {@code null} for none
-   */
-  public Dataset setDefaultTableExpirationMs(java.lang.Long defaultTableExpirationMs) {
-    this.defaultTableExpirationMs = defaultTableExpirationMs;
-    return this;
-  }
+	/**
+	 * [Output-only] A URL that can be used to access the resource again. You can
+	 * use this URL in Get or Update requests to the resource. The value may be
+	 * {@code null}.
+	 */
 
-  /**
-   * [Optional] A user-friendly description of the dataset.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDescription() {
-    return description;
-  }
+	private java.lang.String selfLink;
 
-  /**
-   * [Optional] A user-friendly description of the dataset.
-   * @param description description or {@code null} for none
-   */
-  public Dataset setDescription(java.lang.String description) {
-    this.description = description;
-    return this;
-  }
+	/**
+	 * [Optional] An array of objects that define dataset access for one or more
+	 * entities. You can set this property when inserting or updating a dataset in
+	 * order to control who is allowed to access the data. If unspecified at dataset
+	 * creation time, BigQuery adds default dataset access for the following
+	 * entities: access.specialGroup: projectReaders; access.role: READER;
+	 * access.specialGroup: projectWriters; access.role: WRITER;
+	 * access.specialGroup: projectOwners; access.role: OWNER; access.userByEmail:
+	 * [dataset creator email]; access.role: OWNER;
+	 * 
+	 * @return value or {@code null} for none
+	 */
+	public java.util.List<Access> getAccess() {
+		return access;
+	}
 
-  /**
-   * [Output-only] A hash of the resource.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getEtag() {
-    return etag;
-  }
+	/**
+	 * [Optional] An array of objects that define dataset access for one or more
+	 * entities. You can set this property when inserting or updating a dataset in
+	 * order to control who is allowed to access the data. If unspecified at dataset
+	 * creation time, BigQuery adds default dataset access for the following
+	 * entities: access.specialGroup: projectReaders; access.role: READER;
+	 * access.specialGroup: projectWriters; access.role: WRITER;
+	 * access.specialGroup: projectOwners; access.role: OWNER; access.userByEmail:
+	 * [dataset creator email]; access.role: OWNER;
+	 * 
+	 * @param access
+	 *            access or {@code null} for none
+	 */
+	public Dataset setAccess(java.util.List<Access> access) {
+		this.access = access;
+		return this;
+	}
 
-  /**
-   * [Output-only] A hash of the resource.
-   * @param etag etag or {@code null} for none
-   */
-  public Dataset setEtag(java.lang.String etag) {
-    this.etag = etag;
-    return this;
-  }
+	/**
+	 * [Output-only] The time when this dataset was created, in milliseconds since
+	 * the epoch.
+	 * 
+	 * @return value or {@code null} for none
+	 */
+	public java.lang.Long getCreationTime() {
+		return creationTime;
+	}
 
-  /**
-   * [Optional] A descriptive name for the dataset.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getFriendlyName() {
-    return friendlyName;
-  }
+	/**
+	 * [Output-only] The time when this dataset was created, in milliseconds since
+	 * the epoch.
+	 * 
+	 * @param creationTime
+	 *            creationTime or {@code null} for none
+	 */
+	public Dataset setCreationTime(java.lang.Long creationTime) {
+		this.creationTime = creationTime;
+		return this;
+	}
 
-  /**
-   * [Optional] A descriptive name for the dataset.
-   * @param friendlyName friendlyName or {@code null} for none
-   */
-  public Dataset setFriendlyName(java.lang.String friendlyName) {
-    this.friendlyName = friendlyName;
-    return this;
-  }
+	/**
+	 * [Required] A reference that identifies the dataset.
+	 * 
+	 * @return value or {@code null} for none
+	 */
+	public DatasetReference getDatasetReference() {
+		return datasetReference;
+	}
 
-  /**
-   * [Output-only] The fully-qualified unique name of the dataset in the format projectId:datasetId.
-   * The dataset name without the project name is given in the datasetId field. When creating a new
-   * dataset, leave this field blank, and instead specify the datasetId field.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getId() {
-    return id;
-  }
+	/**
+	 * [Required] A reference that identifies the dataset.
+	 * 
+	 * @param datasetReference
+	 *            datasetReference or {@code null} for none
+	 */
+	public Dataset setDatasetReference(DatasetReference datasetReference) {
+		this.datasetReference = datasetReference;
+		return this;
+	}
 
-  /**
-   * [Output-only] The fully-qualified unique name of the dataset in the format projectId:datasetId.
-   * The dataset name without the project name is given in the datasetId field. When creating a new
-   * dataset, leave this field blank, and instead specify the datasetId field.
-   * @param id id or {@code null} for none
-   */
-  public Dataset setId(java.lang.String id) {
-    this.id = id;
-    return this;
-  }
+	/**
+	 * [Optional] The default lifetime of all tables in the dataset, in
+	 * milliseconds. The minimum value is 3600000 milliseconds (one hour). Once this
+	 * property is set, all newly-created tables in the dataset will have an
+	 * expirationTime property set to the creation time plus the value in this
+	 * property, and changing the value will only affect new tables, not existing
+	 * ones. When the expirationTime for a given table is reached, that table will
+	 * be deleted automatically. If a table's expirationTime is modified or removed
+	 * before the table expires, or if you provide an explicit expirationTime when
+	 * creating a table, that value takes precedence over the default expiration
+	 * time indicated by this property.
+	 * 
+	 * @return value or {@code null} for none
+	 */
+	public java.lang.Long getDefaultTableExpirationMs() {
+		return defaultTableExpirationMs;
+	}
 
-  /**
-   * [Output-only] The resource type.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
+	/**
+	 * [Optional] The default lifetime of all tables in the dataset, in
+	 * milliseconds. The minimum value is 3600000 milliseconds (one hour). Once this
+	 * property is set, all newly-created tables in the dataset will have an
+	 * expirationTime property set to the creation time plus the value in this
+	 * property, and changing the value will only affect new tables, not existing
+	 * ones. When the expirationTime for a given table is reached, that table will
+	 * be deleted automatically. If a table's expirationTime is modified or removed
+	 * before the table expires, or if you provide an explicit expirationTime when
+	 * creating a table, that value takes precedence over the default expiration
+	 * time indicated by this property.
+	 * 
+	 * @param defaultTableExpirationMs
+	 *            defaultTableExpirationMs or {@code null} for none
+	 */
+	public Dataset setDefaultTableExpirationMs(java.lang.Long defaultTableExpirationMs) {
+		this.defaultTableExpirationMs = defaultTableExpirationMs;
+		return this;
+	}
 
-  /**
-   * [Output-only] The resource type.
-   * @param kind kind or {@code null} for none
-   */
-  public Dataset setKind(java.lang.String kind) {
-    this.kind = kind;
-    return this;
-  }
+	/**
+	 * [Optional] A user-friendly description of the dataset.
+	 * 
+	 * @return value or {@code null} for none
+	 */
+	public java.lang.String getDescription() {
+		return description;
+	}
 
-  /**
-   * The labels associated with this dataset. You can use these to organize and group your datasets.
-   * You can set this property when inserting or updating a dataset. See Labeling Datasets for more
-   * information.
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, java.lang.String> getLabels() {
-    return labels;
-  }
+	/**
+	 * [Optional] A user-friendly description of the dataset.
+	 * 
+	 * @param description
+	 *            description or {@code null} for none
+	 */
+	public Dataset setDescription(java.lang.String description) {
+		this.description = description;
+		return this;
+	}
 
-  /**
-   * The labels associated with this dataset. You can use these to organize and group your datasets.
-   * You can set this property when inserting or updating a dataset. See Labeling Datasets for more
-   * information.
-   * @param labels labels or {@code null} for none
-   */
-  public Dataset setLabels(java.util.Map<String, java.lang.String> labels) {
-    this.labels = labels;
-    return this;
-  }
+	/**
+	 * [Output-only] A hash of the resource.
+	 * 
+	 * @return value or {@code null} for none
+	 */
+	public java.lang.String getEtag() {
+		return etag;
+	}
 
-  /**
-   * [Output-only] The date when this dataset or any of its tables was last modified, in
-   * milliseconds since the epoch.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getLastModifiedTime() {
-    return lastModifiedTime;
-  }
+	/**
+	 * [Output-only] A hash of the resource.
+	 * 
+	 * @param etag
+	 *            etag or {@code null} for none
+	 */
+	public Dataset setEtag(java.lang.String etag) {
+		this.etag = etag;
+		return this;
+	}
 
-  /**
-   * [Output-only] The date when this dataset or any of its tables was last modified, in
-   * milliseconds since the epoch.
-   * @param lastModifiedTime lastModifiedTime or {@code null} for none
-   */
-  public Dataset setLastModifiedTime(java.lang.Long lastModifiedTime) {
-    this.lastModifiedTime = lastModifiedTime;
-    return this;
-  }
+	/**
+	 * [Optional] A descriptive name for the dataset.
+	 * 
+	 * @return value or {@code null} for none
+	 */
+	public java.lang.String getFriendlyName() {
+		return friendlyName;
+	}
 
-  /**
-   * The geographic location where the dataset should reside. Possible values include EU and US. The
-   * default value is US.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getLocation() {
-    return location;
-  }
+	/**
+	 * [Optional] A descriptive name for the dataset.
+	 * 
+	 * @param friendlyName
+	 *            friendlyName or {@code null} for none
+	 */
+	public Dataset setFriendlyName(java.lang.String friendlyName) {
+		this.friendlyName = friendlyName;
+		return this;
+	}
 
-  /**
-   * The geographic location where the dataset should reside. Possible values include EU and US. The
-   * default value is US.
-   * @param location location or {@code null} for none
-   */
-  public Dataset setLocation(java.lang.String location) {
-    this.location = location;
-    return this;
-  }
+	/**
+	 * [Output-only] The fully-qualified unique name of the dataset in the format
+	 * projectId:datasetId. The dataset name without the project name is given in
+	 * the datasetId field. When creating a new dataset, leave this field blank, and
+	 * instead specify the datasetId field.
+	 * 
+	 * @return value or {@code null} for none
+	 */
+	public java.lang.String getId() {
+		return id;
+	}
 
-  /**
-   * [Output-only] A URL that can be used to access the resource again. You can use this URL in Get
-   * or Update requests to the resource.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSelfLink() {
-    return selfLink;
-  }
+	/**
+	 * [Output-only] The fully-qualified unique name of the dataset in the format
+	 * projectId:datasetId. The dataset name without the project name is given in
+	 * the datasetId field. When creating a new dataset, leave this field blank, and
+	 * instead specify the datasetId field.
+	 * 
+	 * @param id
+	 *            id or {@code null} for none
+	 */
+	public Dataset setId(java.lang.String id) {
+		this.id = id;
+		return this;
+	}
 
-  /**
-   * [Output-only] A URL that can be used to access the resource again. You can use this URL in Get
-   * or Update requests to the resource.
-   * @param selfLink selfLink or {@code null} for none
-   */
-  public Dataset setSelfLink(java.lang.String selfLink) {
-    this.selfLink = selfLink;
-    return this;
-  }
+	/**
+	 * [Output-only] The resource type.
+	 * 
+	 * @return value or {@code null} for none
+	 */
+	public java.lang.String getKind() {
+		return kind;
+	}
 
+	/**
+	 * [Output-only] The resource type.
+	 * 
+	 * @param kind
+	 *            kind or {@code null} for none
+	 */
+	public Dataset setKind(java.lang.String kind) {
+		this.kind = kind;
+		return this;
+	}
 
-public Dataset(JsonObject jsonObject) {
-	// TODO Auto-generated constructor stub
-}
+	/**
+	 * The labels associated with this dataset. You can use these to organize and
+	 * group your datasets. You can set this property when inserting or updating a
+	 * dataset. See Labeling Datasets for more information.
+	 * 
+	 * @return value or {@code null} for none
+	 */
+	public java.util.Map<String, java.lang.String> getLabels() {
+		return labels;
+	}
 
-public JsonObject toJson() {
-	JsonObject jsonObject = new JsonObject();
-	 DatasetConverter.toJson(this, jsonObject);
-	 return jsonObject;
-	
-}
-public Dataset(Dataset other) {
-	//fixme
-}
+	/**
+	 * The labels associated with this dataset. You can use these to organize and
+	 * group your datasets. You can set this property when inserting or updating a
+	 * dataset. See Labeling Datasets for more information.
+	 * 
+	 * @param labels
+	 *            labels or {@code null} for none
+	 */
+	public Dataset setLabels(java.util.Map<String, java.lang.String> labels) {
+		this.labels = labels;
+		return this;
+	}
+
+	/**
+	 * [Output-only] The date when this dataset or any of its tables was last
+	 * modified, in milliseconds since the epoch.
+	 * 
+	 * @return value or {@code null} for none
+	 */
+	public java.lang.Long getLastModifiedTime() {
+		return lastModifiedTime;
+	}
+
+	/**
+	 * [Output-only] The date when this dataset or any of its tables was last
+	 * modified, in milliseconds since the epoch.
+	 * 
+	 * @param lastModifiedTime
+	 *            lastModifiedTime or {@code null} for none
+	 */
+	public Dataset setLastModifiedTime(java.lang.Long lastModifiedTime) {
+		this.lastModifiedTime = lastModifiedTime;
+		return this;
+	}
+
+	/**
+	 * The geographic location where the dataset should reside. Possible values
+	 * include EU and US. The default value is US.
+	 * 
+	 * @return value or {@code null} for none
+	 */
+	public java.lang.String getLocation() {
+		return location;
+	}
+
+	/**
+	 * The geographic location where the dataset should reside. Possible values
+	 * include EU and US. The default value is US.
+	 * 
+	 * @param location
+	 *            location or {@code null} for none
+	 */
+	public Dataset setLocation(java.lang.String location) {
+		this.location = location;
+		return this;
+	}
+
+	/**
+	 * [Output-only] A URL that can be used to access the resource again. You can
+	 * use this URL in Get or Update requests to the resource.
+	 * 
+	 * @return value or {@code null} for none
+	 */
+	public java.lang.String getSelfLink() {
+		return selfLink;
+	}
+
+	/**
+	 * [Output-only] A URL that can be used to access the resource again. You can
+	 * use this URL in Get or Update requests to the resource.
+	 * 
+	 * @param selfLink
+	 *            selfLink or {@code null} for none
+	 */
+	public Dataset setSelfLink(java.lang.String selfLink) {
+		this.selfLink = selfLink;
+		return this;
+	}
+
+	public Dataset(JsonObject jsonObject) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public JsonObject toJson() {
+		JsonObject jsonObject = new JsonObject();
+		DatasetConverter.toJson(this, jsonObject);
+		return jsonObject;
+
+	}
+
+	public Dataset(Dataset other) {
+		// fixme
+	}
 }

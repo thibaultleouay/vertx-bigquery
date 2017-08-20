@@ -1,1 +1,1 @@
-BigQuery Client
+= A BigQuery Client for VertX

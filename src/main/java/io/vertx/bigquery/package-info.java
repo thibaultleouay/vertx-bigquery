@@ -1,5 +1,5 @@
 /**
- * BigQuery Client 
+ * = A BigQuery Client for VertX
  */
 @Document(fileName = "index.adoc")
 @ModuleGen(name = "vertx-bigquery", groupPackage = "io.vertx")

@@ -9,9 +9,11 @@ import io.vertx.bigquery.model.DatasetReference
  *
  * Model definition for Dataset.
  *
- * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
- * <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ * <p>
+ * This is the Java data model class that specifies how to parse/serialize into
+ * the JSON that is transmitted over HTTP when working with the BigQuery API.
+ * For a detailed explanation see: <a href=
+ * "http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
  * </p>
  *
  * @param access  [Optional] An array of objects that define dataset access for one or more entities. You can set this property when inserting or updating a dataset in order to control who is allowed to access the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the following entities: access.specialGroup: projectReaders; access.role: READER; access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup: projectOwners; access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;

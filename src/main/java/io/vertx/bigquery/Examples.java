@@ -6,6 +6,8 @@ import java.nio.file.Paths;
 import java.util.Collection;
 import java.util.Collections;
 
+import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
+
 //import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
 //import com.google.api.client.http.HttpTransport;
 //import com.google.api.client.http.javanet.NetHttpTransport;
@@ -26,13 +28,14 @@ public class Examples {
 	public static void main(String[] args) throws IOException {
 		Vertx vertx = Vertx.vertx();
 //		
+		GoogleCredential googleCredential = new GoogleCredential();
+		googleCredential.getAccessToken();
 		BigQueryOptions options = new BigQueryOptions();
-		options.setGoogleCredentialToken("my-credentials");
+		options.setGoogleCredentialToken(googleCredential.getAccessToken());
 		
 		BigQueryClientImpl client = new BigQueryClientImpl(vertx, options);
 		client.getDataset("bigquery-public-data", "github_repos", accept -> {
-			System.out.println("ok");
-			System.err.println(accept.result().toString());
+			System.out.println(accept.result());
 		});
 
 	}

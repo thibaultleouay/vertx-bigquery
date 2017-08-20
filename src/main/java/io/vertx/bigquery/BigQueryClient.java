@@ -21,39 +21,130 @@ import io.vertx.core.AsyncResult;
 import io.vertx.core.Handler;
 import io.vertx.core.Vertx;
 import io.vertx.core.json.JsonObject;
-
+/**
+ * 
+ */
 @VertxGen
 public interface BigQueryClient {
 
+	/**
+	 * Create and return a client
+	 * @param vertx
+	 * @return this
+	 */
 	static BigQueryClient create(Vertx vertx) {
 		return new BigQueryClientImpl(vertx, new BigQueryOptions());
 	}
 	
+	/**
+	 * Create and return a client but takes a {@link BigQueryOptions}
+	 * @param vertx
+	 * @param options
+	 * @return this
+	 */
 	static BigQueryClient create(Vertx vertx, BigQueryOptions options) {
 		return new BigQueryClientImpl(vertx, options);
 	}
 	
+	/**
+	 * 
+	 * @param projectId
+	 * @param datasetId
+	 * @param succesHandler
+	 * @return
+	 */
 	@Fluent
 	public BigQueryClient getDataset(String projectId, String datasetId, Handler<AsyncResult<Dataset>> succesHandler);
 	
+	/**
+	 * Deletes the dataset specified by the datasetId value.
+	 * 
+	 * @param projectId Project ID of dataset being deleted
+	 * @param datasetId Dataset ID of dataset being deleted
+	 * @param succesHandler
+	 * @return
+	 * 
+	 * @see <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets/delete">/v2/datasets/delete </a>
+	 */
 	@Fluent
 	public BigQueryClient deleteDataset(String projectId, String datasetId, Handler<AsyncResult<Void>> succesHandler);
 	
+	/**
+	 * Creates a new empty dataset
+	 * 
+	 * @param projectId Project ID of the new dataset
+	 * @param succesHandler
+	 * @param payload a {@link Dataset} ressource 
+	 * @return
+	 * 
+	 * @see <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets/insert">/v2/datasets/insert </a>
+	 */
 	@Fluent
 	public BigQueryClient insertDataset(String projectId,  Handler<AsyncResult<Dataset>> succesHandler, Dataset payload);
 	
+	/**
+	 * Lists all datasets in the specified project.
+	 * 
+	 * @param projectId Project ID of the datasets to be listed
+	 * @param succesHandler
+	 * @return
+	 * 
+	 * @see <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets/list">/v2/datasets/list </a>
+	 */
 	@Fluent
 	public BigQueryClient listDatasets(String projectId, Handler<AsyncResult<DatasetList>> succesHandler);
 	
+	/**
+	 * Lists all datasets in the specified project with options.
+	 * 
+	 * @param projectId
+	 * @param succesHandler
+	 * @param options
+	 * @return
+	 * 
+	 * @see <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets/list">/v2/datasets/list </a>
+	 */
 	@Fluent
 	public BigQueryClient listDatasetsWithOptions(String projectId, Handler<AsyncResult<DatasetList>> succesHandler, JsonObject options);
 	
+	/**
+	 * Updates information in an existing dataset. The update method replaces the entire dataset resource, whereas the patch method only replaces fields that are provided in the submitted dataset resource. 
+	 * 
+	 * @param projectId Project ID of the dataset being updated
+	 * @param datasetId Dataset ID of the dataset being updated
+	 * @param succesHandler
+	 * @param payload
+	 * @return
+	 * 
+	 * @see <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets/patch"> /v2/datasets/patch </a>
+	 */
 	@Fluent
 	public BigQueryClient patchDataset(String projectId, String datasetId, Handler<AsyncResult<Dataset>> succesHandler, Dataset payload);
 	
+	/**
+	 * Updates information in an existing dataset. The update method replaces the entire dataset resource, whereas the patch method only replaces fields that are provided in the submitted dataset resource. 
+	 * 
+	 * @param projectId Project ID of the dataset being updated
+	 * @param datasetId Dataset ID of the dataset being updated
+	 * @param succesHandler
+	 * @param payload
+	 * @return
+	 * 
+	 * @see <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets/update"> /v2/datasets/update </a>
+	 */
 	@Fluent
 	public BigQueryClient updateDataSet(String projectId, String datasetId, Handler<AsyncResult<Dataset>> succesHandler, Dataset payload);
 	
+	/**
+	 * Requests that a job be cancelled. 
+	 * 
+	 * @param projectId  Project Id  of the job to cancel
+	 * @param jobId  Job ID of the job to cancel
+	 * @param successHandler
+	 * @return
+	 * 
+	 * @see <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/jobs/cancel">/v2/jobs/cancel </a>
+	 */
 	@Fluent
 	public BigQueryClient cancelJobs(String projectId, String jobId, Handler<AsyncResult<JobCancelResponse>> successHandler);
 	
