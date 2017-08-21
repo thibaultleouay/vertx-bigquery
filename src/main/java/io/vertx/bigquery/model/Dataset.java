@@ -451,8 +451,12 @@ public final class Dataset {
 		return this;
 	}
 
+	public Dataset() {
+	}
+	
 	public Dataset(JsonObject jsonObject) {
-		// TODO Auto-generated constructor stub
+
+		DatasetConverter.fromJson(jsonObject,this);
 	}
 
 	public JsonObject toJson() {

@@ -21,9 +21,8 @@ import io.vertx.core.AsyncResult;
 import io.vertx.core.Handler;
 import io.vertx.core.Vertx;
 import io.vertx.core.json.JsonObject;
-/**
- * 
- */
+
+
 @VertxGen
 public interface BigQueryClient {
 
@@ -47,7 +46,6 @@ public interface BigQueryClient {
 	}
 	
 	/**
-	 * 
 	 * @param projectId
 	 * @param datasetId
 	 * @param succesHandler
@@ -64,7 +62,7 @@ public interface BigQueryClient {
 	 * @param succesHandler
 	 * @return
 	 * 
-	 * @see <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets/delete">/v2/datasets/delete </a>
+	 *  <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets/delete">/v2/datasets/delete </a>
 	 */
 	@Fluent
 	public BigQueryClient deleteDataset(String projectId, String datasetId, Handler<AsyncResult<Void>> succesHandler);
@@ -77,7 +75,7 @@ public interface BigQueryClient {
 	 * @param payload a {@link Dataset} ressource 
 	 * @return
 	 * 
-	 * @see <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets/insert">/v2/datasets/insert </a>
+	 * <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets/insert">/v2/datasets/insert </a> endpoint
 	 */
 	@Fluent
 	public BigQueryClient insertDataset(String projectId,  Handler<AsyncResult<Dataset>> succesHandler, Dataset payload);
@@ -89,7 +87,7 @@ public interface BigQueryClient {
 	 * @param succesHandler
 	 * @return
 	 * 
-	 * @see <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets/list">/v2/datasets/list </a>
+	 *  <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets/list">/v2/datasets/list </a>
 	 */
 	@Fluent
 	public BigQueryClient listDatasets(String projectId, Handler<AsyncResult<DatasetList>> succesHandler);
@@ -102,7 +100,7 @@ public interface BigQueryClient {
 	 * @param options
 	 * @return
 	 * 
-	 * @see <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets/list">/v2/datasets/list </a>
+	 * <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets/list">/v2/datasets/list </a>
 	 */
 	@Fluent
 	public BigQueryClient listDatasetsWithOptions(String projectId, Handler<AsyncResult<DatasetList>> succesHandler, JsonObject options);
@@ -116,7 +114,7 @@ public interface BigQueryClient {
 	 * @param payload
 	 * @return
 	 * 
-	 * @see <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets/patch"> /v2/datasets/patch </a>
+	 * <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets/patch"> /v2/datasets/patch </a>
 	 */
 	@Fluent
 	public BigQueryClient patchDataset(String projectId, String datasetId, Handler<AsyncResult<Dataset>> succesHandler, Dataset payload);
@@ -130,7 +128,7 @@ public interface BigQueryClient {
 	 * @param payload
 	 * @return
 	 * 
-	 * @see <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets/update"> /v2/datasets/update </a>
+	 *  <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets/update"> /v2/datasets/update </a>
 	 */
 	@Fluent
 	public BigQueryClient updateDataSet(String projectId, String datasetId, Handler<AsyncResult<Dataset>> succesHandler, Dataset payload);
@@ -143,59 +141,184 @@ public interface BigQueryClient {
 	 * @param successHandler
 	 * @return
 	 * 
-	 * @see <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/jobs/cancel">/v2/jobs/cancel </a>
+	 *  <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/jobs/cancel">/v2/jobs/cancel </a>
 	 */
 	@Fluent
 	public BigQueryClient cancelJobs(String projectId, String jobId, Handler<AsyncResult<JobCancelResponse>> successHandler);
 	
+	/**
+	 * 
+	 * @param projectId
+	 * @param jobId
+	 * @param succesHandler
+	 * @return
+	 */
 	@Fluent
 	public BigQueryClient getJob(String projectId, String jobId, Handler<AsyncResult<Job>> succesHandler);
 	
+	/**
+	 * 
+	 * @param projectId
+	 * @param jobId
+	 * @param succesHandler
+	 * @return
+	 */
 	@Fluent
 	public BigQueryClient getQueryResult(String projectId, String jobId,  Handler<AsyncResult<GetQueryResultsResponse>> succesHandler);
 
+	/**
+	 * 
+	 * @param projectId
+	 * @param jobId
+	 * @param succesHandler
+	 * @param options
+	 * @return
+	 */
 	@Fluent
 	public BigQueryClient getQueryResultWithOptions(String projectId, String jobId,  Handler<AsyncResult<GetQueryResultsResponse>> succesHandler, JsonObject options);
 
+	/**
+	 * 
+	 * @param projectId
+	 * @param succeshandler
+	 * @return
+	 */
 	@Fluent
 	public BigQueryClient listJobs(String projectId, Handler<AsyncResult<JobList>> succeshandler);
 	
+	/**
+	 * 
+	 * @param projectId
+	 * @param succeshandler
+	 * @param options
+	 * @return
+	 */
 	@Fluent
 	public BigQueryClient listJobsWithOptions(String projectId, Handler<AsyncResult<JobList>> succeshandler, JsonObject options );
 	
+	/**
+	 * 
+	 * @param projectId
+	 * @param succeshandler
+	 * @param payload
+	 * @return
+	 */
 	@Fluent
 	public BigQueryClient queryJob(String projectId, Handler<AsyncResult<QueryResponse>> succeshandler, QueryRequest payload);
 	
+	/**
+	 * 
+	 * @param succeshandler
+	 * @return
+	 */
 	@Fluent
 	public BigQueryClient listProject(Handler<AsyncResult<ProjectList>> succeshandler);
 	
+	/**
+	 * 
+	 * @param projectId
+	 * @param datasetId
+	 * @param tableId
+	 * @param succeshandler
+	 * @param payload
+	 * @return
+	 */
 	@Fluent
 	public BigQueryClient insertAllTableData(String projectId, String datasetId, String tableId, Handler<AsyncResult<TableDataInsertAllResponse>> succeshandler, TableDataInsertAllRequest payload);
 	
+	/**
+	 * 
+	 * @param projectId
+	 * @param datasetId
+	 * @param tableId
+	 * @param succeHandler
+	 * @return
+	 */
 	@Fluent
 	public BigQueryClient deleteTable(String projectId, String datasetId, String tableId, Handler<AsyncResult<Void>> succeHandler);
 	
+	/**
+	 * 
+	 * @param projectId
+	 * @param datasetId
+	 * @param tableId
+	 * @param succeshandler
+	 * @return
+	 */
 	@Fluent
 	public BigQueryClient getTable(String projectId, String datasetId, String tableId, Handler<AsyncResult<Table>>succeshandler);
 
+	/**
+	 * 
+	 * @param projectId
+	 * @param datasetId
+	 * @param tableId
+	 * @param succeshandler
+	 * @param options
+	 * @return
+	 */
 	@Fluent
 	public BigQueryClient getTableWithOptions(String projectId, String datasetId, String tableId, Handler<AsyncResult<Table>>succeshandler, JsonObject options);
 	
+	/**
+	 * 
+	 * @param projectId
+	 * @param datasetId
+	 * @param succeshandler
+	 * @param payload
+	 * @return
+	 */
 	@Fluent
 	public BigQueryClient insertTable(String projectId, String datasetId, Handler<AsyncResult<Table>> succeshandler, Table payload);
 	
+	/**
+	 * 
+	 * @param projectId
+	 * @param datasetId
+	 * @param succeshandler
+	 * @return
+	 */
 	@Fluent
 	public BigQueryClient listTables(String projectId, String datasetId, Handler<AsyncResult<TableList>> succeshandler);
 	
+	/**
+	 * 
+	 * @param projectId
+	 * @param datasetId
+	 * @param succeshandler
+	 * @param options
+	 * @return
+	 */
 	@Fluent
 	public BigQueryClient listTablesWithOptions(String projectId, String datasetId, Handler<AsyncResult<TableList>> succeshandler, JsonObject options);
 	
+	/**
+	 * 
+	 * @param projectId
+	 * @param datasetId
+	 * @param tableId
+	 * @param succeshandler
+	 * @param payload
+	 * @return
+	 */
 	@Fluent
 	public BigQueryClient patchTable(String projectId, String datasetId, String tableId, Handler<AsyncResult<Table>> succeshandler, Table payload);
 	
+	/**
+	 * 
+	 * @param projectId
+	 * @param datasetId
+	 * @param tableId
+	 * @param succeshandler
+	 * @param payload
+	 * @return
+	 */
 	@Fluent
 	public BigQueryClient updateTable(String projectId, String datasetId, String tableId, Handler<AsyncResult<Table>> succeshandler, Table payload);
 
+	/**
+	 * 
+	 */
 	public void close();
 	
 }

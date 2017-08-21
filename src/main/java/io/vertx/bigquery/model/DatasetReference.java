@@ -93,8 +93,16 @@ public final class DatasetReference {
 		return this;
 	}
 
+	public DatasetReference() {
+	}
+	
 	public DatasetReference(JsonObject json) {
-		// TODO Auto-generated constructor stub
+		DatasetReferenceConverter.fromJson(json, this);
 	}
 
+	public JsonObject toJson() {
+		JsonObject jsonObject = new JsonObject();
+		DatasetReferenceConverter.toJson(this, jsonObject);
+		return jsonObject;
+	}
 }

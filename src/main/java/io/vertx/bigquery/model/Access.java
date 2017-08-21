@@ -201,8 +201,16 @@ public final class Access {
 		return this;
 	}
 
+	public Access() {
+	}
 	
 	public Access(JsonObject json) {
-		// TODO Auto-generated constructor stub
+		AccessConverter.fromJson(json, this);
+	}
+	
+	public JsonObject toJson() {
+		JsonObject jsonObject = new JsonObject();
+		AccessConverter.toJson(this, jsonObject);
+		return jsonObject;
 	}
 }

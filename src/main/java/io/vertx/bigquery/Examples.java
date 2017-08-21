@@ -7,6 +7,11 @@ import java.util.Collection;
 import java.util.Collections;
 
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
+import com.google.api.client.googleapis.testing.auth.oauth2.MockGoogleCredential;
+import com.google.api.client.http.HttpTransport;
+import com.google.api.client.http.javanet.NetHttpTransport;
+import com.google.api.client.json.JsonFactory;
+import com.google.api.client.json.jackson2.JacksonFactory;
 
 //import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
 //import com.google.api.client.http.HttpTransport;
@@ -20,22 +25,23 @@ import com.google.gson.GsonBuilder;
 import io.vertx.bigquery.impl.BigQueryClientImpl;
 import io.vertx.core.Vertx;
 
-/**
- * Hello world!
- *
- */
 public class Examples {
 	public static void main(String[] args) throws IOException {
 		Vertx vertx = Vertx.vertx();
-//		
-		GoogleCredential googleCredential = new GoogleCredential();
-		googleCredential.getAccessToken();
 		BigQueryOptions options = new BigQueryOptions();
-		options.setGoogleCredentialToken(googleCredential.getAccessToken());
+		GoogleCredential mock = MockGoogleCredential.getApplicationDefault().createScoped(BigqueryScopes.all());
+		
+		options.setGoogleCredentialToken(mock.getAccessToken());
 		
 		BigQueryClientImpl client = new BigQueryClientImpl(vertx, options);
 		client.getDataset("bigquery-public-data", "github_repos", accept -> {
-			System.out.println(accept.result());
+			if(accept.succeeded()) {
+				System.out.println(accept.result().getId());
+				}
+			else {
+				System.out.println(accept.cause());
+				
+			}
 		});
 
 	}
