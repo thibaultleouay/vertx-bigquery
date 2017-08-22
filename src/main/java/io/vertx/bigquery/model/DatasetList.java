@@ -163,8 +163,7 @@ public final class DatasetList {
 		DatasetListConverter.toJson(this, jsonObject);
 		return jsonObject;
 	}
-	/**
-	 * Model definition for DatasetListDatasets.
-	 */
 
+	public DatasetList() {
+	}
 }

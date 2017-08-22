@@ -105,4 +105,5 @@ public final class DatasetReference {
 		DatasetReferenceConverter.toJson(this, jsonObject);
 		return jsonObject;
 	}
+	
 }

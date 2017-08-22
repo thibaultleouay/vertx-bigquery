@@ -384,6 +384,16 @@ public final class ExternalDataConfiguration {
 	}
 
 	public ExternalDataConfiguration(JsonObject json) {
-		// TODO Auto-generated constructor stub
+		ExternalDataConfigurationConverter.fromJson(json, this);
 	}
+	
+	public ExternalDataConfiguration() {}
+	
+	public JsonObject toJson() {
+		JsonObject jsonObject = new JsonObject();
+		ExternalDataConfigurationConverter.toJson(this, jsonObject);
+		return jsonObject;
+	}
+	
+	
 }

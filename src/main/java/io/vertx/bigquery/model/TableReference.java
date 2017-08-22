@@ -108,6 +108,14 @@ public final class TableReference {
   }
 
   public TableReference(JsonObject jsonObject) {
-	// TODO Auto-generated constructor stub
-}
+	  TableReferenceConverter.fromJson(jsonObject, this);
+  }
+  
+  public TableReference() {}
+
+  public JsonObject toJson() {
+	  JsonObject jsonObject = new JsonObject();
+	  TableReferenceConverter.toJson(this, jsonObject);
+	  return jsonObject;
+  }
 }

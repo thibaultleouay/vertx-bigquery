@@ -223,6 +223,15 @@ public final class Tables {
 	}
 
 	public Tables(JsonObject jsonObject) {
-		// TODO Auto-generated constructor stub
+		TablesConverter.fromJson(jsonObject, this);
+	}
+
+	public JsonObject toJson() {
+		JsonObject jsonObject = new JsonObject();
+		TablesConverter.toJson(this, jsonObject);
+		return jsonObject;
+	}
+	
+	public Tables() {
 	}
 }

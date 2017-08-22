@@ -81,6 +81,13 @@ public final class GoogleSheetsOptions  {
   }
 
   public GoogleSheetsOptions(JsonObject json) {
-	// TODO Auto-generated constructor stub
-}
+	  GoogleSheetsOptionsConverter.fromJson(json, this);
+  }
+  public GoogleSheetsOptions() {}
+  
+  public JsonObject toJson() {
+	  JsonObject jsonObject = new JsonObject(); 
+	  GoogleSheetsOptionsConverter.toJson(this, jsonObject);
+	  return jsonObject;
+  }
 }

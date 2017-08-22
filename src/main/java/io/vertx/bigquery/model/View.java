@@ -32,8 +32,15 @@ public  final class View  {
     this.useLegacySql = useLegacySql;
     return this;
   }
-public View(JsonObject jsonObject) {
-// TODO Auto-generated constructor stub
-}
+	public View(JsonObject jsonObject) {
+		ViewConverter.fromJson(jsonObject, this);
+	}
 
+	public View() {}
+	
+	public JsonObject toJson() {
+		JsonObject jsonObject = new JsonObject();
+		ViewConverter.toJson(this, jsonObject);
+		return jsonObject;
+	}
 }

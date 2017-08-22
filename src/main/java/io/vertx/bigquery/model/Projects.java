@@ -4,129 +4,148 @@ import io.vertx.codegen.annotations.DataObject;
 import io.vertx.core.json.JsonObject;
 
 @DataObject(generateConverter = true)
-public  final class Projects  {
+public final class Projects {
 
-  /**
-   * A descriptive name for this project.
-   * The value may be {@code null}.
-   */
-  
-  private java.lang.String friendlyName;
+	/**
+	 * A descriptive name for this project. The value may be {@code null}.
+	 */
 
-  /**
-   * An opaque ID of this project.
-   * The value may be {@code null}.
-   */
-  
-  private java.lang.String id;
+	private java.lang.String friendlyName;
 
-  /**
-   * The resource type.
-   * The value may be {@code null}.
-   */
-  
-  private java.lang.String kind;
+	/**
+	 * An opaque ID of this project. The value may be {@code null}.
+	 */
 
-  /**
-   * The numeric ID of this project.
-   * The value may be {@code null}.
-   */
+	private java.lang.String id;
 
-  private java.math.BigInteger numericId;
+	/**
+	 * The resource type. The value may be {@code null}.
+	 */
 
-  /**
-   * A unique reference to this project.
-   * The value may be {@code null}.
-   */
-  
-  private ProjectReference projectReference;
+	private java.lang.String kind;
 
-  /**
-   * A descriptive name for this project.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getFriendlyName() {
-    return friendlyName;
-  }
+	/**
+	 * The numeric ID of this project. The value may be {@code null}.
+	 */
 
-  /**
-   * A descriptive name for this project.
-   * @param friendlyName friendlyName or {@code null} for none
-   */
-  public Projects setFriendlyName(java.lang.String friendlyName) {
-    this.friendlyName = friendlyName;
-    return this;
-  }
+	private java.math.BigInteger numericId;
 
-  /**
-   * An opaque ID of this project.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getId() {
-    return id;
-  }
+	/**
+	 * A unique reference to this project. The value may be {@code null}.
+	 */
 
-  /**
-   * An opaque ID of this project.
-   * @param id id or {@code null} for none
-   */
-  public Projects setId(java.lang.String id) {
-    this.id = id;
-    return this;
-  }
+	private ProjectReference projectReference;
 
-  /**
-   * The resource type.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
+	/**
+	 * A descriptive name for this project.
+	 * 
+	 * @return value or {@code null} for none
+	 */
+	public java.lang.String getFriendlyName() {
+		return friendlyName;
+	}
 
-  /**
-   * The resource type.
-   * @param kind kind or {@code null} for none
-   */
-  public Projects setKind(java.lang.String kind) {
-    this.kind = kind;
-    return this;
-  }
+	/**
+	 * A descriptive name for this project.
+	 * 
+	 * @param friendlyName
+	 *            friendlyName or {@code null} for none
+	 */
+	public Projects setFriendlyName(java.lang.String friendlyName) {
+		this.friendlyName = friendlyName;
+		return this;
+	}
 
-  /**
-   * The numeric ID of this project.
-   * @return value or {@code null} for none
-   */
-  public java.math.BigInteger getNumericId() {
-    return numericId;
-  }
+	/**
+	 * An opaque ID of this project.
+	 * 
+	 * @return value or {@code null} for none
+	 */
+	public java.lang.String getId() {
+		return id;
+	}
 
-  /**
-   * The numeric ID of this project.
-   * @param numericId numericId or {@code null} for none
-   */
-  public Projects setNumericId(java.math.BigInteger numericId) {
-    this.numericId = numericId;
-    return this;
-  }
+	/**
+	 * An opaque ID of this project.
+	 * 
+	 * @param id
+	 *            id or {@code null} for none
+	 */
+	public Projects setId(java.lang.String id) {
+		this.id = id;
+		return this;
+	}
 
-  /**
-   * A unique reference to this project.
-   * @return value or {@code null} for none
-   */
-  public ProjectReference getProjectReference() {
-    return projectReference;
-  }
+	/**
+	 * The resource type.
+	 * 
+	 * @return value or {@code null} for none
+	 */
+	public java.lang.String getKind() {
+		return kind;
+	}
 
-  /**
-   * A unique reference to this project.
-   * @param projectReference projectReference or {@code null} for none
-   */
-  public Projects setProjectReference(ProjectReference projectReference) {
-    this.projectReference = projectReference;
-    return this;
-  }
+	/**
+	 * The resource type.
+	 * 
+	 * @param kind
+	 *            kind or {@code null} for none
+	 */
+	public Projects setKind(java.lang.String kind) {
+		this.kind = kind;
+		return this;
+	}
 
-  public Projects(JsonObject jsonObject) {
-		// TODO Auto-generated constructor stub
+	/**
+	 * The numeric ID of this project.
+	 * 
+	 * @return value or {@code null} for none
+	 */
+	public java.math.BigInteger getNumericId() {
+		return numericId;
+	}
+
+	/**
+	 * The numeric ID of this project.
+	 * 
+	 * @param numericId
+	 *            numericId or {@code null} for none
+	 */
+	public Projects setNumericId(java.math.BigInteger numericId) {
+		this.numericId = numericId;
+		return this;
+	}
+
+	/**
+	 * A unique reference to this project.
+	 * 
+	 * @return value or {@code null} for none
+	 */
+	public ProjectReference getProjectReference() {
+		return projectReference;
+	}
+
+	/**
+	 * A unique reference to this project.
+	 * 
+	 * @param projectReference
+	 *            projectReference or {@code null} for none
+	 */
+	public Projects setProjectReference(ProjectReference projectReference) {
+		this.projectReference = projectReference;
+		return this;
+	}
+
+	public Projects(JsonObject jsonObject) {
+		ProjectsConverter.fromJson(jsonObject, this);
+	}
+
+	public JsonObject toJson() {
+		JsonObject jsonObject = new JsonObject();
+		ProjectsConverter.toJson(this, jsonObject);
+		return jsonObject;
+	}
+
+	public Projects() {
 	}
 }

@@ -38,7 +38,7 @@ public final class ProjectReference {
 	 * [Required] ID of the project. Can be either the numeric ID or the assigned ID
 	 * of the project. The value may be {@code null}.
 	 */
-	
+
 	private java.lang.String projectId;
 
 	/**
@@ -64,6 +64,15 @@ public final class ProjectReference {
 	}
 
 	public ProjectReference(JsonObject jsonObject) {
-		// TODO Auto-generated constructor stub
+		ProjectReferenceConverter.fromJson(jsonObject, this);
+	}
+	
+	public JsonObject toJson() {
+		JsonObject jsonObject = new JsonObject();
+		ProjectReferenceConverter.toJson(this, jsonObject);
+		return jsonObject;
+	}
+	
+	public ProjectReference() {
 	}
 }

@@ -56,7 +56,15 @@ public final class TableSchema {
     return this;
   }
 
-public TableSchema(JsonObject jsonObject) {
-	// TODO Auto-generated constructor stub
-}
+	public TableSchema(JsonObject jsonObject) {
+		TableSchemaConverter.fromJson(jsonObject, this);
+	}
+	public TableSchema() {
+	}
+
+	public JsonObject toJson() {
+		JsonObject jsonObject = new JsonObject();
+		TableSchemaConverter.toJson(this, jsonObject);
+		return jsonObject;
+	}
 }

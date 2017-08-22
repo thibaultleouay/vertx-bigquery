@@ -148,6 +148,13 @@ public final class BigtableOptions {
 	}
 
 	public BigtableOptions(JsonObject json) {
-		// TODO Auto-generated constructor stub
+		BigtableOptionsConverter.fromJson(json, this);
+	}
+	public BigtableOptions() {}
+	
+	public JsonObject toJson() {
+		JsonObject jsonObject = new JsonObject();
+		BigtableOptionsConverter.toJson(this, jsonObject);
+		return jsonObject;
 	}
 }

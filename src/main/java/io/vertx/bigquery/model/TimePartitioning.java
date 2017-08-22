@@ -16,6 +16,8 @@
 
 package io.vertx.bigquery.model;
 
+import com.google.gson.JsonSerializationContext;
+
 import io.vertx.codegen.annotations.DataObject;
 import io.vertx.core.json.JsonObject;
 
@@ -82,7 +84,14 @@ public final class TimePartitioning {
     this.type = type;
     return this;
   }
-public TimePartitioning(JsonObject jsonObject) {
-	// TODO Auto-generated constructor stub
-}
+	public TimePartitioning(JsonObject jsonObject) {
+		TimePartitioningConverter.fromJson(jsonObject, this);
+	}
+	public TimePartitioning() {}
+	
+	public JsonObject toJson() {
+		JsonObject jsonObject = new JsonObject();
+		TimePartitioningConverter.toJson(this, jsonObject);
+		return jsonObject;
+	}
 }

@@ -165,9 +165,6 @@ public final class ProjectList {
 		return this;
 	}
 
-	/**
-	 * Model definition for ProjectListProjects.
-	 */
 
 	public ProjectList(JsonObject jsonObject) {
 		ProjectListConverter.fromJson(jsonObject, this);
@@ -177,5 +174,8 @@ public final class ProjectList {
 		JsonObject jsonObject = new JsonObject();
 		ProjectListConverter.toJson(this, jsonObject);
 		return jsonObject;
+	}
+
+	public ProjectList() {
 	}
 }

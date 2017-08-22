@@ -174,4 +174,7 @@ public final class TableList {
 		TableListConverter.toJson(this, jsonObject);
 		return jsonObject;
 	}
+	
+	public TableList() {
+	}
 }

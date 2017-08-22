@@ -169,7 +169,15 @@ public final class TableFieldSchema {
     this.type = type;
     return this;
   }
-public TableFieldSchema(JsonObject jsonObject) {
-	// TODO Auto-generated constructor stub
-}
+	public TableFieldSchema(JsonObject jsonObject) {
+		TableFieldSchemaConverter.fromJson(jsonObject, this);
+	}
+	public TableFieldSchema() {
+	}
+
+	public JsonObject toJson() {
+		JsonObject jsonObject = new JsonObject();
+		TableFieldSchemaConverter.toJson(this, jsonObject);
+		return jsonObject;
+	}
 }

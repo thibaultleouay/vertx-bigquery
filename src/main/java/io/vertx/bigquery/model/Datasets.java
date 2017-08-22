@@ -147,7 +147,16 @@ public  final class Datasets {
 	}
 
 	public Datasets(JsonObject json) {
-		// TODO Auto-generated constructor stub
+		DatasetsConverter.fromJson(json, this);
+	}
+	
+	public JsonObject toJson() {
+		JsonObject jsonObject = new JsonObject();
+		DatasetsConverter.toJson(this, jsonObject);
+		return jsonObject;
+	}
+	
+	public Datasets() {
 	}
 
 }

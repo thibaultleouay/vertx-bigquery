@@ -659,4 +659,6 @@ public final class Table {
 		TableConverter.toJson(this, jsonObject);
 		return jsonObject;
 	}
+	public Table() {
+	}
 }
