@@ -39,26 +39,26 @@ public final class ErrorProto {
 	 * used. The value may be {@code null}.
 	 */
 	
-	private java.lang.String debugInfo;
+	private String debugInfo;
 
 	/**
 	 * Specifies where the error occurred, if present. The value may be
 	 * {@code null}.
 	 */
 	
-	private java.lang.String location;
+	private String location;
 
 	/**
 	 * A human-readable description of the error. The value may be {@code null}.
 	 */
 	
-	private java.lang.String message;
+	private String message;
 
 	/**
 	 * A short error code that summarizes the error. The value may be {@code null}.
 	 */
 	
-	private java.lang.String reason;
+	private String reason;
 
 	/**
 	 * Debugging information. This property is internal to Google and should not be
@@ -66,7 +66,7 @@ public final class ErrorProto {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getDebugInfo() {
+	public String getDebugInfo() {
 		return debugInfo;
 	}
 
@@ -77,7 +77,7 @@ public final class ErrorProto {
 	 * @param debugInfo
 	 *            debugInfo or {@code null} for none
 	 */
-	public ErrorProto setDebugInfo(java.lang.String debugInfo) {
+	public ErrorProto setDebugInfo(String debugInfo) {
 		this.debugInfo = debugInfo;
 		return this;
 	}
@@ -87,7 +87,7 @@ public final class ErrorProto {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getLocation() {
+	public String getLocation() {
 		return location;
 	}
 
@@ -97,7 +97,7 @@ public final class ErrorProto {
 	 * @param location
 	 *            location or {@code null} for none
 	 */
-	public ErrorProto setLocation(java.lang.String location) {
+	public ErrorProto setLocation(String location) {
 		this.location = location;
 		return this;
 	}
@@ -107,7 +107,7 @@ public final class ErrorProto {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getMessage() {
+	public String getMessage() {
 		return message;
 	}
 
@@ -117,7 +117,7 @@ public final class ErrorProto {
 	 * @param message
 	 *            message or {@code null} for none
 	 */
-	public ErrorProto setMessage(java.lang.String message) {
+	public ErrorProto setMessage(String message) {
 		this.message = message;
 		return this;
 	}
@@ -127,7 +127,7 @@ public final class ErrorProto {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getReason() {
+	public String getReason() {
 		return reason;
 	}
 
@@ -137,7 +137,7 @@ public final class ErrorProto {
 	 * @param reason
 	 *            reason or {@code null} for none
 	 */
-	public ErrorProto setReason(java.lang.String reason) {
+	public ErrorProto setReason(String reason) {
 		this.reason = reason;
 		return this;
 	}

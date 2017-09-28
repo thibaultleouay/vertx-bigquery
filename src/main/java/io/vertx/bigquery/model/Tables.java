@@ -13,26 +13,26 @@ public final class Tables {
 	 * The user-friendly name for this table. The value may be {@code null}.
 	 */
 	
-	private java.lang.String friendlyName;
+	private String friendlyName;
 
 	/**
 	 * An opaque ID of the table The value may be {@code null}.
 	 */
 	
-	private java.lang.String id;
+	private String id;
 
 	/**
 	 * The resource type. The value may be {@code null}.
 	 */
 	
-	private java.lang.String kind;
+	private String kind;
 
 	/**
 	 * [Experimental] The labels associated with this table. You can use these to
 	 * organize and group your tables. The value may be {@code null}.
 	 */
 	
-	private java.util.Map<String, java.lang.String> labels;
+	private java.util.Map<String, String> labels;
 
 	/**
 	 * A reference uniquely identifying the table. The value may be {@code null}.
@@ -52,7 +52,7 @@ public final class Tables {
 	 * {@code null}.
 	 */
 	
-	private java.lang.String type;
+	private String type;
 
 	/**
 	 * Additional details for a view. The value may be {@code null}.
@@ -65,7 +65,7 @@ public final class Tables {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getFriendlyName() {
+	public String getFriendlyName() {
 		return friendlyName;
 	}
 
@@ -75,7 +75,7 @@ public final class Tables {
 	 * @param friendlyName
 	 *            friendlyName or {@code null} for none
 	 */
-	public Tables setFriendlyName(java.lang.String friendlyName) {
+	public Tables setFriendlyName(String friendlyName) {
 		this.friendlyName = friendlyName;
 		return this;
 	}
@@ -85,7 +85,7 @@ public final class Tables {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getId() {
+	public String getId() {
 		return id;
 	}
 
@@ -95,7 +95,7 @@ public final class Tables {
 	 * @param id
 	 *            id or {@code null} for none
 	 */
-	public Tables setId(java.lang.String id) {
+	public Tables setId(String id) {
 		this.id = id;
 		return this;
 	}
@@ -105,7 +105,7 @@ public final class Tables {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getKind() {
+	public String getKind() {
 		return kind;
 	}
 
@@ -115,7 +115,7 @@ public final class Tables {
 	 * @param kind
 	 *            kind or {@code null} for none
 	 */
-	public Tables setKind(java.lang.String kind) {
+	public Tables setKind(String kind) {
 		this.kind = kind;
 		return this;
 	}
@@ -126,7 +126,7 @@ public final class Tables {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.util.Map<String, java.lang.String> getLabels() {
+	public java.util.Map<String, String> getLabels() {
 		return labels;
 	}
 
@@ -137,7 +137,7 @@ public final class Tables {
 	 * @param labels
 	 *            labels or {@code null} for none
 	 */
-	public Tables setLabels(java.util.Map<String, java.lang.String> labels) {
+	public Tables setLabels(java.util.Map<String, String> labels) {
 		this.labels = labels;
 		return this;
 	}
@@ -187,7 +187,7 @@ public final class Tables {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getType() {
+	public String getType() {
 		return type;
 	}
 
@@ -197,7 +197,7 @@ public final class Tables {
 	 * @param type
 	 *            type or {@code null} for none
 	 */
-	public Tables setType(java.lang.String type) {
+	public Tables setType(String type) {
 		this.type = type;
 		return this;
 	}

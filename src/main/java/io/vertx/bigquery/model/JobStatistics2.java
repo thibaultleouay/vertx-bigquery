@@ -82,7 +82,7 @@ public final class JobStatistics2 {
 	 * may be {@code null}.
 	 */
 	
-	private java.lang.String statementType;
+	private String statementType;
 
 	/**
 	 * [Output-only] Total bytes billed for the job. The value may be {@code null}.
@@ -236,7 +236,7 @@ public final class JobStatistics2 {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getStatementType() {
+	public String getStatementType() {
 		return statementType;
 	}
 
@@ -246,7 +246,7 @@ public final class JobStatistics2 {
 	 * @param statementType
 	 *            statementType or {@code null} for none
 	 */
-	public JobStatistics2 setStatementType(java.lang.String statementType) {
+	public JobStatistics2 setStatementType(String statementType) {
 		this.statementType = statementType;
 		return this;
 	}

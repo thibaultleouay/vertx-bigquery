@@ -44,7 +44,7 @@ public final class BigtableColumn {
 	 * levels. The value may be {@code null}.
 	 */
 	
-	private java.lang.String encoding;
+	private String encoding;
 
 	/**
 	 * [Optional] If the qualifier is not a valid BigQuery field identifier i.e.
@@ -53,7 +53,7 @@ public final class BigtableColumn {
 	 * {@code null}.
 	 */
 	
-	private java.lang.String fieldName;
+	private String fieldName;
 
 	/**
 	 * [Optional] If this is set, only the latest version of value in this column
@@ -74,13 +74,13 @@ public final class BigtableColumn {
 	 * identifier must be provided as field_name. The value may be {@code null}.
 	 */
 	
-	private java.lang.String qualifierEncoded;
+	private String qualifierEncoded;
 
 	/**
 	 * The value may be {@code null}.
 	 */
 	
-	private java.lang.String qualifierString;
+	private String qualifierString;
 
 	/**
 	 * [Optional] The type to convert the value in cells of this column. The values
@@ -91,7 +91,7 @@ public final class BigtableColumn {
 	 * precedence if 'type' is set at both levels. The value may be {@code null}.
 	 */
 	
-	private java.lang.String type;
+	private String type;
 
 	/**
 	 * [Optional] The encoding of the values when the type is not STRING. Acceptable
@@ -103,7 +103,7 @@ public final class BigtableColumn {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getEncoding() {
+	public String getEncoding() {
 		return encoding;
 	}
 
@@ -118,7 +118,7 @@ public final class BigtableColumn {
 	 * @param encoding
 	 *            encoding or {@code null} for none
 	 */
-	public BigtableColumn setEncoding(java.lang.String encoding) {
+	public BigtableColumn setEncoding(String encoding) {
 		this.encoding = encoding;
 		return this;
 	}
@@ -130,7 +130,7 @@ public final class BigtableColumn {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getFieldName() {
+	public String getFieldName() {
 		return fieldName;
 	}
 
@@ -142,7 +142,7 @@ public final class BigtableColumn {
 	 * @param fieldName
 	 *            fieldName or {@code null} for none
 	 */
-	public BigtableColumn setFieldName(java.lang.String fieldName) {
+	public BigtableColumn setFieldName(String fieldName) {
 		this.fieldName = fieldName;
 		return this;
 	}
@@ -185,7 +185,7 @@ public final class BigtableColumn {
 	 * @see #decodeQualifierEncoded()
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getQualifierEncoded() {
+	public String getQualifierEncoded() {
 		return qualifierEncoded;
 	}
 
@@ -221,7 +221,7 @@ public final class BigtableColumn {
 	 * @param qualifierEncoded
 	 *            qualifierEncoded or {@code null} for none
 	 */
-	public BigtableColumn setQualifierEncoded(java.lang.String qualifierEncoded) {
+	public BigtableColumn setQualifierEncoded(String qualifierEncoded) {
 		this.qualifierEncoded = qualifierEncoded;
 		return this;
 	}
@@ -252,7 +252,7 @@ public final class BigtableColumn {
 	/**
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getQualifierString() {
+	public String getQualifierString() {
 		return qualifierString;
 	}
 
@@ -260,7 +260,7 @@ public final class BigtableColumn {
 	 * @param qualifierString
 	 *            qualifierString or {@code null} for none
 	 */
-	public BigtableColumn setQualifierString(java.lang.String qualifierString) {
+	public BigtableColumn setQualifierString(String qualifierString) {
 		this.qualifierString = qualifierString;
 		return this;
 	}
@@ -275,7 +275,7 @@ public final class BigtableColumn {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getType() {
+	public String getType() {
 		return type;
 	}
 
@@ -290,7 +290,7 @@ public final class BigtableColumn {
 	 * @param type
 	 *            type or {@code null} for none
 	 */
-	public BigtableColumn setType(java.lang.String type) {
+	public BigtableColumn setType(String type) {
 		this.type = type;
 		return this;
 	}

@@ -55,7 +55,7 @@ public class ExternalDataConfigurationConverter {
       obj.setSourceFormat((String)json.getValue("sourceFormat"));
     }
     if (json.getValue("sourceUris") instanceof JsonArray) {
-      java.util.ArrayList<java.lang.String> list = new java.util.ArrayList<>();
+      java.util.ArrayList<String> list = new java.util.ArrayList<>();
       json.getJsonArray("sourceUris").forEach( item -> {
         if (item instanceof String)
           list.add((String)item);

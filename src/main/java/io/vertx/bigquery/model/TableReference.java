@@ -37,14 +37,14 @@ public final class TableReference {
    * The value may be {@code null}.
    */
   
-  private java.lang.String datasetId;
+  private String datasetId;
 
   /**
    * [Required] The ID of the project containing this table.
    * The value may be {@code null}.
    */
   
-  private java.lang.String projectId;
+  private String projectId;
 
   /**
    * [Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
@@ -52,13 +52,13 @@ public final class TableReference {
    * The value may be {@code null}.
    */
   
-  private java.lang.String tableId;
+  private String tableId;
 
   /**
    * [Required] The ID of the dataset containing this table.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDatasetId() {
+  public String getDatasetId() {
     return datasetId;
   }
 
@@ -66,7 +66,7 @@ public final class TableReference {
    * [Required] The ID of the dataset containing this table.
    * @param datasetId datasetId or {@code null} for none
    */
-  public TableReference setDatasetId(java.lang.String datasetId) {
+  public TableReference setDatasetId(String datasetId) {
     this.datasetId = datasetId;
     return this;
   }
@@ -75,7 +75,7 @@ public final class TableReference {
    * [Required] The ID of the project containing this table.
    * @return value or {@code null} for none
    */
-  public java.lang.String getProjectId() {
+  public String getProjectId() {
     return projectId;
   }
 
@@ -83,7 +83,7 @@ public final class TableReference {
    * [Required] The ID of the project containing this table.
    * @param projectId projectId or {@code null} for none
    */
-  public TableReference setProjectId(java.lang.String projectId) {
+  public TableReference setProjectId(String projectId) {
     this.projectId = projectId;
     return this;
   }
@@ -93,7 +93,7 @@ public final class TableReference {
    * underscores (_). The maximum length is 1,024 characters.
    * @return value or {@code null} for none
    */
-  public java.lang.String getTableId() {
+  public String getTableId() {
     return tableId;
   }
 
@@ -102,7 +102,7 @@ public final class TableReference {
    * underscores (_). The maximum length is 1,024 characters.
    * @param tableId tableId or {@code null} for none
    */
-  public TableReference setTableId(java.lang.String tableId) {
+  public TableReference setTableId(String tableId) {
     this.tableId = tableId;
     return this;
   }

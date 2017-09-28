@@ -54,7 +54,7 @@ public final class GetQueryResultsResponse {
 	 * A hash of this response. The value may be {@code null}.
 	 */
 
-	private java.lang.String etag;
+	private String etag;
 
 	/**
 	 * Whether the query has completed or not. If rows or totalRows are present,
@@ -79,7 +79,7 @@ public final class GetQueryResultsResponse {
 	 * The resource type of the response. The value may be {@code null}.
 	 */
 
-	private java.lang.String kind;
+	private String kind;
 
 	/**
 	 * [Output-only] The number of rows affected by a DML statement. Present only
@@ -92,7 +92,7 @@ public final class GetQueryResultsResponse {
 	 * A token used for paging results. The value may be {@code null}.
 	 */
 
-	private java.lang.String pageToken;
+	private String pageToken;
 
 	/**
 	 * An object with as many results as can be contained within the maximum
@@ -176,7 +176,7 @@ public final class GetQueryResultsResponse {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getEtag() {
+	public String getEtag() {
 		return etag;
 	}
 
@@ -186,7 +186,7 @@ public final class GetQueryResultsResponse {
 	 * @param etag
 	 *            etag or {@code null} for none
 	 */
-	public GetQueryResultsResponse setEtag(java.lang.String etag) {
+	public GetQueryResultsResponse setEtag(String etag) {
 		this.etag = etag;
 		return this;
 	}
@@ -246,7 +246,7 @@ public final class GetQueryResultsResponse {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getKind() {
+	public String getKind() {
 		return kind;
 	}
 
@@ -256,7 +256,7 @@ public final class GetQueryResultsResponse {
 	 * @param kind
 	 *            kind or {@code null} for none
 	 */
-	public GetQueryResultsResponse setKind(java.lang.String kind) {
+	public GetQueryResultsResponse setKind(String kind) {
 		this.kind = kind;
 		return this;
 	}
@@ -288,7 +288,7 @@ public final class GetQueryResultsResponse {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getPageToken() {
+	public String getPageToken() {
 		return pageToken;
 	}
 
@@ -298,7 +298,7 @@ public final class GetQueryResultsResponse {
 	 * @param pageToken
 	 *            pageToken or {@code null} for none
 	 */
-	public GetQueryResultsResponse setPageToken(java.lang.String pageToken) {
+	public GetQueryResultsResponse setPageToken(String pageToken) {
 		this.pageToken = pageToken;
 		return this;
 	}

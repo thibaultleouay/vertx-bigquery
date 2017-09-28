@@ -38,7 +38,7 @@ public final class JobList {
 	 * A hash of this page of results. The value may be {@code null}.
 	 */
 	
-	private java.lang.String etag;
+	private String etag;
 
 	/**
 	 * List of jobs that were requested. The value may be {@code null}.
@@ -51,20 +51,20 @@ public final class JobList {
 	 * The resource type of the response. The value may be {@code null}.
 	 */
 	
-	private java.lang.String kind;
+	private String kind;
 
 	/**
 	 * A token to request the next page of results. The value may be {@code null}.
 	 */
 	
-	private java.lang.String nextPageToken;
+	private String nextPageToken;
 
 	/**
 	 * A hash of this page of results.
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getEtag() {
+	public String getEtag() {
 		return etag;
 	}
 
@@ -74,7 +74,7 @@ public final class JobList {
 	 * @param etag
 	 *            etag or {@code null} for none
 	 */
-	public JobList setEtag(java.lang.String etag) {
+	public JobList setEtag(String etag) {
 		this.etag = etag;
 		return this;
 	}
@@ -104,7 +104,7 @@ public final class JobList {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getKind() {
+	public String getKind() {
 		return kind;
 	}
 
@@ -114,7 +114,7 @@ public final class JobList {
 	 * @param kind
 	 *            kind or {@code null} for none
 	 */
-	public JobList setKind(java.lang.String kind) {
+	public JobList setKind(String kind) {
 		this.kind = kind;
 		return this;
 	}
@@ -124,7 +124,7 @@ public final class JobList {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getNextPageToken() {
+	public String getNextPageToken() {
 		return nextPageToken;
 	}
 
@@ -134,7 +134,7 @@ public final class JobList {
 	 * @param nextPageToken
 	 *            nextPageToken or {@code null} for none
 	 */
-	public JobList setNextPageToken(java.lang.String nextPageToken) {
+	public JobList setNextPageToken(String nextPageToken) {
 		this.nextPageToken = nextPageToken;
 		return this;
 	}

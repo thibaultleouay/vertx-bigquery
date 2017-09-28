@@ -39,7 +39,7 @@ public final class ProjectReference {
 	 * of the project. The value may be {@code null}.
 	 */
 
-	private java.lang.String projectId;
+	private String projectId;
 
 	/**
 	 * [Required] ID of the project. Can be either the numeric ID or the assigned ID
@@ -47,7 +47,7 @@ public final class ProjectReference {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getProjectId() {
+	public String getProjectId() {
 		return projectId;
 	}
 
@@ -58,7 +58,7 @@ public final class ProjectReference {
 	 * @param projectId
 	 *            projectId or {@code null} for none
 	 */
-	public ProjectReference setProjectId(java.lang.String projectId) {
+	public ProjectReference setProjectId(String projectId) {
 		this.projectId = projectId;
 		return this;
 	}

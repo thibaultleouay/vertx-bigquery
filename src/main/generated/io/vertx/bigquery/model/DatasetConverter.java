@@ -60,7 +60,7 @@ public class DatasetConverter {
       obj.setKind((String)json.getValue("kind"));
     }
     if (json.getValue("labels") instanceof JsonObject) {
-      java.util.Map<String, java.lang.String> map = new java.util.LinkedHashMap<>();
+      java.util.Map<String, String> map = new java.util.LinkedHashMap<>();
       json.getJsonObject("labels").forEach(entry -> {
         if (entry.getValue() instanceof String)
           map.put(entry.getKey(), (String)entry.getValue());

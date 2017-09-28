@@ -37,7 +37,7 @@ public class JobConfigurationConverter {
       obj.setExtract(new io.vertx.bigquery.model.JobConfigurationExtract((JsonObject)json.getValue("extract")));
     }
     if (json.getValue("labels") instanceof JsonObject) {
-      java.util.Map<String, java.lang.String> map = new java.util.LinkedHashMap<>();
+      java.util.Map<String, String> map = new java.util.LinkedHashMap<>();
       json.getJsonObject("labels").forEach(entry -> {
         if (entry.getValue() instanceof String)
           map.put(entry.getKey(), (String)entry.getValue());

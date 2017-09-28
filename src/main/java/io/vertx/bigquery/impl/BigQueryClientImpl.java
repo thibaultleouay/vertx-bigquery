@@ -1,5 +1,10 @@
 package io.vertx.bigquery.impl;
 
+import java.util.Arrays;
+import java.util.List;
+
+import io.vertx.bigquery.BigQueryClient;
+import io.vertx.bigquery.BigQueryOptions;
 import io.vertx.bigquery.model.Dataset;
 import io.vertx.bigquery.model.DatasetList;
 import io.vertx.bigquery.model.GetQueryResultsResponse;
@@ -13,12 +18,6 @@ import io.vertx.bigquery.model.Table;
 import io.vertx.bigquery.model.TableDataInsertAllRequest;
 import io.vertx.bigquery.model.TableDataInsertAllResponse;
 import io.vertx.bigquery.model.TableList;
-
-import java.util.Arrays;
-import java.util.List;
-
-import io.vertx.bigquery.BigQueryClient;
-import io.vertx.bigquery.BigQueryOptions;
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Context;
 import io.vertx.core.Future;

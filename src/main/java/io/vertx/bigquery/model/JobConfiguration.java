@@ -64,7 +64,7 @@ public final class JobConfiguration {
    * The value may be {@code null}.
    */
   
-  private java.util.Map<String, java.lang.String> labels;
+  private java.util.Map<String, String> labels;
 
   /**
    * [Pick one] Configures a load job.
@@ -143,7 +143,7 @@ public final class JobConfiguration {
    * list must have a different key.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.String> getLabels() {
+  public java.util.Map<String, String> getLabels() {
     return labels;
   }
 
@@ -155,7 +155,7 @@ public final class JobConfiguration {
    * list must have a different key.
    * @param labels labels or {@code null} for none
    */
-  public JobConfiguration setLabels(java.util.Map<String, java.lang.String> labels) {
+  public JobConfiguration setLabels(java.util.Map<String, String> labels) {
     this.labels = labels;
     return this;
   }

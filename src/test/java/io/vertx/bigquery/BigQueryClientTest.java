@@ -1,6 +1,5 @@
 package io.vertx.bigquery;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
@@ -82,4 +81,5 @@ public class BigQueryClientTest extends VertxTestBase {
 		});
 	    await();
 	}
+	
 }

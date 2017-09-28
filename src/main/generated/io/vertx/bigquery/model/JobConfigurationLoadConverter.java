@@ -58,7 +58,7 @@ public class JobConfigurationLoadConverter {
       obj.setNullMarker((String)json.getValue("nullMarker"));
     }
     if (json.getValue("projectionFields") instanceof JsonArray) {
-      java.util.ArrayList<java.lang.String> list = new java.util.ArrayList<>();
+      java.util.ArrayList<String> list = new java.util.ArrayList<>();
       json.getJsonArray("projectionFields").forEach( item -> {
         if (item instanceof String)
           list.add((String)item);
@@ -78,7 +78,7 @@ public class JobConfigurationLoadConverter {
       obj.setSchemaInlineFormat((String)json.getValue("schemaInlineFormat"));
     }
     if (json.getValue("schemaUpdateOptions") instanceof JsonArray) {
-      java.util.ArrayList<java.lang.String> list = new java.util.ArrayList<>();
+      java.util.ArrayList<String> list = new java.util.ArrayList<>();
       json.getJsonArray("schemaUpdateOptions").forEach( item -> {
         if (item instanceof String)
           list.add((String)item);
@@ -92,7 +92,7 @@ public class JobConfigurationLoadConverter {
       obj.setSourceFormat((String)json.getValue("sourceFormat"));
     }
     if (json.getValue("sourceUris") instanceof JsonArray) {
-      java.util.ArrayList<java.lang.String> list = new java.util.ArrayList<>();
+      java.util.ArrayList<String> list = new java.util.ArrayList<>();
       json.getJsonArray("sourceUris").forEach( item -> {
         if (item instanceof String)
           list.add((String)item);

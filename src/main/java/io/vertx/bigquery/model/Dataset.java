@@ -81,19 +81,19 @@ public final class Dataset {
 	 * {@code null}.
 	 */
 
-	private java.lang.String description;
+	private String description;
 
 	/**
 	 * [Output-only] A hash of the resource. The value may be {@code null}.
 	 */
 
-	private java.lang.String etag;
+	private String etag;
 
 	/**
 	 * [Optional] A descriptive name for the dataset. The value may be {@code null}.
 	 */
 
-	private java.lang.String friendlyName;
+	private String friendlyName;
 
 	/**
 	 * [Output-only] The fully-qualified unique name of the dataset in the format
@@ -102,13 +102,13 @@ public final class Dataset {
 	 * instead specify the datasetId field. The value may be {@code null}.
 	 */
 
-	private java.lang.String id;
+	private String id;
 
 	/**
 	 * [Output-only] The resource type. The value may be {@code null}.
 	 */
 
-	private java.lang.String kind;
+	private String kind;
 
 	/**
 	 * The labels associated with this dataset. You can use these to organize and
@@ -117,7 +117,7 @@ public final class Dataset {
 	 * {@code null}.
 	 */
 
-	private java.util.Map<String, java.lang.String> labels;
+	private java.util.Map<String, String> labels;
 
 	/**
 	 * [Output-only] The date when this dataset or any of its tables was last
@@ -131,7 +131,7 @@ public final class Dataset {
 	 * include EU and US. The default value is US. The value may be {@code null}.
 	 */
 
-	private java.lang.String location;
+	private String location;
 
 	/**
 	 * [Output-only] A URL that can be used to access the resource again. You can
@@ -139,7 +139,7 @@ public final class Dataset {
 	 * {@code null}.
 	 */
 
-	private java.lang.String selfLink;
+	private String selfLink;
 
 	/**
 	 * [Optional] An array of objects that define dataset access for one or more
@@ -260,7 +260,7 @@ public final class Dataset {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
@@ -270,7 +270,7 @@ public final class Dataset {
 	 * @param description
 	 *            description or {@code null} for none
 	 */
-	public Dataset setDescription(java.lang.String description) {
+	public Dataset setDescription(String description) {
 		this.description = description;
 		return this;
 	}
@@ -280,7 +280,7 @@ public final class Dataset {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getEtag() {
+	public String getEtag() {
 		return etag;
 	}
 
@@ -290,7 +290,7 @@ public final class Dataset {
 	 * @param etag
 	 *            etag or {@code null} for none
 	 */
-	public Dataset setEtag(java.lang.String etag) {
+	public Dataset setEtag(String etag) {
 		this.etag = etag;
 		return this;
 	}
@@ -300,7 +300,7 @@ public final class Dataset {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getFriendlyName() {
+	public String getFriendlyName() {
 		return friendlyName;
 	}
 
@@ -310,7 +310,7 @@ public final class Dataset {
 	 * @param friendlyName
 	 *            friendlyName or {@code null} for none
 	 */
-	public Dataset setFriendlyName(java.lang.String friendlyName) {
+	public Dataset setFriendlyName(String friendlyName) {
 		this.friendlyName = friendlyName;
 		return this;
 	}
@@ -323,7 +323,7 @@ public final class Dataset {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getId() {
+	public String getId() {
 		return id;
 	}
 
@@ -336,7 +336,7 @@ public final class Dataset {
 	 * @param id
 	 *            id or {@code null} for none
 	 */
-	public Dataset setId(java.lang.String id) {
+	public Dataset setId(String id) {
 		this.id = id;
 		return this;
 	}
@@ -346,7 +346,7 @@ public final class Dataset {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getKind() {
+	public String getKind() {
 		return kind;
 	}
 
@@ -356,7 +356,7 @@ public final class Dataset {
 	 * @param kind
 	 *            kind or {@code null} for none
 	 */
-	public Dataset setKind(java.lang.String kind) {
+	public Dataset setKind(String kind) {
 		this.kind = kind;
 		return this;
 	}
@@ -368,7 +368,7 @@ public final class Dataset {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.util.Map<String, java.lang.String> getLabels() {
+	public java.util.Map<String, String> getLabels() {
 		return labels;
 	}
 
@@ -380,7 +380,7 @@ public final class Dataset {
 	 * @param labels
 	 *            labels or {@code null} for none
 	 */
-	public Dataset setLabels(java.util.Map<String, java.lang.String> labels) {
+	public Dataset setLabels(java.util.Map<String, String> labels) {
 		this.labels = labels;
 		return this;
 	}
@@ -413,7 +413,7 @@ public final class Dataset {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getLocation() {
+	public String getLocation() {
 		return location;
 	}
 
@@ -424,7 +424,7 @@ public final class Dataset {
 	 * @param location
 	 *            location or {@code null} for none
 	 */
-	public Dataset setLocation(java.lang.String location) {
+	public Dataset setLocation(String location) {
 		this.location = location;
 		return this;
 	}
@@ -435,7 +435,7 @@ public final class Dataset {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getSelfLink() {
+	public String getSelfLink() {
 		return selfLink;
 	}
 
@@ -446,7 +446,7 @@ public final class Dataset {
 	 * @param selfLink
 	 *            selfLink or {@code null} for none
 	 */
-	public Dataset setSelfLink(java.lang.String selfLink) {
+	public Dataset setSelfLink(String selfLink) {
 		this.selfLink = selfLink;
 		return this;
 	}

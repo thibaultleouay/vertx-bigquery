@@ -31,7 +31,7 @@ public class RowsConverter {
       obj.setInsertId((String)json.getValue("insertId"));
     }
     if (json.getValue("json") instanceof JsonObject) {
-      java.util.Map<String, java.lang.String> map = new java.util.LinkedHashMap<>();
+      java.util.Map<String, String> map = new java.util.LinkedHashMap<>();
       json.getJsonObject("json").forEach(entry -> {
         if (entry.getValue() instanceof String)
           map.put(entry.getKey(), (String)entry.getValue());

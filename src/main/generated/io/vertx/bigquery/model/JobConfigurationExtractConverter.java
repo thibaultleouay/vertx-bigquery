@@ -37,7 +37,7 @@ public class JobConfigurationExtractConverter {
       obj.setDestinationUri((String)json.getValue("destinationUri"));
     }
     if (json.getValue("destinationUris") instanceof JsonArray) {
-      java.util.ArrayList<java.lang.String> list = new java.util.ArrayList<>();
+      java.util.ArrayList<String> list = new java.util.ArrayList<>();
       json.getJsonArray("destinationUris").forEach( item -> {
         if (item instanceof String)
           list.add((String)item);

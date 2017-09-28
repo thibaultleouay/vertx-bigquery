@@ -38,13 +38,13 @@ public final class TableDataList {
 	 * A hash of this page of results. The value may be {@code null}.
 	 */
 	
-	private java.lang.String etag;
+	private String etag;
 
 	/**
 	 * The resource type of the response. The value may be {@code null}.
 	 */
 	
-	private java.lang.String kind;
+	private String kind;
 
 	/**
 	 * A token used for paging results. Providing this token instead of the
@@ -52,7 +52,7 @@ public final class TableDataList {
 	 * table is changing. The value may be {@code null}.
 	 */
 	
-	private java.lang.String pageToken;
+	private String pageToken;
 
 	/**
 	 * Rows of results. The value may be {@code null}.
@@ -72,7 +72,7 @@ public final class TableDataList {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getEtag() {
+	public String getEtag() {
 		return etag;
 	}
 
@@ -82,7 +82,7 @@ public final class TableDataList {
 	 * @param etag
 	 *            etag or {@code null} for none
 	 */
-	public TableDataList setEtag(java.lang.String etag) {
+	public TableDataList setEtag(String etag) {
 		this.etag = etag;
 		return this;
 	}
@@ -92,7 +92,7 @@ public final class TableDataList {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getKind() {
+	public String getKind() {
 		return kind;
 	}
 
@@ -102,7 +102,7 @@ public final class TableDataList {
 	 * @param kind
 	 *            kind or {@code null} for none
 	 */
-	public TableDataList setKind(java.lang.String kind) {
+	public TableDataList setKind(String kind) {
 		this.kind = kind;
 		return this;
 	}
@@ -114,7 +114,7 @@ public final class TableDataList {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getPageToken() {
+	public String getPageToken() {
 		return pageToken;
 	}
 
@@ -126,7 +126,7 @@ public final class TableDataList {
 	 * @param pageToken
 	 *            pageToken or {@code null} for none
 	 */
-	public TableDataList setPageToken(java.lang.String pageToken) {
+	public TableDataList setPageToken(String pageToken) {
 		this.pageToken = pageToken;
 		return this;
 	}

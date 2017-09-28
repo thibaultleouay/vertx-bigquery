@@ -31,7 +31,7 @@ public class ExplainQueryStepConverter {
       obj.setKind((String)json.getValue("kind"));
     }
     if (json.getValue("substeps") instanceof JsonArray) {
-      java.util.ArrayList<java.lang.String> list = new java.util.ArrayList<>();
+      java.util.ArrayList<String> list = new java.util.ArrayList<>();
       json.getJsonArray("substeps").forEach( item -> {
         if (item instanceof String)
           list.add((String)item);

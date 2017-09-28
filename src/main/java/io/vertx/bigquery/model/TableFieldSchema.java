@@ -37,7 +37,7 @@ public final class TableFieldSchema {
    * The value may be {@code null}.
    */
   
-  private java.lang.String description;
+  private String description;
 
   /**
    * [Optional] Describes the nested schema fields if the type property is set to RECORD.
@@ -52,7 +52,7 @@ public final class TableFieldSchema {
    * The value may be {@code null}.
    */
   
-  private java.lang.String mode;
+  private String mode;
 
   /**
    * [Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or
@@ -61,7 +61,7 @@ public final class TableFieldSchema {
    * The value may be {@code null}.
    */
   
-  private java.lang.String name;
+  private String name;
 
   /**
    * [Required] The field data type. Possible values include STRING, BYTES, INTEGER, INT64 (same as
@@ -71,13 +71,13 @@ public final class TableFieldSchema {
    * The value may be {@code null}.
    */
   
-  private java.lang.String type;
+  private String type;
 
   /**
    * [Optional] The field description. The maximum length is 1,024 characters.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDescription() {
+  public String getDescription() {
     return description;
   }
 
@@ -85,7 +85,7 @@ public final class TableFieldSchema {
    * [Optional] The field description. The maximum length is 1,024 characters.
    * @param description description or {@code null} for none
    */
-  public TableFieldSchema setDescription(java.lang.String description) {
+  public TableFieldSchema setDescription(String description) {
     this.description = description;
     return this;
   }
@@ -112,7 +112,7 @@ public final class TableFieldSchema {
    * value is NULLABLE.
    * @return value or {@code null} for none
    */
-  public java.lang.String getMode() {
+  public String getMode() {
     return mode;
   }
 
@@ -121,7 +121,7 @@ public final class TableFieldSchema {
    * value is NULLABLE.
    * @param mode mode or {@code null} for none
    */
-  public TableFieldSchema setMode(java.lang.String mode) {
+  public TableFieldSchema setMode(String mode) {
     this.mode = mode;
     return this;
   }
@@ -132,7 +132,7 @@ public final class TableFieldSchema {
    * characters.
    * @return value or {@code null} for none
    */
-  public java.lang.String getName() {
+  public String getName() {
     return name;
   }
 
@@ -142,7 +142,7 @@ public final class TableFieldSchema {
    * characters.
    * @param name name or {@code null} for none
    */
-  public TableFieldSchema setName(java.lang.String name) {
+  public TableFieldSchema setName(String name) {
     this.name = name;
     return this;
   }
@@ -154,7 +154,7 @@ public final class TableFieldSchema {
    * STRUCT (same as RECORD).
    * @return value or {@code null} for none
    */
-  public java.lang.String getType() {
+  public String getType() {
     return type;
   }
 
@@ -165,7 +165,7 @@ public final class TableFieldSchema {
    * STRUCT (same as RECORD).
    * @param type type or {@code null} for none
    */
-  public TableFieldSchema setType(java.lang.String type) {
+  public TableFieldSchema setType(String type) {
     this.type = type;
     return this;
   }

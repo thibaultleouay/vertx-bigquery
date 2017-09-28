@@ -11,13 +11,13 @@ public  final class StructTypes {
 	 * {@code null}.
 	 */
 	
-	private java.lang.String description;
+	private String description;
 
 	/**
 	 * [Optional] The name of this field. The value may be {@code null}.
 	 */
 	
-	private java.lang.String name;
+	private String name;
 
 	/**
 	 * [Required] The type of this field. The value may be {@code null}.
@@ -30,7 +30,7 @@ public  final class StructTypes {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
@@ -40,7 +40,7 @@ public  final class StructTypes {
 	 * @param description
 	 *            description or {@code null} for none
 	 */
-	public StructTypes setDescription(java.lang.String description) {
+	public StructTypes setDescription(String description) {
 		this.description = description;
 		return this;
 	}
@@ -50,7 +50,7 @@ public  final class StructTypes {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getName() {
+	public String getName() {
 		return name;
 	}
 
@@ -60,7 +60,7 @@ public  final class StructTypes {
 	 * @param name
 	 *            name or {@code null} for none
 	 */
-	public StructTypes setName(java.lang.String name) {
+	public StructTypes setName(String name) {
 		this.name = name;
 		return this;
 	}

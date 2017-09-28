@@ -44,7 +44,7 @@ public final class JobCancelResponse {
 	 * The resource type of the response. The value may be {@code null}.
 	 */
 
-	private java.lang.String kind;
+	private String kind;
 
 	/**
 	 * The final state of the job.
@@ -71,7 +71,7 @@ public final class JobCancelResponse {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getKind() {
+	public String getKind() {
 		return kind;
 	}
 
@@ -81,7 +81,7 @@ public final class JobCancelResponse {
 	 * @param kind
 	 *            kind or {@code null} for none
 	 */
-	public JobCancelResponse setKind(java.lang.String kind) {
+	public JobCancelResponse setKind(String kind) {
 		this.kind = kind;
 		return this;
 	}

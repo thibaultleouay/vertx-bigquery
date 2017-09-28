@@ -24,7 +24,7 @@ public  final class Jobs {
 	 * Unique opaque ID of the job. The value may be {@code null}.
 	 */
 	
-	private java.lang.String id;
+	private String id;
 
 	/**
 	 * Job reference uniquely identifying the job. The value may be {@code null}.
@@ -36,7 +36,7 @@ public  final class Jobs {
 	 * The resource type. The value may be {@code null}.
 	 */
 	
-	private java.lang.String kind;
+	private String kind;
 
 	/**
 	 * Running state of the job. When the state is DONE, errorResult can be checked
@@ -44,7 +44,7 @@ public  final class Jobs {
 	 * {@code null}.
 	 */
 	
-	private java.lang.String state;
+	private String state;
 
 	/**
 	 * [Output-only] Information about the job, including starting time and ending
@@ -63,7 +63,7 @@ public  final class Jobs {
 	 * [Full-projection-only] Email address of the user who ran the job. The value
 	 * may be {@code null}.
 	 */
-	private java.lang.String userEmail;
+	private String userEmail;
 
 	/**
 	 * [Full-projection-only] Specifies the job configuration.
@@ -110,7 +110,7 @@ public  final class Jobs {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getId() {
+	public String getId() {
 		return id;
 	}
 
@@ -120,7 +120,7 @@ public  final class Jobs {
 	 * @param id
 	 *            id or {@code null} for none
 	 */
-	public Jobs setId(java.lang.String id) {
+	public Jobs setId(String id) {
 		this.id = id;
 		return this;
 	}
@@ -150,7 +150,7 @@ public  final class Jobs {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getKind() {
+	public String getKind() {
 		return kind;
 	}
 
@@ -160,7 +160,7 @@ public  final class Jobs {
 	 * @param kind
 	 *            kind or {@code null} for none
 	 */
-	public Jobs setKind(java.lang.String kind) {
+	public Jobs setKind(String kind) {
 		this.kind = kind;
 		return this;
 	}
@@ -171,7 +171,7 @@ public  final class Jobs {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getState() {
+	public String getState() {
 		return state;
 	}
 
@@ -182,7 +182,7 @@ public  final class Jobs {
 	 * @param state
 	 *            state or {@code null} for none
 	 */
-	public Jobs setState(java.lang.String state) {
+	public Jobs setState(String state) {
 		this.state = state;
 		return this;
 	}
@@ -234,7 +234,7 @@ public  final class Jobs {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getUserEmail() {
+	public String getUserEmail() {
 		return userEmail;
 	}
 
@@ -244,7 +244,7 @@ public  final class Jobs {
 	 * @param userEmail
 	 *            userEmail or {@code null} for none
 	 */
-	public Jobs setUserEmail(java.lang.String userEmail) {
+	public Jobs setUserEmail(String userEmail) {
 		this.userEmail = userEmail;
 		return this;
 	}

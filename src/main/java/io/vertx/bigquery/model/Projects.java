@@ -10,19 +10,19 @@ public final class Projects {
 	 * A descriptive name for this project. The value may be {@code null}.
 	 */
 
-	private java.lang.String friendlyName;
+	private String friendlyName;
 
 	/**
 	 * An opaque ID of this project. The value may be {@code null}.
 	 */
 
-	private java.lang.String id;
+	private String id;
 
 	/**
 	 * The resource type. The value may be {@code null}.
 	 */
 
-	private java.lang.String kind;
+	private String kind;
 
 	/**
 	 * The numeric ID of this project. The value may be {@code null}.
@@ -41,7 +41,7 @@ public final class Projects {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getFriendlyName() {
+	public String getFriendlyName() {
 		return friendlyName;
 	}
 
@@ -51,7 +51,7 @@ public final class Projects {
 	 * @param friendlyName
 	 *            friendlyName or {@code null} for none
 	 */
-	public Projects setFriendlyName(java.lang.String friendlyName) {
+	public Projects setFriendlyName(String friendlyName) {
 		this.friendlyName = friendlyName;
 		return this;
 	}
@@ -61,7 +61,7 @@ public final class Projects {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getId() {
+	public String getId() {
 		return id;
 	}
 
@@ -71,7 +71,7 @@ public final class Projects {
 	 * @param id
 	 *            id or {@code null} for none
 	 */
-	public Projects setId(java.lang.String id) {
+	public Projects setId(String id) {
 		this.id = id;
 		return this;
 	}
@@ -81,7 +81,7 @@ public final class Projects {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getKind() {
+	public String getKind() {
 		return kind;
 	}
 
@@ -91,7 +91,7 @@ public final class Projects {
 	 * @param kind
 	 *            kind or {@code null} for none
 	 */
-	public Projects setKind(java.lang.String kind) {
+	public Projects setKind(String kind) {
 		this.kind = kind;
 		return this;
 	}

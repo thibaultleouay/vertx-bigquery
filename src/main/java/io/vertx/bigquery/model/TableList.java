@@ -38,19 +38,19 @@ public final class TableList {
 	 * A hash of this page of results. The value may be {@code null}.
 	 */
 
-	private java.lang.String etag;
+	private String etag;
 
 	/**
 	 * The type of list. The value may be {@code null}.
 	 */
 
-	private java.lang.String kind;
+	private String kind;
 
 	/**
 	 * A token to request the next page of results. The value may be {@code null}.
 	 */
 
-	private java.lang.String nextPageToken;
+	private String nextPageToken;
 
 	/**
 	 * Tables in the requested dataset. The value may be {@code null}.
@@ -69,7 +69,7 @@ public final class TableList {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getEtag() {
+	public String getEtag() {
 		return etag;
 	}
 
@@ -79,7 +79,7 @@ public final class TableList {
 	 * @param etag
 	 *            etag or {@code null} for none
 	 */
-	public TableList setEtag(java.lang.String etag) {
+	public TableList setEtag(String etag) {
 		this.etag = etag;
 		return this;
 	}
@@ -89,7 +89,7 @@ public final class TableList {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getKind() {
+	public String getKind() {
 		return kind;
 	}
 
@@ -99,7 +99,7 @@ public final class TableList {
 	 * @param kind
 	 *            kind or {@code null} for none
 	 */
-	public TableList setKind(java.lang.String kind) {
+	public TableList setKind(String kind) {
 		this.kind = kind;
 		return this;
 	}
@@ -109,7 +109,7 @@ public final class TableList {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getNextPageToken() {
+	public String getNextPageToken() {
 		return nextPageToken;
 	}
 
@@ -119,7 +119,7 @@ public final class TableList {
 	 * @param nextPageToken
 	 *            nextPageToken or {@code null} for none
 	 */
-	public TableList setNextPageToken(java.lang.String nextPageToken) {
+	public TableList setNextPageToken(String nextPageToken) {
 		this.nextPageToken = nextPageToken;
 		return this;
 	}

@@ -12,7 +12,7 @@ public  final class Rows {
 	 * {@code null}.
 	 */
 	
-	private java.lang.String insertId;
+	private String insertId;
 
 	/**
 	 * [Required] A JSON object that contains a row of data. The object's properties
@@ -28,7 +28,7 @@ public  final class Rows {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getInsertId() {
+	public String getInsertId() {
 		return insertId;
 	}
 
@@ -39,7 +39,7 @@ public  final class Rows {
 	 * @param insertId
 	 *            insertId or {@code null} for none
 	 */
-	public Rows setInsertId(java.lang.String insertId) {
+	public Rows setInsertId(String insertId) {
 		this.insertId = insertId;
 		return this;
 	}
@@ -67,6 +67,12 @@ public  final class Rows {
 	}
 
 	public Rows(JsonObject jsonObject) {
-		// TODO Auto-generated constructor stub
+	    RowsConverter.fromJson(jsonObject, this);
+	}
+	
+	public JsonObject toJson() {
+	    JsonObject jsonObject = new JsonObject();
+	    RowsConverter.toJson(this, jsonObject);
+	    return jsonObject;
 	}
 }

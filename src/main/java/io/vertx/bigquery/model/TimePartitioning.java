@@ -16,8 +16,6 @@
 
 package io.vertx.bigquery.model;
 
-import com.google.gson.JsonSerializationContext;
-
 import io.vertx.codegen.annotations.DataObject;
 import io.vertx.core.json.JsonObject;
 
@@ -47,7 +45,7 @@ public final class TimePartitioning {
    * The value may be {@code null}.
    */
   
-  private java.lang.String type;
+  private String type;
 
   /**
    * [Optional] Number of milliseconds for which to keep the storage for a partition.
@@ -71,7 +69,7 @@ public final class TimePartitioning {
    * data loading time.
    * @return value or {@code null} for none
    */
-  public java.lang.String getType() {
+  public String getType() {
     return type;
   }
 
@@ -80,7 +78,7 @@ public final class TimePartitioning {
    * data loading time.
    * @param type type or {@code null} for none
    */
-  public TimePartitioning setType(java.lang.String type) {
+  public TimePartitioning setType(String type) {
     this.type = type;
     return this;
   }

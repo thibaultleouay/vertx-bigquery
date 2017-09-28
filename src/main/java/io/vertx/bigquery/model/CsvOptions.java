@@ -59,7 +59,7 @@ public final class CsvOptions {
 	 * fieldDelimiter properties. The value may be {@code null}.
 	 */
 	
-	private java.lang.String encoding;
+	private String encoding;
 
 	/**
 	 * [Optional] The separator for fields in a CSV file. BigQuery converts the
@@ -69,7 +69,7 @@ public final class CsvOptions {
 	 * (','). The value may be {@code null}.
 	 */
 	
-	private java.lang.String fieldDelimiter;
+	private String fieldDelimiter;
 
 	/**
 	 * [Optional] The value that is used to quote data sections in a CSV file.
@@ -81,7 +81,7 @@ public final class CsvOptions {
 	 * to true. The value may be {@code null}.
 	 */
 	
-	private java.lang.String quote;
+	private String quote;
 
 	/**
 	 * [Optional] The number of rows at the top of a CSV file that BigQuery will
@@ -150,7 +150,7 @@ public final class CsvOptions {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getEncoding() {
+	public String getEncoding() {
 		return encoding;
 	}
 
@@ -163,7 +163,7 @@ public final class CsvOptions {
 	 * @param encoding
 	 *            encoding or {@code null} for none
 	 */
-	public CsvOptions setEncoding(java.lang.String encoding) {
+	public CsvOptions setEncoding(String encoding) {
 		this.encoding = encoding;
 		return this;
 	}
@@ -177,7 +177,7 @@ public final class CsvOptions {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getFieldDelimiter() {
+	public String getFieldDelimiter() {
 		return fieldDelimiter;
 	}
 
@@ -191,7 +191,7 @@ public final class CsvOptions {
 	 * @param fieldDelimiter
 	 *            fieldDelimiter or {@code null} for none
 	 */
-	public CsvOptions setFieldDelimiter(java.lang.String fieldDelimiter) {
+	public CsvOptions setFieldDelimiter(String fieldDelimiter) {
 		this.fieldDelimiter = fieldDelimiter;
 		return this;
 	}
@@ -207,7 +207,7 @@ public final class CsvOptions {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getQuote() {
+	public String getQuote() {
 		return quote;
 	}
 
@@ -223,7 +223,7 @@ public final class CsvOptions {
 	 * @param quote
 	 *            quote or {@code null} for none
 	 */
-	public CsvOptions setQuote(java.lang.String quote) {
+	public CsvOptions setQuote(String quote) {
 		this.quote = quote;
 		return this;
 	}

@@ -72,7 +72,7 @@ public final class ExplainQueryStage {
    * The value may be {@code null}.
    */
   
-  private java.lang.String name;
+  private String name;
 
   /**
    * Milliseconds the average shard spent reading input.
@@ -135,7 +135,7 @@ public final class ExplainQueryStage {
    * The value may be {@code null}.
    */
   
-  private java.lang.String status;
+  private String status;
 
   /**
    * List of operations within the stage in dependency order (approximately chronological).
@@ -289,7 +289,7 @@ public final class ExplainQueryStage {
    * Human-readable name for stage.
    * @return value or {@code null} for none
    */
-  public java.lang.String getName() {
+  public String getName() {
     return name;
   }
 
@@ -297,7 +297,7 @@ public final class ExplainQueryStage {
    * Human-readable name for stage.
    * @param name name or {@code null} for none
    */
-  public ExplainQueryStage setName(java.lang.String name) {
+  public ExplainQueryStage setName(String name) {
     this.name = name;
     return this;
   }
@@ -442,7 +442,7 @@ public final class ExplainQueryStage {
    * Current status for the stage.
    * @return value or {@code null} for none
    */
-  public java.lang.String getStatus() {
+  public String getStatus() {
     return status;
   }
 
@@ -450,7 +450,7 @@ public final class ExplainQueryStage {
    * Current status for the stage.
    * @param status status or {@code null} for none
    */
-  public ExplainQueryStage setStatus(java.lang.String status) {
+  public ExplainQueryStage setStatus(String status) {
     this.status = status;
     return this;
   }

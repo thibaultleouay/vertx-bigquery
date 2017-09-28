@@ -7,6 +7,7 @@ import io.vertx.bigquery.model.DatasetList;
 import io.vertx.bigquery.model.GetQueryResultsResponse;
 import io.vertx.bigquery.model.Job;
 import io.vertx.bigquery.model.JobCancelResponse;
+import io.vertx.bigquery.model.JobConfiguration;
 import io.vertx.bigquery.model.JobList;
 import io.vertx.bigquery.model.ProjectList;
 import io.vertx.bigquery.model.QueryRequest;
@@ -147,36 +148,57 @@ public interface BigQueryClient {
 	public BigQueryClient cancelJobs(String projectId, String jobId, Handler<AsyncResult<JobCancelResponse>> successHandler);
 	
 	/**
+	 * Returns information about a specific job
 	 * 
-	 * @param projectId
-	 * @param jobId
+	 * @param projectId  Job ID of the requested job
+	 * @param jobId Project ID of the requested job
 	 * @param succesHandler
 	 * @return
+	 * <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/jobs/get">/v2/jobs/get </a>
 	 */
 	@Fluent
 	public BigQueryClient getJob(String projectId, String jobId, Handler<AsyncResult<Job>> succesHandler);
 	
 	/**
+	 * Retrieves the results of a query job
 	 * 
-	 * @param projectId
-	 * @param jobId
+	 * @param projectId Project ID of the query job
+	 * @param jobId Job ID of the query job
 	 * @param succesHandler
 	 * @return
+	 * 
+	 * <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/jobs/getQueryResults"> /v2/jobs/getQueryResults </a>
 	 */
 	@Fluent
 	public BigQueryClient getQueryResult(String projectId, String jobId,  Handler<AsyncResult<GetQueryResultsResponse>> succesHandler);
 
 	/**
+	 * Retrieves the results of a query job
 	 * 
-	 * @param projectId
-	 * @param jobId
+	 * @param projectId Project ID of the query job
+	 * @param jobId Job ID of the query job
 	 * @param succesHandler
 	 * @param options
 	 * @return
+	 * 
+	 * <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/jobs/getQueryResults"> /v2/jobs/getQueryResults </a>
 	 */
 	@Fluent
 	public BigQueryClient getQueryResultWithOptions(String projectId, String jobId,  Handler<AsyncResult<GetQueryResultsResponse>> succesHandler, JsonObject options);
 
+
+//	/**
+//	 * Starts a new asynchronous job.
+//	 * 
+//	 * @param projectId
+//	 * @param succesHandler
+//	 * @param payload
+//	 * @return
+//	 * 
+//	 * <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/jobs/insert"> /v2/jobs/insert </a>
+//	 */
+//	@Fluent
+//	public BigQueryClient insertJob(String projectId, Handler<AsyncResult<Job>> succesHandler, JobConfiguration payload);
 	/**
 	 * 
 	 * @param projectId

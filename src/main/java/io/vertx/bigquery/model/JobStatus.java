@@ -56,7 +56,7 @@ public final class JobStatus {
    * The value may be {@code null}.
    */
   
-  private java.lang.String state;
+  private String state;
 
   /**
    * [Output-only] Final error result of the job. If present, indicates that the job has completed
@@ -102,7 +102,7 @@ public final class JobStatus {
    * [Output-only] Running state of the job.
    * @return value or {@code null} for none
    */
-  public java.lang.String getState() {
+  public String getState() {
     return state;
   }
 
@@ -110,7 +110,7 @@ public final class JobStatus {
    * [Output-only] Running state of the job.
    * @param state state or {@code null} for none
    */
-  public JobStatus setState(java.lang.String state) {
+  public JobStatus setState(String state) {
     this.state = state;
     return this;
   }

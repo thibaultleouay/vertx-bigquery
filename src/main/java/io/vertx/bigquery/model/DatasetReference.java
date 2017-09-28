@@ -40,14 +40,14 @@ public final class DatasetReference {
 	 * maximum length is 1,024 characters. The value may be {@code null}.
 	 */
 	
-	private java.lang.String datasetId;
+	private String datasetId;
 
 	/**
 	 * [Optional] The ID of the project containing this dataset. The value may be
 	 * {@code null}.
 	 */
 	
-	private java.lang.String projectId;
+	private String projectId;
 
 	/**
 	 * [Required] A unique ID for this dataset, without the project name. The ID
@@ -56,7 +56,7 @@ public final class DatasetReference {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getDatasetId() {
+	public String getDatasetId() {
 		return datasetId;
 	}
 
@@ -68,7 +68,7 @@ public final class DatasetReference {
 	 * @param datasetId
 	 *            datasetId or {@code null} for none
 	 */
-	public DatasetReference setDatasetId(java.lang.String datasetId) {
+	public DatasetReference setDatasetId(String datasetId) {
 		this.datasetId = datasetId;
 		return this;
 	}
@@ -78,7 +78,7 @@ public final class DatasetReference {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getProjectId() {
+	public String getProjectId() {
 		return projectId;
 	}
 
@@ -88,7 +88,7 @@ public final class DatasetReference {
 	 * @param projectId
 	 *            projectId or {@code null} for none
 	 */
-	public DatasetReference setProjectId(java.lang.String projectId) {
+	public DatasetReference setProjectId(String projectId) {
 		this.projectId = projectId;
 		return this;
 	}

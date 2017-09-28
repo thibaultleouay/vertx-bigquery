@@ -38,21 +38,21 @@ public final class UserDefinedFunctionResource {
    * The value may be {@code null}.
    */
   
-  private java.lang.String inlineCode;
+  private String inlineCode;
 
   /**
    * [Pick one] A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
    * The value may be {@code null}.
    */
   
-  private java.lang.String resourceUri;
+  private String resourceUri;
 
   /**
    * [Pick one] An inline resource that contains code for a user-defined function (UDF). Providing a
    * inline code resource is equivalent to providing a URI for a file containing the same code.
    * @return value or {@code null} for none
    */
-  public java.lang.String getInlineCode() {
+  public String getInlineCode() {
     return inlineCode;
   }
 
@@ -61,7 +61,7 @@ public final class UserDefinedFunctionResource {
    * inline code resource is equivalent to providing a URI for a file containing the same code.
    * @param inlineCode inlineCode or {@code null} for none
    */
-  public UserDefinedFunctionResource setInlineCode(java.lang.String inlineCode) {
+  public UserDefinedFunctionResource setInlineCode(String inlineCode) {
     this.inlineCode = inlineCode;
     return this;
   }
@@ -70,7 +70,7 @@ public final class UserDefinedFunctionResource {
    * [Pick one] A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
    * @return value or {@code null} for none
    */
-  public java.lang.String getResourceUri() {
+  public String getResourceUri() {
     return resourceUri;
   }
 
@@ -78,7 +78,7 @@ public final class UserDefinedFunctionResource {
    * [Pick one] A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
    * @param resourceUri resourceUri or {@code null} for none
    */
-  public UserDefinedFunctionResource setResourceUri(java.lang.String resourceUri) {
+  public UserDefinedFunctionResource setResourceUri(String resourceUri) {
     this.resourceUri = resourceUri;
     return this;
   }

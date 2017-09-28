@@ -69,7 +69,7 @@ public final class JobConfigurationLoad {
 	 * {@code null}.
 	 */
 	
-	private java.lang.String createDisposition;
+	private String createDisposition;
 
 	/**
 	 * [Required] The destination table to load the data into. The value may be
@@ -85,7 +85,7 @@ public final class JobConfigurationLoad {
 	 * fieldDelimiter properties. The value may be {@code null}.
 	 */
 	
-	private java.lang.String encoding;
+	private String encoding;
 
 	/**
 	 * [Optional] The separator for fields in a CSV file. The separator can be any
@@ -97,7 +97,7 @@ public final class JobConfigurationLoad {
 	 * The value may be {@code null}.
 	 */
 	
-	private java.lang.String fieldDelimiter;
+	private String fieldDelimiter;
 
 	/**
 	 * [Optional] Indicates if BigQuery should allow extra values that are not
@@ -130,7 +130,7 @@ public final class JobConfigurationLoad {
 	 * may be {@code null}.
 	 */
 	
-	private java.lang.String nullMarker;
+	private String nullMarker;
 
 	/**
 	 * If sourceFormat is set to "DATASTORE_BACKUP", indicates which entity
@@ -141,7 +141,7 @@ public final class JobConfigurationLoad {
 	 * result. The value may be {@code null}.
 	 */
 	
-	private java.util.List<java.lang.String> projectionFields;
+	private java.util.List<String> projectionFields;
 
 	/**
 	 * [Optional] The value that is used to quote data sections in a CSV file.
@@ -153,7 +153,7 @@ public final class JobConfigurationLoad {
 	 * to true. The value may be {@code null}.
 	 */
 	
-	private java.lang.String quote;
+	private String quote;
 
 	/**
 	 * [Optional] The schema for the destination table. The schema can be omitted if
@@ -169,14 +169,14 @@ public final class JobConfigurationLoad {
 	 * baz:FLOAT". The value may be {@code null}.
 	 */
 	
-	private java.lang.String schemaInline;
+	private String schemaInline;
 
 	/**
 	 * [Deprecated] The format of the schemaInline property. The value may be
 	 * {@code null}.
 	 */
 	
-	private java.lang.String schemaInlineFormat;
+	private String schemaInlineFormat;
 
 	/**
 	 * [Experimental] Allows the schema of the desitination table to be updated as a
@@ -191,7 +191,7 @@ public final class JobConfigurationLoad {
 	 * schema to nullable. The value may be {@code null}.
 	 */
 	
-	private java.util.List<java.lang.String> schemaUpdateOptions;
+	private java.util.List<String> schemaUpdateOptions;
 
 	/**
 	 * [Optional] The number of rows at the top of a CSV file that BigQuery will
@@ -209,7 +209,7 @@ public final class JobConfigurationLoad {
 	 * is CSV. The value may be {@code null}.
 	 */
 	
-	private java.lang.String sourceFormat;
+	private String sourceFormat;
 
 	/**
 	 * [Required] The fully-qualified URIs that point to your data in Google Cloud.
@@ -222,7 +222,7 @@ public final class JobConfigurationLoad {
 	 * is not allowed. The value may be {@code null}.
 	 */
 	
-	private java.util.List<java.lang.String> sourceUris;
+	private java.util.List<String> sourceUris;
 
 	/**
 	 * [Experimental] If specified, configures time-based partitioning for the
@@ -243,7 +243,7 @@ public final class JobConfigurationLoad {
 	 * completion. The value may be {@code null}.
 	 */
 	
-	private java.lang.String writeDisposition;
+	private String writeDisposition;
 
 	/**
 	 * [Optional] Accept rows that are missing trailing optional columns. The
@@ -327,7 +327,7 @@ public final class JobConfigurationLoad {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getCreateDisposition() {
+	public String getCreateDisposition() {
 		return createDisposition;
 	}
 
@@ -342,7 +342,7 @@ public final class JobConfigurationLoad {
 	 * @param createDisposition
 	 *            createDisposition or {@code null} for none
 	 */
-	public JobConfigurationLoad setCreateDisposition(java.lang.String createDisposition) {
+	public JobConfigurationLoad setCreateDisposition(String createDisposition) {
 		this.createDisposition = createDisposition;
 		return this;
 	}
@@ -375,7 +375,7 @@ public final class JobConfigurationLoad {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getEncoding() {
+	public String getEncoding() {
 		return encoding;
 	}
 
@@ -388,7 +388,7 @@ public final class JobConfigurationLoad {
 	 * @param encoding
 	 *            encoding or {@code null} for none
 	 */
-	public JobConfigurationLoad setEncoding(java.lang.String encoding) {
+	public JobConfigurationLoad setEncoding(String encoding) {
 		this.encoding = encoding;
 		return this;
 	}
@@ -403,7 +403,7 @@ public final class JobConfigurationLoad {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getFieldDelimiter() {
+	public String getFieldDelimiter() {
 		return fieldDelimiter;
 	}
 
@@ -418,7 +418,7 @@ public final class JobConfigurationLoad {
 	 * @param fieldDelimiter
 	 *            fieldDelimiter or {@code null} for none
 	 */
-	public JobConfigurationLoad setFieldDelimiter(java.lang.String fieldDelimiter) {
+	public JobConfigurationLoad setFieldDelimiter(String fieldDelimiter) {
 		this.fieldDelimiter = fieldDelimiter;
 		return this;
 	}
@@ -491,7 +491,7 @@ public final class JobConfigurationLoad {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getNullMarker() {
+	public String getNullMarker() {
 		return nullMarker;
 	}
 
@@ -506,7 +506,7 @@ public final class JobConfigurationLoad {
 	 * @param nullMarker
 	 *            nullMarker or {@code null} for none
 	 */
-	public JobConfigurationLoad setNullMarker(java.lang.String nullMarker) {
+	public JobConfigurationLoad setNullMarker(String nullMarker) {
 		this.nullMarker = nullMarker;
 		return this;
 	}
@@ -521,7 +521,7 @@ public final class JobConfigurationLoad {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.util.List<java.lang.String> getProjectionFields() {
+	public java.util.List<String> getProjectionFields() {
 		return projectionFields;
 	}
 
@@ -536,7 +536,7 @@ public final class JobConfigurationLoad {
 	 * @param projectionFields
 	 *            projectionFields or {@code null} for none
 	 */
-	public JobConfigurationLoad setProjectionFields(java.util.List<java.lang.String> projectionFields) {
+	public JobConfigurationLoad setProjectionFields(java.util.List<String> projectionFields) {
 		this.projectionFields = projectionFields;
 		return this;
 	}
@@ -552,7 +552,7 @@ public final class JobConfigurationLoad {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getQuote() {
+	public String getQuote() {
 		return quote;
 	}
 
@@ -568,7 +568,7 @@ public final class JobConfigurationLoad {
 	 * @param quote
 	 *            quote or {@code null} for none
 	 */
-	public JobConfigurationLoad setQuote(java.lang.String quote) {
+	public JobConfigurationLoad setQuote(String quote) {
 		this.quote = quote;
 		return this;
 	}
@@ -604,7 +604,7 @@ public final class JobConfigurationLoad {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getSchemaInline() {
+	public String getSchemaInline() {
 		return schemaInline;
 	}
 
@@ -616,7 +616,7 @@ public final class JobConfigurationLoad {
 	 * @param schemaInline
 	 *            schemaInline or {@code null} for none
 	 */
-	public JobConfigurationLoad setSchemaInline(java.lang.String schemaInline) {
+	public JobConfigurationLoad setSchemaInline(String schemaInline) {
 		this.schemaInline = schemaInline;
 		return this;
 	}
@@ -626,7 +626,7 @@ public final class JobConfigurationLoad {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getSchemaInlineFormat() {
+	public String getSchemaInlineFormat() {
 		return schemaInlineFormat;
 	}
 
@@ -636,7 +636,7 @@ public final class JobConfigurationLoad {
 	 * @param schemaInlineFormat
 	 *            schemaInlineFormat or {@code null} for none
 	 */
-	public JobConfigurationLoad setSchemaInlineFormat(java.lang.String schemaInlineFormat) {
+	public JobConfigurationLoad setSchemaInlineFormat(String schemaInlineFormat) {
 		this.schemaInlineFormat = schemaInlineFormat;
 		return this;
 	}
@@ -655,7 +655,7 @@ public final class JobConfigurationLoad {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.util.List<java.lang.String> getSchemaUpdateOptions() {
+	public java.util.List<String> getSchemaUpdateOptions() {
 		return schemaUpdateOptions;
 	}
 
@@ -674,7 +674,7 @@ public final class JobConfigurationLoad {
 	 * @param schemaUpdateOptions
 	 *            schemaUpdateOptions or {@code null} for none
 	 */
-	public JobConfigurationLoad setSchemaUpdateOptions(java.util.List<java.lang.String> schemaUpdateOptions) {
+	public JobConfigurationLoad setSchemaUpdateOptions(java.util.List<String> schemaUpdateOptions) {
 		this.schemaUpdateOptions = schemaUpdateOptions;
 		return this;
 	}
@@ -711,7 +711,7 @@ public final class JobConfigurationLoad {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getSourceFormat() {
+	public String getSourceFormat() {
 		return sourceFormat;
 	}
 
@@ -724,7 +724,7 @@ public final class JobConfigurationLoad {
 	 * @param sourceFormat
 	 *            sourceFormat or {@code null} for none
 	 */
-	public JobConfigurationLoad setSourceFormat(java.lang.String sourceFormat) {
+	public JobConfigurationLoad setSourceFormat(String sourceFormat) {
 		this.sourceFormat = sourceFormat;
 		return this;
 	}
@@ -741,7 +741,7 @@ public final class JobConfigurationLoad {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.util.List<java.lang.String> getSourceUris() {
+	public java.util.List<String> getSourceUris() {
 		return sourceUris;
 	}
 
@@ -758,7 +758,7 @@ public final class JobConfigurationLoad {
 	 * @param sourceUris
 	 *            sourceUris or {@code null} for none
 	 */
-	public JobConfigurationLoad setSourceUris(java.util.List<java.lang.String> sourceUris) {
+	public JobConfigurationLoad setSourceUris(java.util.List<String> sourceUris) {
 		this.sourceUris = sourceUris;
 		return this;
 	}
@@ -798,7 +798,7 @@ public final class JobConfigurationLoad {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getWriteDisposition() {
+	public String getWriteDisposition() {
 		return writeDisposition;
 	}
 
@@ -816,7 +816,7 @@ public final class JobConfigurationLoad {
 	 * @param writeDisposition
 	 *            writeDisposition or {@code null} for none
 	 */
-	public JobConfigurationLoad setWriteDisposition(java.lang.String writeDisposition) {
+	public JobConfigurationLoad setWriteDisposition(String writeDisposition) {
 		this.writeDisposition = writeDisposition;
 		return this;
 	}

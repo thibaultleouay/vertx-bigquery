@@ -44,14 +44,14 @@ public final class Job {
    * The value may be {@code null}.
    */
   
-  private java.lang.String etag;
+  private String etag;
 
   /**
    * [Output-only] Opaque ID field of the job
    * The value may be {@code null}.
    */
   
-  private java.lang.String id;
+  private String id;
 
   /**
    * [Optional] Reference describing the unique-per-user name of the job.
@@ -65,14 +65,14 @@ public final class Job {
    * The value may be {@code null}.
    */
   
-  private java.lang.String kind;
+  private String kind;
 
   /**
    * [Output-only] A URL that can be used to access this resource again.
    * The value may be {@code null}.
    */
   
-  private java.lang.String selfLink;
+  private String selfLink;
 
   /**
    * [Output-only] Information about the job, including starting time and ending time of the job.
@@ -93,7 +93,7 @@ public final class Job {
    * [Output-only] Email address of the user who ran the job.
    * The value may be {@code null}.
    */
-  private java.lang.String userEmail;
+  private String userEmail;
 
   /**
    * [Required] Describes the job configuration.
@@ -116,7 +116,7 @@ public final class Job {
    * [Output-only] A hash of this resource.
    * @return value or {@code null} for none
    */
-  public java.lang.String getEtag() {
+  public String getEtag() {
     return etag;
   }
 
@@ -124,7 +124,7 @@ public final class Job {
    * [Output-only] A hash of this resource.
    * @param etag etag or {@code null} for none
    */
-  public Job setEtag(java.lang.String etag) {
+  public Job setEtag(String etag) {
     this.etag = etag;
     return this;
   }
@@ -133,7 +133,7 @@ public final class Job {
    * [Output-only] Opaque ID field of the job
    * @return value or {@code null} for none
    */
-  public java.lang.String getId() {
+  public String getId() {
     return id;
   }
 
@@ -141,7 +141,7 @@ public final class Job {
    * [Output-only] Opaque ID field of the job
    * @param id id or {@code null} for none
    */
-  public Job setId(java.lang.String id) {
+  public Job setId(String id) {
     this.id = id;
     return this;
   }
@@ -167,7 +167,7 @@ public final class Job {
    * [Output-only] The type of the resource.
    * @return value or {@code null} for none
    */
-  public java.lang.String getKind() {
+  public String getKind() {
     return kind;
   }
 
@@ -175,7 +175,7 @@ public final class Job {
    * [Output-only] The type of the resource.
    * @param kind kind or {@code null} for none
    */
-  public Job setKind(java.lang.String kind) {
+  public Job setKind(String kind) {
     this.kind = kind;
     return this;
   }
@@ -184,7 +184,7 @@ public final class Job {
    * [Output-only] A URL that can be used to access this resource again.
    * @return value or {@code null} for none
    */
-  public java.lang.String getSelfLink() {
+  public String getSelfLink() {
     return selfLink;
   }
 
@@ -192,7 +192,7 @@ public final class Job {
    * [Output-only] A URL that can be used to access this resource again.
    * @param selfLink selfLink or {@code null} for none
    */
-  public Job setSelfLink(java.lang.String selfLink) {
+  public Job setSelfLink(String selfLink) {
     this.selfLink = selfLink;
     return this;
   }
@@ -237,7 +237,7 @@ public final class Job {
    * [Output-only] Email address of the user who ran the job.
    * @return value or {@code null} for none
    */
-  public java.lang.String getUserEmail() {
+  public String getUserEmail() {
     return userEmail;
   }
 
@@ -245,7 +245,7 @@ public final class Job {
    * [Output-only] Email address of the user who ran the job.
    * @param userEmail userEmail or {@code null} for none
    */
-  public Job setUserEmail(java.lang.String userEmail) {
+  public Job setUserEmail(String userEmail) {
     this.userEmail = userEmail;
     return this;
   }

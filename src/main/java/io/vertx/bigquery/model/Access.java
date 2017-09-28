@@ -15,14 +15,14 @@ public final class Access {
 	 * value may be {@code null}.
 	 */
 	
-	private java.lang.String domain;
+	private String domain;
 
 	/**
 	 * [Pick one] An email address of a Google Group to grant access to. The value
 	 * may be {@code null}.
 	 */
 	
-	private java.lang.String groupByEmail;
+	private String groupByEmail;
 
 	/**
 	 * [Required] Describes the rights granted to the user specified by the other
@@ -30,7 +30,7 @@ public final class Access {
 	 * READER, WRITER, OWNER. The value may be {@code null}.
 	 */
 	
-	private java.lang.String role;
+	private String role;
 
 	/**
 	 * [Pick one] A special group to grant access to. Possible values include:
@@ -40,14 +40,14 @@ public final class Access {
 	 * {@code null}.
 	 */
 	
-	private java.lang.String specialGroup;
+	private String specialGroup;
 
 	/**
 	 * [Pick one] An email address of a user to grant access to. For example:
 	 * fred@example.com. The value may be {@code null}.
 	 */
 	
-	private java.lang.String userByEmail;
+	private String userByEmail;
 
 	/**
 	 * [Pick one] A view from a different dataset to grant access to. Queries
@@ -65,7 +65,7 @@ public final class Access {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getDomain() {
+	public String getDomain() {
 		return domain;
 	}
 
@@ -76,7 +76,7 @@ public final class Access {
 	 * @param domain
 	 *            domain or {@code null} for none
 	 */
-	public Access setDomain(java.lang.String domain) {
+	public Access setDomain(String domain) {
 		this.domain = domain;
 		return this;
 	}
@@ -86,7 +86,7 @@ public final class Access {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getGroupByEmail() {
+	public String getGroupByEmail() {
 		return groupByEmail;
 	}
 
@@ -96,7 +96,7 @@ public final class Access {
 	 * @param groupByEmail
 	 *            groupByEmail or {@code null} for none
 	 */
-	public Access setGroupByEmail(java.lang.String groupByEmail) {
+	public Access setGroupByEmail(String groupByEmail) {
 		this.groupByEmail = groupByEmail;
 		return this;
 	}
@@ -108,7 +108,7 @@ public final class Access {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getRole() {
+	public String getRole() {
 		return role;
 	}
 
@@ -120,7 +120,7 @@ public final class Access {
 	 * @param role
 	 *            role or {@code null} for none
 	 */
-	public Access setRole(java.lang.String role) {
+	public Access setRole(String role) {
 		this.role = role;
 		return this;
 	}
@@ -133,7 +133,7 @@ public final class Access {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getSpecialGroup() {
+	public String getSpecialGroup() {
 		return specialGroup;
 	}
 
@@ -146,7 +146,7 @@ public final class Access {
 	 * @param specialGroup
 	 *            specialGroup or {@code null} for none
 	 */
-	public Access setSpecialGroup(java.lang.String specialGroup) {
+	public Access setSpecialGroup(String specialGroup) {
 		this.specialGroup = specialGroup;
 		return this;
 	}
@@ -157,7 +157,7 @@ public final class Access {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getUserByEmail() {
+	public String getUserByEmail() {
 		return userByEmail;
 	}
 
@@ -168,7 +168,7 @@ public final class Access {
 	 * @param userByEmail
 	 *            userByEmail or {@code null} for none
 	 */
-	public Access setUserByEmail(java.lang.String userByEmail) {
+	public Access setUserByEmail(String userByEmail) {
 		this.userByEmail = userByEmail;
 		return this;
 	}

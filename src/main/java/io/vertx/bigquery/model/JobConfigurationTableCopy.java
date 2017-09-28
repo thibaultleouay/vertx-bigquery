@@ -41,7 +41,7 @@ public final class JobConfigurationTableCopy {
    * The value may be {@code null}.
    */
   
-  private java.lang.String createDisposition;
+  private String createDisposition;
 
   /**
    * [Required] The destination table
@@ -75,7 +75,7 @@ public final class JobConfigurationTableCopy {
    * The value may be {@code null}.
    */
   
-  private java.lang.String writeDisposition;
+  private String writeDisposition;
 
   /**
    * [Optional] Specifies whether the job is allowed to create new tables. The following values are
@@ -85,7 +85,7 @@ public final class JobConfigurationTableCopy {
    * occur as one atomic update upon job completion.
    * @return value or {@code null} for none
    */
-  public java.lang.String getCreateDisposition() {
+  public String getCreateDisposition() {
     return createDisposition;
   }
 
@@ -97,7 +97,7 @@ public final class JobConfigurationTableCopy {
    * occur as one atomic update upon job completion.
    * @param createDisposition createDisposition or {@code null} for none
    */
-  public JobConfigurationTableCopy setCreateDisposition(java.lang.String createDisposition) {
+  public JobConfigurationTableCopy setCreateDisposition(String createDisposition) {
     this.createDisposition = createDisposition;
     return this;
   }
@@ -163,7 +163,7 @@ public final class JobConfigurationTableCopy {
    * actions occur as one atomic update upon job completion.
    * @return value or {@code null} for none
    */
-  public java.lang.String getWriteDisposition() {
+  public String getWriteDisposition() {
     return writeDisposition;
   }
 
@@ -177,7 +177,7 @@ public final class JobConfigurationTableCopy {
    * actions occur as one atomic update upon job completion.
    * @param writeDisposition writeDisposition or {@code null} for none
    */
-  public JobConfigurationTableCopy setWriteDisposition(java.lang.String writeDisposition) {
+  public JobConfigurationTableCopy setWriteDisposition(String writeDisposition) {
     this.writeDisposition = writeDisposition;
     return this;
   }

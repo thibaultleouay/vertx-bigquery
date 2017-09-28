@@ -55,7 +55,7 @@ public final class QueryRequest  {
    * The value may be {@code null}.
    */
   
-  private java.lang.String kind;
+  private String kind;
 
   /**
    * [Optional] The maximum number of rows of data to return per page of results. Setting this flag
@@ -73,7 +73,7 @@ public final class QueryRequest  {
    * The value may be {@code null}.
    */
   
-  private java.lang.String parameterMode;
+  private String parameterMode;
 
   /**
    * [Deprecated] This property is deprecated.
@@ -88,7 +88,7 @@ public final class QueryRequest  {
    * The value may be {@code null}.
    */
   
-  private java.lang.String query;
+  private String query;
 
   /**
    * Query parameters for Standard SQL queries.
@@ -174,7 +174,7 @@ public final class QueryRequest  {
    * The resource type of the request.
    * @return value or {@code null} for none
    */
-  public java.lang.String getKind() {
+  public String getKind() {
     return kind;
   }
 
@@ -182,7 +182,7 @@ public final class QueryRequest  {
    * The resource type of the request.
    * @param kind kind or {@code null} for none
    */
-  public QueryRequest setKind(java.lang.String kind) {
+  public QueryRequest setKind(String kind) {
     this.kind = kind;
     return this;
   }
@@ -215,7 +215,7 @@ public final class QueryRequest  {
    * named (@myparam) query parameters in this query.
    * @return value or {@code null} for none
    */
-  public java.lang.String getParameterMode() {
+  public String getParameterMode() {
     return parameterMode;
   }
 
@@ -224,7 +224,7 @@ public final class QueryRequest  {
    * named (@myparam) query parameters in this query.
    * @param parameterMode parameterMode or {@code null} for none
    */
-  public QueryRequest setParameterMode(java.lang.String parameterMode) {
+  public QueryRequest setParameterMode(String parameterMode) {
     this.parameterMode = parameterMode;
     return this;
   }
@@ -251,7 +251,7 @@ public final class QueryRequest  {
    * Example: "SELECT count(f1) FROM [myProjectId:myDatasetId.myTableId]".
    * @return value or {@code null} for none
    */
-  public java.lang.String getQuery() {
+  public String getQuery() {
     return query;
   }
 
@@ -260,7 +260,7 @@ public final class QueryRequest  {
    * Example: "SELECT count(f1) FROM [myProjectId:myDatasetId.myTableId]".
    * @param query query or {@code null} for none
    */
-  public QueryRequest setQuery(java.lang.String query) {
+  public QueryRequest setQuery(String query) {
     this.query = query;
     return this;
   }

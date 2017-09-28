@@ -51,7 +51,7 @@ public final class JobConfigurationQuery {
    * The value may be {@code null}.
    */
   
-  private java.lang.String createDisposition;
+  private String createDisposition;
 
   /**
    * [Optional] Specifies the default dataset to use for unqualified table names in the query.
@@ -102,7 +102,7 @@ public final class JobConfigurationQuery {
    * The value may be {@code null}.
    */
   
-  private java.lang.String parameterMode;
+  private String parameterMode;
 
   /**
    * [Deprecated] This property is deprecated.
@@ -117,7 +117,7 @@ public final class JobConfigurationQuery {
    * The value may be {@code null}.
    */
   
-  private java.lang.String priority;
+  private String priority;
 
   /**
    * [Required] SQL query text to execute. The useLegacySql field can be used to indicate whether
@@ -125,7 +125,7 @@ public final class JobConfigurationQuery {
    * The value may be {@code null}.
    */
   
-  private java.lang.String query;
+  private String query;
 
   /**
    * Query parameters for standard SQL queries.
@@ -145,7 +145,7 @@ public final class JobConfigurationQuery {
    * The value may be {@code null}.
    */
   
-  private java.util.List<java.lang.String> schemaUpdateOptions;
+  private java.util.List<String> schemaUpdateOptions;
 
   /**
    * [Optional] If querying an external data source outside of BigQuery, describes the data format,
@@ -203,7 +203,7 @@ public final class JobConfigurationQuery {
    * The value may be {@code null}.
    */
   
-  private java.lang.String writeDisposition;
+  private String writeDisposition;
 
   /**
    * [Optional] If true and query uses legacy SQL dialect, allows the query to produce arbitrarily
@@ -266,7 +266,7 @@ public final class JobConfigurationQuery {
    * occur as one atomic update upon job completion.
    * @return value or {@code null} for none
    */
-  public java.lang.String getCreateDisposition() {
+  public String getCreateDisposition() {
     return createDisposition;
   }
 
@@ -278,7 +278,7 @@ public final class JobConfigurationQuery {
    * occur as one atomic update upon job completion.
    * @param createDisposition createDisposition or {@code null} for none
    */
-  public JobConfigurationQuery setCreateDisposition(java.lang.String createDisposition) {
+  public JobConfigurationQuery setCreateDisposition(String createDisposition) {
     this.createDisposition = createDisposition;
     return this;
   }
@@ -418,7 +418,7 @@ public final class JobConfigurationQuery {
    * named (@myparam) query parameters in this query.
    * @return value or {@code null} for none
    */
-  public java.lang.String getParameterMode() {
+  public String getParameterMode() {
     return parameterMode;
   }
 
@@ -427,7 +427,7 @@ public final class JobConfigurationQuery {
    * named (@myparam) query parameters in this query.
    * @param parameterMode parameterMode or {@code null} for none
    */
-  public JobConfigurationQuery setParameterMode(java.lang.String parameterMode) {
+  public JobConfigurationQuery setParameterMode(String parameterMode) {
     this.parameterMode = parameterMode;
     return this;
   }
@@ -454,7 +454,7 @@ public final class JobConfigurationQuery {
    * The default value is INTERACTIVE.
    * @return value or {@code null} for none
    */
-  public java.lang.String getPriority() {
+  public String getPriority() {
     return priority;
   }
 
@@ -463,7 +463,7 @@ public final class JobConfigurationQuery {
    * The default value is INTERACTIVE.
    * @param priority priority or {@code null} for none
    */
-  public JobConfigurationQuery setPriority(java.lang.String priority) {
+  public JobConfigurationQuery setPriority(String priority) {
     this.priority = priority;
     return this;
   }
@@ -473,7 +473,7 @@ public final class JobConfigurationQuery {
    * the query uses legacy SQL or standard SQL.
    * @return value or {@code null} for none
    */
-  public java.lang.String getQuery() {
+  public String getQuery() {
     return query;
   }
 
@@ -482,7 +482,7 @@ public final class JobConfigurationQuery {
    * the query uses legacy SQL or standard SQL.
    * @param query query or {@code null} for none
    */
-  public JobConfigurationQuery setQuery(java.lang.String query) {
+  public JobConfigurationQuery setQuery(String query) {
     this.query = query;
     return this;
   }
@@ -514,7 +514,7 @@ public final class JobConfigurationQuery {
    * field in the original schema to nullable.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getSchemaUpdateOptions() {
+  public java.util.List<String> getSchemaUpdateOptions() {
     return schemaUpdateOptions;
   }
 
@@ -528,7 +528,7 @@ public final class JobConfigurationQuery {
    * field in the original schema to nullable.
    * @param schemaUpdateOptions schemaUpdateOptions or {@code null} for none
    */
-  public JobConfigurationQuery setSchemaUpdateOptions(java.util.List<java.lang.String> schemaUpdateOptions) {
+  public JobConfigurationQuery setSchemaUpdateOptions(java.util.List<String> schemaUpdateOptions) {
     this.schemaUpdateOptions = schemaUpdateOptions;
     return this;
   }
@@ -675,7 +675,7 @@ public final class JobConfigurationQuery {
    * completion.
    * @return value or {@code null} for none
    */
-  public java.lang.String getWriteDisposition() {
+  public String getWriteDisposition() {
     return writeDisposition;
   }
 
@@ -690,7 +690,7 @@ public final class JobConfigurationQuery {
    * completion.
    * @param writeDisposition writeDisposition or {@code null} for none
    */
-  public JobConfigurationQuery setWriteDisposition(java.lang.String writeDisposition) {
+  public JobConfigurationQuery setWriteDisposition(String writeDisposition) {
     this.writeDisposition = writeDisposition;
     return this;
   }

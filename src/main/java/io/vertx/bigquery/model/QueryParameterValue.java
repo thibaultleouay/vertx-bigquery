@@ -51,7 +51,7 @@ public final class QueryParameterValue  {
    * The value may be {@code null}.
    */
   
-  private java.lang.String value;
+  private String value;
 
   /**
    * [Optional] The array values, if this is an array type.
@@ -91,7 +91,7 @@ public final class QueryParameterValue  {
    * [Optional] The value of this value, if a simple scalar type.
    * @return value or {@code null} for none
    */
-  public java.lang.String getValue() {
+  public String getValue() {
     return value;
   }
 
@@ -99,7 +99,7 @@ public final class QueryParameterValue  {
    * [Optional] The value of this value, if a simple scalar type.
    * @param value value or {@code null} for none
    */
-  public QueryParameterValue setValue(java.lang.String value) {
+  public QueryParameterValue setValue(String value) {
     this.value = value;
     return this;
   }

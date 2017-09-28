@@ -69,7 +69,7 @@ public class JobConfigurationQueryConverter {
       obj.setQueryParameters(list);
     }
     if (json.getValue("schemaUpdateOptions") instanceof JsonArray) {
-      java.util.ArrayList<java.lang.String> list = new java.util.ArrayList<>();
+      java.util.ArrayList<String> list = new java.util.ArrayList<>();
       json.getJsonArray("schemaUpdateOptions").forEach( item -> {
         if (item instanceof String)
           list.add((String)item);

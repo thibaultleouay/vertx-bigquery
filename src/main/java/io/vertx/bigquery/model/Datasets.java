@@ -19,28 +19,28 @@ public  final class Datasets {
 	 * {@code null}.
 	 */
 	
-	private java.lang.String friendlyName;
+	private String friendlyName;
 
 	/**
 	 * The fully-qualified, unique, opaque ID of the dataset. The value may be
 	 * {@code null}.
 	 */
 	
-	private java.lang.String id;
+	private String id;
 
 	/**
 	 * The resource type. This property always returns the value "bigquery#dataset".
 	 * The value may be {@code null}.
 	 */
 	
-	private java.lang.String kind;
+	private String kind;
 
 	/**
 	 * The labels associated with this dataset. You can use these to organize and
 	 * group your datasets. The value may be {@code null}.
 	 */
 	
-	private java.util.Map<String, java.lang.String> labels;
+	private java.util.Map<String, String> labels;
 
 	/**
 	 * The dataset reference. Use this property to access specific parts of the
@@ -69,7 +69,7 @@ public  final class Datasets {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getFriendlyName() {
+	public String getFriendlyName() {
 		return friendlyName;
 	}
 
@@ -79,7 +79,7 @@ public  final class Datasets {
 	 * @param friendlyName
 	 *            friendlyName or {@code null} for none
 	 */
-	public Datasets setFriendlyName(java.lang.String friendlyName) {
+	public Datasets setFriendlyName(String friendlyName) {
 		this.friendlyName = friendlyName;
 		return this;
 	}
@@ -89,7 +89,7 @@ public  final class Datasets {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getId() {
+	public String getId() {
 		return id;
 	}
 
@@ -99,7 +99,7 @@ public  final class Datasets {
 	 * @param id
 	 *            id or {@code null} for none
 	 */
-	public Datasets setId(java.lang.String id) {
+	public Datasets setId(String id) {
 		this.id = id;
 		return this;
 	}
@@ -109,7 +109,7 @@ public  final class Datasets {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getKind() {
+	public String getKind() {
 		return kind;
 	}
 
@@ -119,7 +119,7 @@ public  final class Datasets {
 	 * @param kind
 	 *            kind or {@code null} for none
 	 */
-	public Datasets setKind(java.lang.String kind) {
+	public Datasets setKind(String kind) {
 		this.kind = kind;
 		return this;
 	}
@@ -130,7 +130,7 @@ public  final class Datasets {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.util.Map<String, java.lang.String> getLabels() {
+	public java.util.Map<String, String> getLabels() {
 		return labels;
 	}
 
@@ -141,7 +141,7 @@ public  final class Datasets {
 	 * @param labels
 	 *            labels or {@code null} for none
 	 */
-	public Datasets setLabels(java.util.Map<String, java.lang.String> labels) {
+	public Datasets setLabels(java.util.Map<String, String> labels) {
 		this.labels = labels;
 		return this;
 	}

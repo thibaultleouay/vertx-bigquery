@@ -48,21 +48,21 @@ public final class DatasetList {
 	 * the page has changed since the last request. The value may be {@code null}.
 	 */
 	
-	private java.lang.String etag;
+	private String etag;
 
 	/**
 	 * The list type. This property always returns the value "bigquery#datasetList".
 	 * The value may be {@code null}.
 	 */
 	
-	private java.lang.String kind;
+	private String kind;
 
 	/**
 	 * A token that can be used to request the next results page. This property is
 	 * omitted on the final results page. The value may be {@code null}.
 	 */
 	
-	private java.lang.String nextPageToken;
+	private String nextPageToken;
 
 	/**
 	 * An array of the dataset resources in the project. Each resource contains
@@ -96,7 +96,7 @@ public final class DatasetList {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getEtag() {
+	public String getEtag() {
 		return etag;
 	}
 
@@ -107,7 +107,7 @@ public final class DatasetList {
 	 * @param etag
 	 *            etag or {@code null} for none
 	 */
-	public DatasetList setEtag(java.lang.String etag) {
+	public DatasetList setEtag(String etag) {
 		this.etag = etag;
 		return this;
 	}
@@ -117,7 +117,7 @@ public final class DatasetList {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getKind() {
+	public String getKind() {
 		return kind;
 	}
 
@@ -127,7 +127,7 @@ public final class DatasetList {
 	 * @param kind
 	 *            kind or {@code null} for none
 	 */
-	public DatasetList setKind(java.lang.String kind) {
+	public DatasetList setKind(String kind) {
 		this.kind = kind;
 		return this;
 	}
@@ -138,7 +138,7 @@ public final class DatasetList {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getNextPageToken() {
+	public String getNextPageToken() {
 		return nextPageToken;
 	}
 
@@ -149,7 +149,7 @@ public final class DatasetList {
 	 * @param nextPageToken
 	 *            nextPageToken or {@code null} for none
 	 */
-	public DatasetList setNextPageToken(java.lang.String nextPageToken) {
+	public DatasetList setNextPageToken(String nextPageToken) {
 		this.nextPageToken = nextPageToken;
 		return this;
 	}

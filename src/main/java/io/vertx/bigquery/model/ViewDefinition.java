@@ -37,7 +37,7 @@ public final class ViewDefinition {
    * The value may be {@code null}.
    */
   
-  private java.lang.String query;
+  private String query;
 
   /**
    * Specifies whether to use BigQuery's legacy SQL for this view. The default value is true. If set
@@ -61,7 +61,7 @@ public final class ViewDefinition {
    * [Required] A query that BigQuery executes when the view is referenced.
    * @return value or {@code null} for none
    */
-  public java.lang.String getQuery() {
+  public String getQuery() {
     return query;
   }
 
@@ -69,7 +69,7 @@ public final class ViewDefinition {
    * [Required] A query that BigQuery executes when the view is referenced.
    * @param query query or {@code null} for none
    */
-  public ViewDefinition setQuery(java.lang.String query) {
+  public ViewDefinition setQuery(String query) {
     this.query = query;
     return this;
   }

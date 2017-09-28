@@ -49,14 +49,14 @@ public final class BigtableColumnFamily {
    * The value may be {@code null}.
    */
   
-  private java.lang.String encoding;
+  private String encoding;
 
   /**
    * Identifier of the column family.
    * The value may be {@code null}.
    */
   
-  private java.lang.String familyId;
+  private String familyId;
 
   /**
    * [Optional] If this is set only the latest version of value are exposed for all columns in this
@@ -76,7 +76,7 @@ public final class BigtableColumnFamily {
    * The value may be {@code null}.
    */
   
-  private java.lang.String type;
+  private String type;
 
   /**
    * [Optional] Lists of columns that should be exposed as individual fields as opposed to a list of
@@ -106,7 +106,7 @@ public final class BigtableColumnFamily {
    * column by listing that column in 'columns' and specifying an encoding for it.
    * @return value or {@code null} for none
    */
-  public java.lang.String getEncoding() {
+  public String getEncoding() {
     return encoding;
   }
 
@@ -117,7 +117,7 @@ public final class BigtableColumnFamily {
    * column by listing that column in 'columns' and specifying an encoding for it.
    * @param encoding encoding or {@code null} for none
    */
-  public BigtableColumnFamily setEncoding(java.lang.String encoding) {
+  public BigtableColumnFamily setEncoding(String encoding) {
     this.encoding = encoding;
     return this;
   }
@@ -126,7 +126,7 @@ public final class BigtableColumnFamily {
    * Identifier of the column family.
    * @return value or {@code null} for none
    */
-  public java.lang.String getFamilyId() {
+  public String getFamilyId() {
     return familyId;
   }
 
@@ -134,7 +134,7 @@ public final class BigtableColumnFamily {
    * Identifier of the column family.
    * @param familyId familyId or {@code null} for none
    */
-  public BigtableColumnFamily setFamilyId(java.lang.String familyId) {
+  public BigtableColumnFamily setFamilyId(String familyId) {
     this.familyId = familyId;
     return this;
   }
@@ -168,7 +168,7 @@ public final class BigtableColumnFamily {
    * 'columns' and specifying a type for it.
    * @return value or {@code null} for none
    */
-  public java.lang.String getType() {
+  public String getType() {
     return type;
   }
 
@@ -180,7 +180,7 @@ public final class BigtableColumnFamily {
    * 'columns' and specifying a type for it.
    * @param type type or {@code null} for none
    */
-  public BigtableColumnFamily setType(java.lang.String type) {
+  public BigtableColumnFamily setType(String type) {
     this.type = type;
     return this;
   }

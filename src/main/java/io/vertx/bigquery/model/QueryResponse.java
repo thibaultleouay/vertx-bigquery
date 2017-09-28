@@ -72,7 +72,7 @@ public final class QueryResponse {
 	 * The resource type. The value may be {@code null}.
 	 */
 
-	private java.lang.String kind;
+	private String kind;
 
 	/**
 	 * [Output-only] The number of rows affected by a DML statement. Present only
@@ -85,7 +85,7 @@ public final class QueryResponse {
 	 * A token used for paging results. The value may be {@code null}.
 	 */
 
-	private java.lang.String pageToken;
+	private String pageToken;
 
 	/**
 	 * An object with as many results as can be contained within the maximum
@@ -220,7 +220,7 @@ public final class QueryResponse {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getKind() {
+	public String getKind() {
 		return kind;
 	}
 
@@ -230,7 +230,7 @@ public final class QueryResponse {
 	 * @param kind
 	 *            kind or {@code null} for none
 	 */
-	public QueryResponse setKind(java.lang.String kind) {
+	public QueryResponse setKind(String kind) {
 		this.kind = kind;
 		return this;
 	}
@@ -262,7 +262,7 @@ public final class QueryResponse {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getPageToken() {
+	public String getPageToken() {
 		return pageToken;
 	}
 
@@ -272,7 +272,7 @@ public final class QueryResponse {
 	 * @param pageToken
 	 *            pageToken or {@code null} for none
 	 */
-	public QueryResponse setPageToken(java.lang.String pageToken) {
+	public QueryResponse setPageToken(String pageToken) {
 		this.pageToken = pageToken;
 		return this;
 	}

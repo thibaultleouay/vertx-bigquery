@@ -55,7 +55,7 @@ public final class ExternalDataConfiguration {
 	 * may be {@code null}.
 	 */
 	
-	private java.lang.String compression;
+	private String compression;
 
 	/**
 	 * Additional properties to set if sourceFormat is set to CSV. The value may be
@@ -112,7 +112,7 @@ public final class ExternalDataConfiguration {
 	 * Bigtable, specify "BIGTABLE". The value may be {@code null}.
 	 */
 	
-	private java.lang.String sourceFormat;
+	private String sourceFormat;
 
 	/**
 	 * [Required] The fully-qualified URIs that point to your data in Google Cloud.
@@ -125,7 +125,7 @@ public final class ExternalDataConfiguration {
 	 * is not allowed. The value may be {@code null}.
 	 */
 	
-	private java.util.List<java.lang.String> sourceUris;
+	private java.util.List<String> sourceUris;
 
 	/**
 	 * Try to detect schema and format options automatically. Any option specified
@@ -176,7 +176,7 @@ public final class ExternalDataConfiguration {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getCompression() {
+	public String getCompression() {
 		return compression;
 	}
 
@@ -188,7 +188,7 @@ public final class ExternalDataConfiguration {
 	 * @param compression
 	 *            compression or {@code null} for none
 	 */
-	public ExternalDataConfiguration setCompression(java.lang.String compression) {
+	public ExternalDataConfiguration setCompression(String compression) {
 		this.compression = compression;
 		return this;
 	}
@@ -330,7 +330,7 @@ public final class ExternalDataConfiguration {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getSourceFormat() {
+	public String getSourceFormat() {
 		return sourceFormat;
 	}
 
@@ -344,7 +344,7 @@ public final class ExternalDataConfiguration {
 	 * @param sourceFormat
 	 *            sourceFormat or {@code null} for none
 	 */
-	public ExternalDataConfiguration setSourceFormat(java.lang.String sourceFormat) {
+	public ExternalDataConfiguration setSourceFormat(String sourceFormat) {
 		this.sourceFormat = sourceFormat;
 		return this;
 	}
@@ -361,7 +361,7 @@ public final class ExternalDataConfiguration {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.util.List<java.lang.String> getSourceUris() {
+	public java.util.List<String> getSourceUris() {
 		return sourceUris;
 	}
 
@@ -378,7 +378,7 @@ public final class ExternalDataConfiguration {
 	 * @param sourceUris
 	 *            sourceUris or {@code null} for none
 	 */
-	public ExternalDataConfiguration setSourceUris(java.util.List<java.lang.String> sourceUris) {
+	public ExternalDataConfiguration setSourceUris(java.util.List<String> sourceUris) {
 		this.sourceUris = sourceUris;
 		return this;
 	}

@@ -40,14 +40,14 @@ public final class JobReference {
 	 * characters. The value may be {@code null}.
 	 */
 	
-	private java.lang.String jobId;
+	private String jobId;
 
 	/**
 	 * [Required] The ID of the project containing this job. The value may be
 	 * {@code null}.
 	 */
 	
-	private java.lang.String projectId;
+	private String projectId;
 
 	/**
 	 * [Required] The ID of the job. The ID must contain only letters (a-z, A-Z),
@@ -56,7 +56,7 @@ public final class JobReference {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getJobId() {
+	public String getJobId() {
 		return jobId;
 	}
 
@@ -68,7 +68,7 @@ public final class JobReference {
 	 * @param jobId
 	 *            jobId or {@code null} for none
 	 */
-	public JobReference setJobId(java.lang.String jobId) {
+	public JobReference setJobId(String jobId) {
 		this.jobId = jobId;
 		return this;
 	}
@@ -78,7 +78,7 @@ public final class JobReference {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getProjectId() {
+	public String getProjectId() {
 		return projectId;
 	}
 
@@ -88,7 +88,7 @@ public final class JobReference {
 	 * @param projectId
 	 *            projectId or {@code null} for none
 	 */
-	public JobReference setProjectId(java.lang.String projectId) {
+	public JobReference setProjectId(String projectId) {
 		this.projectId = projectId;
 		return this;
 	}

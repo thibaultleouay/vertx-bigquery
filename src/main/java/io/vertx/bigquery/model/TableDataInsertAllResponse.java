@@ -45,7 +45,7 @@ public final class TableDataInsertAllResponse {
 	 * The resource type of the response. The value may be {@code null}.
 	 */
 
-	private java.lang.String kind;
+	private String kind;
 
 	/**
 	 * An array of errors for rows that were not inserted.
@@ -72,7 +72,7 @@ public final class TableDataInsertAllResponse {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getKind() {
+	public String getKind() {
 		return kind;
 	}
 
@@ -82,7 +82,7 @@ public final class TableDataInsertAllResponse {
 	 * @param kind
 	 *            kind or {@code null} for none
 	 */
-	public TableDataInsertAllResponse setKind(java.lang.String kind) {
+	public TableDataInsertAllResponse setKind(String kind) {
 		this.kind = kind;
 		return this;
 	}

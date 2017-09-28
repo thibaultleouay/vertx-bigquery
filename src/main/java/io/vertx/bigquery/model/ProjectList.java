@@ -38,19 +38,19 @@ public final class ProjectList {
 	 * A hash of the page of results The value may be {@code null}.
 	 */
 
-	private java.lang.String etag;
+	private String etag;
 
 	/**
 	 * The type of list. The value may be {@code null}.
 	 */
 
-	private java.lang.String kind;
+	private String kind;
 
 	/**
 	 * A token to request the next page of results. The value may be {@code null}.
 	 */
 
-	private java.lang.String nextPageToken;
+	private String nextPageToken;
 
 	/**
 	 * Projects to which you have at least READ access. The value may be
@@ -70,7 +70,7 @@ public final class ProjectList {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getEtag() {
+	public String getEtag() {
 		return etag;
 	}
 
@@ -80,7 +80,7 @@ public final class ProjectList {
 	 * @param etag
 	 *            etag or {@code null} for none
 	 */
-	public ProjectList setEtag(java.lang.String etag) {
+	public ProjectList setEtag(String etag) {
 		this.etag = etag;
 		return this;
 	}
@@ -90,7 +90,7 @@ public final class ProjectList {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getKind() {
+	public String getKind() {
 		return kind;
 	}
 
@@ -100,7 +100,7 @@ public final class ProjectList {
 	 * @param kind
 	 *            kind or {@code null} for none
 	 */
-	public ProjectList setKind(java.lang.String kind) {
+	public ProjectList setKind(String kind) {
 		this.kind = kind;
 		return this;
 	}
@@ -110,7 +110,7 @@ public final class ProjectList {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getNextPageToken() {
+	public String getNextPageToken() {
 		return nextPageToken;
 	}
 
@@ -120,7 +120,7 @@ public final class ProjectList {
 	 * @param nextPageToken
 	 *            nextPageToken or {@code null} for none
 	 */
-	public ProjectList setNextPageToken(java.lang.String nextPageToken) {
+	public ProjectList setNextPageToken(String nextPageToken) {
 		this.nextPageToken = nextPageToken;
 		return this;
 	}

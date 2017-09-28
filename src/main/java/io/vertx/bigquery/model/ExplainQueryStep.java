@@ -38,20 +38,20 @@ public final class ExplainQueryStep {
 	 * Machine-readable operation type. The value may be {@code null}.
 	 */
 	
-	private java.lang.String kind;
+	private String kind;
 
 	/**
 	 * Human-readable stage descriptions. The value may be {@code null}.
 	 */
 	
-	private java.util.List<java.lang.String> substeps;
+	private java.util.List<String> substeps;
 
 	/**
 	 * Machine-readable operation type.
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getKind() {
+	public String getKind() {
 		return kind;
 	}
 
@@ -61,7 +61,7 @@ public final class ExplainQueryStep {
 	 * @param kind
 	 *            kind or {@code null} for none
 	 */
-	public ExplainQueryStep setKind(java.lang.String kind) {
+	public ExplainQueryStep setKind(String kind) {
 		this.kind = kind;
 		return this;
 	}
@@ -71,7 +71,7 @@ public final class ExplainQueryStep {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.util.List<java.lang.String> getSubsteps() {
+	public java.util.List<String> getSubsteps() {
 		return substeps;
 	}
 
@@ -81,7 +81,7 @@ public final class ExplainQueryStep {
 	 * @param substeps
 	 *            substeps or {@code null} for none
 	 */
-	public ExplainQueryStep setSubsteps(java.util.List<java.lang.String> substeps) {
+	public ExplainQueryStep setSubsteps(java.util.List<String> substeps) {
 		this.substeps = substeps;
 		return this;
 	}

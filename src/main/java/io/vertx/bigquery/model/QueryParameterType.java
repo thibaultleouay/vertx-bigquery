@@ -52,7 +52,7 @@ public final class QueryParameterType {
 	 * [Required] The top level type of this field. The value may be {@code null}.
 	 */
 	
-	private java.lang.String type;
+	private String type;
 
 	/**
 	 * [Optional] The type of the array's elements, if this is an array.
@@ -101,7 +101,7 @@ public final class QueryParameterType {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getType() {
+	public String getType() {
 		return type;
 	}
 
@@ -111,7 +111,7 @@ public final class QueryParameterType {
 	 * @param type
 	 *            type or {@code null} for none
 	 */
-	public QueryParameterType setType(java.lang.String type) {
+	public QueryParameterType setType(String type) {
 		this.type = type;
 		return this;
 	}

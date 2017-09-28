@@ -39,7 +39,7 @@ public final class QueryParameter {
 	 * unique within a query. The value may be {@code null}.
 	 */
 	
-	private java.lang.String name;
+	private String name;
 
 	/**
 	 * [Required] The type of this parameter. The value may be {@code null}.
@@ -59,7 +59,7 @@ public final class QueryParameter {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getName() {
+	public String getName() {
 		return name;
 	}
 
@@ -70,7 +70,7 @@ public final class QueryParameter {
 	 * @param name
 	 *            name or {@code null} for none
 	 */
-	public QueryParameter setName(java.lang.String name) {
+	public QueryParameter setName(String name) {
 		this.name = name;
 		return this;
 	}

@@ -46,7 +46,7 @@ public final class TableDataInsertAllRequest {
 	 * The resource type of the response. The value may be {@code null}.
 	 */
 	
-	private java.lang.String kind;
+	private String kind;
 
 	/**
 	 * The rows to insert. The value may be {@code null}.
@@ -72,7 +72,7 @@ public final class TableDataInsertAllRequest {
 	 * {@code null}.
 	 */
 	
-	private java.lang.String templateSuffix;
+	private String templateSuffix;
 
 	/**
 	 * [Optional] Accept rows that contain values that do not match the schema. The
@@ -103,7 +103,7 @@ public final class TableDataInsertAllRequest {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getKind() {
+	public String getKind() {
 		return kind;
 	}
 
@@ -113,7 +113,7 @@ public final class TableDataInsertAllRequest {
 	 * @param kind
 	 *            kind or {@code null} for none
 	 */
-	public TableDataInsertAllRequest setKind(java.lang.String kind) {
+	public TableDataInsertAllRequest setKind(String kind) {
 		this.kind = kind;
 		return this;
 	}
@@ -172,7 +172,7 @@ public final class TableDataInsertAllRequest {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getTemplateSuffix() {
+	public String getTemplateSuffix() {
 		return templateSuffix;
 	}
 
@@ -187,11 +187,18 @@ public final class TableDataInsertAllRequest {
 	 * @param templateSuffix
 	 *            templateSuffix or {@code null} for none
 	 */
-	public TableDataInsertAllRequest setTemplateSuffix(java.lang.String templateSuffix) {
+	public TableDataInsertAllRequest setTemplateSuffix(String templateSuffix) {
 		this.templateSuffix = templateSuffix;
 		return this;
 	}
 
 	public TableDataInsertAllRequest(JsonObject jsonObject) {
+	    TableDataInsertAllRequestConverter.fromJson(jsonObject, this);
+	}
+	
+	public JsonObject toJson() {
+	    JsonObject jsonObject = new JsonObject();
+	    TableDataInsertAllRequestConverter.toJson(this, jsonObject);
+	    return jsonObject;
 	}
 }

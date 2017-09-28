@@ -38,7 +38,7 @@ public final class JobConfigurationExtract  {
    * The value may be {@code null}.
    */
   
-  private java.lang.String compression;
+  private String compression;
 
   /**
    * [Optional] The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON and
@@ -47,7 +47,7 @@ public final class JobConfigurationExtract  {
    * The value may be {@code null}.
    */
   
-  private java.lang.String destinationFormat;
+  private String destinationFormat;
 
   /**
    * [Pick one] DEPRECATED: Use destinationUris instead, passing only one URI as necessary. The
@@ -55,7 +55,7 @@ public final class JobConfigurationExtract  {
    * The value may be {@code null}.
    */
   
-  private java.lang.String destinationUri;
+  private String destinationUri;
 
   /**
    * [Pick one] A list of fully-qualified Google Cloud Storage URIs where the extracted table should
@@ -63,14 +63,14 @@ public final class JobConfigurationExtract  {
    * The value may be {@code null}.
    */
   
-  private java.util.List<java.lang.String> destinationUris;
+  private java.util.List<String> destinationUris;
 
   /**
    * [Optional] Delimiter to use between fields in the exported data. Default is ','
    * The value may be {@code null}.
    */
   
-  private java.lang.String fieldDelimiter;
+  private String fieldDelimiter;
 
   /**
    * [Optional] Whether to print out a header row in the results. Default is true.
@@ -91,7 +91,7 @@ public final class JobConfigurationExtract  {
    * NONE. The default value is NONE.
    * @return value or {@code null} for none
    */
-  public java.lang.String getCompression() {
+  public String getCompression() {
     return compression;
   }
 
@@ -100,7 +100,7 @@ public final class JobConfigurationExtract  {
    * NONE. The default value is NONE.
    * @param compression compression or {@code null} for none
    */
-  public JobConfigurationExtract setCompression(java.lang.String compression) {
+  public JobConfigurationExtract setCompression(String compression) {
     this.compression = compression;
     return this;
   }
@@ -111,7 +111,7 @@ public final class JobConfigurationExtract  {
    * CSV.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDestinationFormat() {
+  public String getDestinationFormat() {
     return destinationFormat;
   }
 
@@ -121,7 +121,7 @@ public final class JobConfigurationExtract  {
    * CSV.
    * @param destinationFormat destinationFormat or {@code null} for none
    */
-  public JobConfigurationExtract setDestinationFormat(java.lang.String destinationFormat) {
+  public JobConfigurationExtract setDestinationFormat(String destinationFormat) {
     this.destinationFormat = destinationFormat;
     return this;
   }
@@ -131,7 +131,7 @@ public final class JobConfigurationExtract  {
    * fully-qualified Google Cloud Storage URI where the extracted table should be written.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDestinationUri() {
+  public String getDestinationUri() {
     return destinationUri;
   }
 
@@ -140,7 +140,7 @@ public final class JobConfigurationExtract  {
    * fully-qualified Google Cloud Storage URI where the extracted table should be written.
    * @param destinationUri destinationUri or {@code null} for none
    */
-  public JobConfigurationExtract setDestinationUri(java.lang.String destinationUri) {
+  public JobConfigurationExtract setDestinationUri(String destinationUri) {
     this.destinationUri = destinationUri;
     return this;
   }
@@ -150,7 +150,7 @@ public final class JobConfigurationExtract  {
    * be written.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getDestinationUris() {
+  public java.util.List<String> getDestinationUris() {
     return destinationUris;
   }
 
@@ -159,7 +159,7 @@ public final class JobConfigurationExtract  {
    * be written.
    * @param destinationUris destinationUris or {@code null} for none
    */
-  public JobConfigurationExtract setDestinationUris(java.util.List<java.lang.String> destinationUris) {
+  public JobConfigurationExtract setDestinationUris(java.util.List<String> destinationUris) {
     this.destinationUris = destinationUris;
     return this;
   }
@@ -168,7 +168,7 @@ public final class JobConfigurationExtract  {
    * [Optional] Delimiter to use between fields in the exported data. Default is ','
    * @return value or {@code null} for none
    */
-  public java.lang.String getFieldDelimiter() {
+  public String getFieldDelimiter() {
     return fieldDelimiter;
   }
 
@@ -176,7 +176,7 @@ public final class JobConfigurationExtract  {
    * [Optional] Delimiter to use between fields in the exported data. Default is ','
    * @param fieldDelimiter fieldDelimiter or {@code null} for none
    */
-  public JobConfigurationExtract setFieldDelimiter(java.lang.String fieldDelimiter) {
+  public JobConfigurationExtract setFieldDelimiter(String fieldDelimiter) {
     this.fieldDelimiter = fieldDelimiter;
     return this;
   }

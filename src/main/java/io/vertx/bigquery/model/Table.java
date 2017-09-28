@@ -46,13 +46,13 @@ public final class Table {
 	 * {@code null}.
 	 */
 	
-	private java.lang.String description;
+	private String description;
 
 	/**
 	 * [Output-only] A hash of this resource. The value may be {@code null}.
 	 */
 	
-	private java.lang.String etag;
+	private String etag;
 
 	/**
 	 * [Optional] The time when this table expires, in milliseconds since the epoch.
@@ -75,20 +75,20 @@ public final class Table {
 	 * [Optional] A descriptive name for this table. The value may be {@code null}.
 	 */
 	
-	private java.lang.String friendlyName;
+	private String friendlyName;
 
 	/**
 	 * [Output-only] An opaque ID uniquely identifying the table. The value may be
 	 * {@code null}.
 	 */
 	
-	private java.lang.String id;
+	private String id;
 
 	/**
 	 * [Output-only] The type of the resource. The value may be {@code null}.
 	 */
 	
-	private java.lang.String kind;
+	private String kind;
 
 	/**
 	 * [Experimental] The labels associated with this table. You can use these to
@@ -99,7 +99,7 @@ public final class Table {
 	 * must have a different key. The value may be {@code null}.
 	 */
 	
-	private java.util.Map<String, java.lang.String> labels;
+	private java.util.Map<String, String> labels;
 
 	/**
 	 * [Output-only] The time when this table was last modified, in milliseconds
@@ -113,7 +113,7 @@ public final class Table {
 	 * inherited from the dataset. The value may be {@code null}.
 	 */
 	
-	private java.lang.String location;
+	private String location;
 
 	/**
 	 * [Output-only] The size of this table in bytes, excluding any data in the
@@ -147,7 +147,7 @@ public final class Table {
 	 * may be {@code null}.
 	 */
 	
-	private java.lang.String selfLink;
+	private String selfLink;
 
 	/**
 	 * [Output-only] Contains information regarding this table's streaming buffer,
@@ -180,7 +180,7 @@ public final class Table {
 	 * {@code null}.
 	 */
 	
-	private java.lang.String type;
+	private String type;
 
 	/**
 	 * [Optional] The view definition. The value may be {@code null}.
@@ -215,7 +215,7 @@ public final class Table {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
@@ -225,7 +225,7 @@ public final class Table {
 	 * @param description
 	 *            description or {@code null} for none
 	 */
-	public Table setDescription(java.lang.String description) {
+	public Table setDescription(String description) {
 		this.description = description;
 		return this;
 	}
@@ -235,7 +235,7 @@ public final class Table {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getEtag() {
+	public String getEtag() {
 		return etag;
 	}
 
@@ -245,7 +245,7 @@ public final class Table {
 	 * @param etag
 	 *            etag or {@code null} for none
 	 */
-	public Table setEtag(java.lang.String etag) {
+	public Table setEtag(String etag) {
 		this.etag = etag;
 		return this;
 	}
@@ -303,7 +303,7 @@ public final class Table {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getFriendlyName() {
+	public String getFriendlyName() {
 		return friendlyName;
 	}
 
@@ -313,7 +313,7 @@ public final class Table {
 	 * @param friendlyName
 	 *            friendlyName or {@code null} for none
 	 */
-	public Table setFriendlyName(java.lang.String friendlyName) {
+	public Table setFriendlyName(String friendlyName) {
 		this.friendlyName = friendlyName;
 		return this;
 	}
@@ -323,7 +323,7 @@ public final class Table {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getId() {
+	public String getId() {
 		return id;
 	}
 
@@ -333,7 +333,7 @@ public final class Table {
 	 * @param id
 	 *            id or {@code null} for none
 	 */
-	public Table setId(java.lang.String id) {
+	public Table setId(String id) {
 		this.id = id;
 		return this;
 	}
@@ -343,7 +343,7 @@ public final class Table {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getKind() {
+	public String getKind() {
 		return kind;
 	}
 
@@ -353,7 +353,7 @@ public final class Table {
 	 * @param kind
 	 *            kind or {@code null} for none
 	 */
-	public Table setKind(java.lang.String kind) {
+	public Table setKind(String kind) {
 		this.kind = kind;
 		return this;
 	}
@@ -368,7 +368,7 @@ public final class Table {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.util.Map<String, java.lang.String> getLabels() {
+	public java.util.Map<String, String> getLabels() {
 		return labels;
 	}
 
@@ -383,7 +383,7 @@ public final class Table {
 	 * @param labels
 	 *            labels or {@code null} for none
 	 */
-	public Table setLabels(java.util.Map<String, java.lang.String> labels) {
+	public Table setLabels(java.util.Map<String, String> labels) {
 		this.labels = labels;
 		return this;
 	}
@@ -416,7 +416,7 @@ public final class Table {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getLocation() {
+	public String getLocation() {
 		return location;
 	}
 
@@ -427,7 +427,7 @@ public final class Table {
 	 * @param location
 	 *            location or {@code null} for none
 	 */
-	public Table setLocation(java.lang.String location) {
+	public Table setLocation(String location) {
 		this.location = location;
 		return this;
 	}
@@ -523,7 +523,7 @@ public final class Table {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getSelfLink() {
+	public String getSelfLink() {
 		return selfLink;
 	}
 
@@ -533,7 +533,7 @@ public final class Table {
 	 * @param selfLink
 	 *            selfLink or {@code null} for none
 	 */
-	public Table setSelfLink(java.lang.String selfLink) {
+	public Table setSelfLink(String selfLink) {
 		this.selfLink = selfLink;
 		return this;
 	}
@@ -612,7 +612,7 @@ public final class Table {
 	 * 
 	 * @return value or {@code null} for none
 	 */
-	public java.lang.String getType() {
+	public String getType() {
 		return type;
 	}
 
@@ -625,7 +625,7 @@ public final class Table {
 	 * @param type
 	 *            type or {@code null} for none
 	 */
-	public Table setType(java.lang.String type) {
+	public Table setType(String type) {
 		this.type = type;
 		return this;
 	}
