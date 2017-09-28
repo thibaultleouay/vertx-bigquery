@@ -824,4 +824,12 @@ public final class JobConfigurationLoad {
 	public JobConfigurationLoad(JsonObject json) {
 		// TODO Auto-generated constructor stub
 	}
+	public JobConfigurationLoad() {
+	}
+
+	public JsonObject toJson() {
+		JsonObject jsonObject = new JsonObject();
+		JobConfigurationLoadConverter.toJson(this, jsonObject);
+		return jsonObject;
+	}
 }

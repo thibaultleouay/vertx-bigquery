@@ -193,7 +193,16 @@ public final class JobConfiguration {
     this.query = query;
     return this;
   }
-public JobConfiguration(JsonObject json) {
-	// TODO Auto-generated constructor stub
-}
+
+  public JobConfiguration(JsonObject json) {
+    // TODO Auto-generated constructor stub
+  }
+
+  public  JobConfiguration() {}
+
+  public JsonObject toJson() {
+    JsonObject jsonObject = new JsonObject();
+    JobConfigurationConverter.toJson(this, jsonObject);
+    return jsonObject;
+  }
 }

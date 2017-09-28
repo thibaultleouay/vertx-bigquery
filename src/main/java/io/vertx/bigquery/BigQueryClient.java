@@ -178,6 +178,15 @@ public interface BigQueryClient {
 	public BigQueryClient getQueryResultWithOptions(String projectId, String jobId,  Handler<AsyncResult<GetQueryResultsResponse>> succesHandler, JsonObject options);
 
 	/**
+	 *
+	 * @param projectId
+	 * @param succesHandler
+	 * @return
+	 */
+	@Fluent
+	public BigQueryClient insertJob(String projectId, Handler<AsyncResult<Job>> succesHandler, Job job);
+
+	/**
 	 * 
 	 * @param projectId
 	 * @param succeshandler
@@ -194,7 +203,7 @@ public interface BigQueryClient {
 	 * @return
 	 */
 	@Fluent
-	public BigQueryClient listJobsWithOptions(String projectId, Handler<AsyncResult<JobList>> succeshandler, JsonObject options );
+	public BigQueryClient listJobsWithOptions(String projectId, Handler<AsyncResult<JobList>> succeshandler, JsonObject options);
 	
 	/**
 	 * 

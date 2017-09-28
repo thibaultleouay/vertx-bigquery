@@ -61,5 +61,8 @@ public class JobConfigurationConverter {
       obj.getLabels().forEach((key,value) -> map.put(key, value));
       json.put("labels", map);
     }
+    if (obj.getLoad() != null) {
+      json.put("load", obj.getLoad().toJson());
+    }
   }
 }

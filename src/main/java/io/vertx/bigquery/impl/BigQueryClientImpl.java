@@ -132,6 +132,15 @@ public class BigQueryClientImpl implements BigQueryClient {
 	}
 
 	@Override
+	public BigQueryClient insertJob(String projectId, Handler<AsyncResult<Job>> succesHandler, Job job) {
+		System.out.println(job.toJson().encodePrettily());
+		String path = DEFAULT_ENDPOINT + projectId + "/jobs";
+		createPostRequest(path, succesHandler, Job.class, job);
+
+		return  this;
+	}
+
+	@Override
 	public BigQueryClient listJobs(String projectId, Handler<AsyncResult<JobList>> succeshandler) {
 		listJobsWithOptions(projectId, succeshandler, null);
 		return this;

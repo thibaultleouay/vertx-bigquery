@@ -72,5 +72,8 @@ public class JobConverter {
     if (obj.getUserEmail() != null) {
       json.put("userEmail", obj.getUserEmail());
     }
+    if (obj.getConfiguration() != null) {
+      json.put("configuration", obj.getConfiguration().toJson());
+    }
   }
 }

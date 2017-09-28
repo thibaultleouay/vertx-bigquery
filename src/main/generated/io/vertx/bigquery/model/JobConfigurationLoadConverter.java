@@ -143,6 +143,9 @@ public class JobConfigurationLoadConverter {
     if (obj.getQuote() != null) {
       json.put("quote", obj.getQuote());
     }
+    if (obj.getDestinationTable() != null) {
+      json.put("destinationTable", obj.getDestinationTable().toJson());
+    }
     if (obj.getSchemaInline() != null) {
       json.put("schemaInline", obj.getSchemaInline());
     }

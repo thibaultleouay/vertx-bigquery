@@ -252,6 +252,8 @@ public final class Job {
   public Job(JsonObject json) {
 	  JobConverter.fromJson(json, this);
   }
+
+  public Job() {}
   
   public JsonObject toJson() {
 	  JsonObject jsonObject = new JsonObject();
