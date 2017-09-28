@@ -96,4 +96,6 @@ public final class JobReference {
 	public JobReference(JsonObject jsonObject) {
 		// TODO Auto-generated constructor stub
 	}
+
+	public JobReference() {}
 }

@@ -235,4 +235,6 @@ public final class JobStatistics {
 	public JobStatistics(JsonObject jsonObject) {
 		// TODO Auto-generated constructor stub
 	}
+
+	public JobStatistics() {}
 }

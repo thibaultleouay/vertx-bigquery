@@ -93,7 +93,7 @@ public final class Job {
    * [Output-only] Email address of the user who ran the job.
    * The value may be {@code null}.
    */
-  private java.lang.String userEmail;
+  private java.lang.String user_email;
 
   /**
    * [Required] Describes the job configuration.
@@ -238,15 +238,15 @@ public final class Job {
    * @return value or {@code null} for none
    */
   public java.lang.String getUserEmail() {
-    return userEmail;
+    return user_email;
   }
 
   /**
    * [Output-only] Email address of the user who ran the job.
-   * @param userEmail userEmail or {@code null} for none
+   * @param userEmail user_email or {@code null} for none
    */
-  public Job setUserEmail(java.lang.String userEmail) {
-    this.userEmail = userEmail;
+  public Job setuser_email(java.lang.String userEmail) {
+    this.user_email = userEmail;
     return this;
   }
   public Job(JsonObject json) {

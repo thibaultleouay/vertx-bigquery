@@ -114,7 +114,9 @@ public final class JobStatus {
     this.state = state;
     return this;
   }
-public JobStatus(JsonObject jsonObject) {
-	// TODO Auto-generated constructor stub
-}
+   public JobStatus(JsonObject jsonObject) {
+    // TODO Auto-generated constructor stub
+   }
+
+   public JobStatus() {}
 }

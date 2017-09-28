@@ -1,10 +1,6 @@
 package io.vertx.kotlin.bigquery.model
 
 import io.vertx.bigquery.model.Job
-import io.vertx.bigquery.model.JobConfiguration
-import io.vertx.bigquery.model.JobReference
-import io.vertx.bigquery.model.JobStatistics
-import io.vertx.bigquery.model.JobStatus
 
 /**
  * A function providing a DSL for building [io.vertx.bigquery.model.Job] objects.
@@ -65,7 +61,7 @@ fun Job(
     this.setStatus(status)
   }
   if (userEmail != null) {
-    this.setUserEmail(userEmail)
+    this.setuser_email(userEmail)
   }
 }
 

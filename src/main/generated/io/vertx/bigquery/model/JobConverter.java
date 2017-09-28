@@ -17,7 +17,6 @@
 package io.vertx.bigquery.model;
 
 import io.vertx.core.json.JsonObject;
-import io.vertx.core.json.JsonArray;
 
 /**
  * Converter for {@link io.vertx.bigquery.model.Job}.
@@ -51,8 +50,8 @@ public class JobConverter {
     if (json.getValue("status") instanceof JsonObject) {
       obj.setStatus(new io.vertx.bigquery.model.JobStatus((JsonObject)json.getValue("status")));
     }
-    if (json.getValue("userEmail") instanceof String) {
-      obj.setUserEmail((String)json.getValue("userEmail"));
+    if (json.getValue("user_email") instanceof String) {
+      obj.setuser_email((String)json.getValue("user_email"));
     }
   }
 
@@ -70,7 +69,7 @@ public class JobConverter {
       json.put("selfLink", obj.getSelfLink());
     }
     if (obj.getUserEmail() != null) {
-      json.put("userEmail", obj.getUserEmail());
+      json.put("user_email", obj.getUserEmail());
     }
     if (obj.getConfiguration() != null) {
       json.put("configuration", obj.getConfiguration().toJson());
