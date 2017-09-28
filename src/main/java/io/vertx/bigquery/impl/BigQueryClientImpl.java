@@ -133,10 +133,8 @@ public class BigQueryClientImpl implements BigQueryClient {
 
 	@Override
 	public BigQueryClient insertJob(String projectId, Handler<AsyncResult<Job>> succesHandler, Job job) {
-		System.out.println(job.toJson().encodePrettily());
 		String path = DEFAULT_ENDPOINT + projectId + "/jobs";
-		createPostRequest(path, succesHandler, Job.class, job);
-
+		createPostRequest(path, succesHandler, Job.class, job.toJson());
 		return  this;
 	}
 
